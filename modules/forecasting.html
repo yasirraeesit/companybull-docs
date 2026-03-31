@@ -1,0 +1,151 @@
+<div class="module-hero">
+    <span class="neo-badge accent">Module 19: The Growth Blueprint</span>
+    <h2 class="gradient-text" style="font-size: 3.5rem;">Headcount Forecasting</h2>
+    <p class="module-summary" style="max-width: 800px;">Headcount Forecasting is the company's "Crystal Ball." It’s where leadership and HR plan for the future, tracking how many people we have today and how many we need tomorrow. It helps ensure that the company grows at the right speed without running out of resources.</p>
+</div>
+
+<!-- SECTION 01: PLANNING SCOREBOARD -->
+<div class="doc-section">
+    <span class="neo-section-title">01. The Planning Scoreboard</span>
+    <p style="margin-bottom: 2rem;">At the top of the planner, we show four key "Hiring Goals." These metrics tell you everything you need to know about our expansion plans for 2026, including how much the team will grow by the end of the year.</p>
+    
+    <div class="grid-layout" style="grid-template-columns: repeat(4, 1fr); gap: 1rem;">
+        <div class="stat-card">
+            <h4><i data-lucide="users" style="width: 24px; vertical-align: middle;"></i> 71</h4>
+            <p>Current Team</p>
+        </div>
+        <div class="stat-card" style="border-color: hsl(142, 72%, 40%);">
+            <h4><i data-lucide="target" style="width: 24px; vertical-align: middle;"></i> +24</h4>
+            <p>Planned Hires</p>
+        </div>
+        <div class="stat-card" style="border-color: hsl(280, 65%, 55%);">
+            <h4><i data-lucide="trending-up" style="width: 24px; vertical-align: middle;"></i> 95</h4>
+            <p>EOY Target</p>
+        </div>
+        <div class="stat-card" style="border-color: hsl(38, 92%, 50%);">
+            <h4><i data-lucide="calendar" style="width: 24px; vertical-align: middle;"></i> +34%</h4>
+            <p>Proj. Growth</p>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 02: CHARTING THE FUTURE -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">02. Visualizing Our Future</span>
+    <p style="margin-bottom: 2rem;">The Headcount Chart is a "Mix" of the past and the future. A **Solid Line** shows the people who are already working with us, while a **Dashed Line** predicts our growth based on our open job roles. A vertical line marks "Today" to give you context.</p>
+    
+    <div class="neo-card spotlight" style="padding: 2.5rem; background: hsl(var(--card)); border-style: solid;">
+        <div style="height: 100px; display: flex; align-items: flex-end; gap: 0.5rem; border-bottom: 2px solid #eee; padding-bottom: 0.5rem; position: relative;">
+            <div style="position: absolute; left: 40%; top: 0; bottom: 0; width: 2px; border-left: 2px dashed hsl(var(--primary));"></div>
+            <div style="position: absolute; left: 42%; top: -1rem; font-size: 0.7rem; color: hsl(var(--primary)); font-weight: 800;">TODAY</div>
+            <!-- Mock Chart -->
+            <div style="flex: 1; height: 30%; background: hsl(var(--primary) / 0.3); border-top: 2px solid hsl(var(--primary));"></div>
+            <div style="flex: 1; height: 45%; background: hsl(var(--primary) / 0.3); border-top: 2px solid hsl(var(--primary));"></div>
+            <div style="flex: 1; height: 60%; background: hsl(280 65% 55% / 0.15); border-top: 2px dashed hsl(280 65% 55%);"></div>
+            <div style="flex: 1; height: 80%; background: hsl(280 65% 55% / 0.15); border-top: 2px dashed hsl(280 65% 55%);"></div>
+        </div>
+        <div style="display: flex; justify-content: space-between; margin-top: 0.5rem; font-size: 0.7rem; opacity: 0.5;">
+            <span>Jan 26</span>
+            <span>Mar 26</span>
+            <span>Dec 26</span>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 03: PRIORITY TIERS -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">03. Department Hiring Roadmap</span>
+    <p style="margin-bottom: 2rem;">Not all hires should happen at the same time. We prioritize them based on department needs. Each department has a "Priority Tier" so the recruiting team knows where to focus their energy first.</p>
+    
+    <div class="grid-layout" style="grid-template-columns: repeat(3, 1fr); gap: 1rem; text-align: center;">
+        <div class="neo-card spotlight" style="padding: 1.5rem;">
+            <div class="neo-badge" style="background: hsl(0 84% 60% / 0.1); color: hsl(0 84% 60%); width: 100%;">High Priority</div>
+            <p style="font-size: 0.7rem; margin-top: 0.5rem;">Urgent hiring needed</p>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem;">
+            <div class="neo-badge" style="background: hsl(38 92% 50% / 0.1); color: hsl(38 92% 50%); width: 100%;">Medium Priority</div>
+            <p style="font-size: 0.7rem; margin-top: 0.5rem;">Targeting next quarter</p>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem;">
+            <div class="neo-badge" style="background: hsl(142 72% 40% / 0.1); color: hsl(142 72% 40%); width: 100%;">Low Priority</div>
+            <p style="font-size: 0.7rem; margin-top: 0.5rem;">Strategic long-term hires</p>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 04: ENGINEERING BLUEPRINT -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">04. Engineering Blueprint</span>
+    <div class="neo-card technical">
+        <h3><i data-lucide="terminal"></i> Behind the Scenes (Code)</h3>
+        <p style="color: hsl(var(--secondary)); font-weight: 700;">How we built the forecasting engine:</p>
+        <div class="tech-grid" style="margin-top: 2rem;">
+            <div class="tech-item">
+                <strong>Growth Pct Math</strong>
+                <p>The system calculates <code>((EndOfYear - Current) / Current) * 100</code> to find the expansion percentage for the year.</p>
+            </div>
+            <div class="tech-item">
+                <strong>Chart Layering</strong>
+                <p>We use two overlapping <code>Area</code> components to show "Actual" (Solid) and "Forecast" (Dashed) data on the same chart.</p>
+            </div>
+            <div class="tech-item">
+                <strong>Reference Line</strong>
+                <p>A simple <code>ReferenceLine</code> component marks today's date, helping users distinguish between history and future plans.</p>
+            </div>
+            <div class="tech-item">
+                <strong>Bar Chart Legend</strong>
+                <p>The "BarChart" uses a horizontal legend so you can easily compare current staff vs. planned hires for each team side-by-side.</p>
+            </div>
+        </div>
+        <pre class="code-block" style="margin-top: 2rem;"><code>// Distinguishing Forecast in code
+strokeDasharray="5 5" name="Forecast"</code></pre>
+    </div>
+</div>
+
+<!-- SECTION 05: HOW TO USE IT -->
+<div class="doc-section" style="margin-top: 5rem; border-top: 4px solid hsl(var(--border)); padding-top: 4rem;">
+    <span class="neo-section-title">05. How to use this page</span>
+    <p style="margin-bottom: 2rem;">Planning for the next year? Here’s the best way to leverage Forecasting:</p>
+    
+    <div class="grid-layout" style="grid-template-columns: repeat(3, 1fr);">
+        <div class="neo-card spotlight" style="padding: 1.5rem; text-align: left;">
+            <div style="font-weight: 800; font-size: 0.8rem; margin-bottom: 0.5rem;">STEP 1: CHECK GROWTH %</div>
+            <p style="font-size: 0.75rem;">If the growth % is too high (e.g., above 50%), you should talk to HR to make sure they have enough recruiters to handle the load.</p>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem; text-align: left;">
+            <div style="font-weight: 800; font-size: 0.8rem; margin-bottom: 0.5rem;">STEP 2: FIND CRITICAL GAPS</div>
+            <p style="font-size: 0.75rem;">Sort the Department Detail table by **Priority**. Focus on the red "High Priority" roles first for the current quarter.</p>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem; text-align: left;">
+            <div style="font-weight: 800; font-size: 0.8rem; margin-bottom: 0.5rem;">STEP 3: CONSULT THE TIMELINE</div>
+            <p style="font-size: 0.75rem;">Check the "Timeline" column for each role. If a role is marked for "Q3 2026," you can wait a few months before starting the search.</p>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 06: ACCESS & PERMISSIONS -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">06. Who can do what? (RBAC)</span>
+    <table class="neo-table" style="margin-top: 2rem;">
+        <thead>
+            <tr>
+                <th>Action</th>
+                <th>Admin</th>
+                <th>HR</th>
+                <th>Manager</th>
+                <th>Employee</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Enter Module</td><td>✅ Yes</td><td>✅ Yes</td><td>❌ No</td><td>❌ No</td></tr>
+            <tr><td>View Hiring Plans</td><td>✅ Yes</td><td>✅ Yes</td><td>❌ No</td><td>❌ No</td></tr>
+            <tr><td>Set Priorities</td><td>✅ Yes</td><td>✅ Yes</td><td>❌ No</td><td>❌ No</td></tr>
+            <tr><td>See Growth Math</td><td>✅ Yes</td><td>✅ Yes</td><td>❌ No</td><td>❌ No</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="neo-card spotlight" style="margin-top: 5rem; background: hsl(var(--primary) / 0.1); border-style: dashed;">
+    <h3><i data-lucide="award"></i> Pro Feature</h3>
+    <p>Forecasting is **linked to the budget**. High-priority roles are automatically highlighted so they are never forgotten during board meetings!</p>
+</div>

@@ -1,0 +1,138 @@
+<div class="module-hero">
+    <span class="neo-badge accent">Module 25: The Monthly Settlement</span>
+    <h2 class="gradient-text" style="font-size: 3.5rem;">Payroll</h2>
+    <p class="module-summary" style="max-width: 800px;">The Payroll module is the company's "Financial Engine." It’s where everyone’s hard work is turned into professional records. It’s built to be transparent for admins while ensuring that personal salary data stays 100% private for all regular employees.</p>
+</div>
+
+<!-- SECTION 01: FINANCIAL SCORECARD -->
+<div class="doc-section">
+    <span class="neo-section-title">01. The Monthly Scorecard (Admins)</span>
+    <p style="margin-bottom: 2rem;">Admins and HR see a high-level summary at the top right of the page. This **Total Net Pay** card sums up every penny the company is paying out for the month, helping the accounting team prepare for the final bank transfers.</p>
+    
+    <div class="neo-card spotlight" style="padding: 2rem; background: hsl(var(--card)); border-style: solid; max-width: 300px; margin: 0 auto; text-align: center;">
+        <p style="font-size: 0.7rem; opacity: 0.5; text-transform: uppercase; font-weight: 800;">Total Net Pay (April 2026)</p>
+        <h4 style="font-size: 2.5rem; font-weight: 900; color: hsl(var(--primary));">$152,400.00</h4>
+        <div style="margin-top: 10px;">
+           <span class="neo-badge" style="background: hsl(142 72% 40% / 0.1); color: hsl(142 72% 40%); width: 100%;">READY TO TRANSFER</span>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 02: THE BREAKDOWN TABLE -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">02. Detailed Pay Breakdowns</span>
+    <p style="margin-bottom: 2rem;">The Payroll table is the "Heart" of this module. It doesn't just show one number; it breaks down your pay into four distinct columns. This helps you understand where every dollar went, including taxes and bonuses.</p>
+    
+    <div class="grid-layout" style="grid-template-columns: repeat(4, 1fr); gap: 1rem; text-align: center;">
+        <div class="neo-card spotlight" style="padding: 1.5rem;">
+            <div style="font-weight: 800; font-size: 0.75rem; margin-bottom: 0.5rem;">💵 Base Salary</div>
+            <p style="font-size: 1.25rem; font-weight: 900;">$5,000</p>
+            <p style="font-size: 0.6rem; opacity: 0.5;">Standard monthly pay</p>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem; border-color: hsl(0, 84%, 60%);">
+            <div style="font-weight: 800; font-size: 0.75rem; margin-bottom: 0.5rem; color: hsl(0, 84%, 60%);">🔴 Deductions</div>
+            <p style="font-size: 1.25rem; font-weight: 900; color: hsl(0, 84%, 60%);">-$850</p>
+            <p style="font-size: 0.6rem; opacity: 0.5;">Taxes, insurance, etc.</p>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem; border-color: hsl(142, 72%, 40%);">
+            <div style="font-weight: 800; font-size: 0.75rem; margin-bottom: 0.5rem; color: hsl(142, 72%, 40%);">🟢 Bonus</div>
+            <p style="font-size: 1.25rem; font-weight: 900; color: hsl(142, 72%, 40%);">+$250</p>
+            <p style="font-size: 0.6rem; opacity: 0.5;">Extra performance pay</p>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem; background: hsl(var(--primary) / 0.05);">
+            <div style="font-weight: 800; font-size: 0.75rem; margin-bottom: 0.5rem;">💰 Net Pay</div>
+            <p style="font-size: 1.25rem; font-weight: 900;">$4,400</p>
+            <p style="font-size: 0.6rem; opacity: 0.5;">The final amount you keep</p>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 03: PRIVACY BARRIER -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">03. The Privacy Shield</span>
+    <div class="neo-card spotlight" style="margin-top: 2rem; background: hsl(var(--card)); border-style: dashed; padding: 2.5rem; text-align: center;">
+        <h3><i data-lucide="lock"></i> Your Salary is Secret</h3>
+        <p>This is the most secure part of Company Bull. Unless you are an Admin or HR, you will **only** see your own name in the table. The scoreboard at the top? It’s completely hidden for regular staff to protect everyone's privacy.</p>
+        <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 1.5rem;">
+           <span class="neo-badge" style="background: hsl(var(--card));">MY PAY ONLY</span>
+           <span class="neo-badge" style="background: hsl(var(--card));">NO COMPANY TOTALS</span>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 04: ENGINEERING BLUEPRINT -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">04. Engineering Blueprint</span>
+    <div class="neo-card technical">
+        <h3><i data-lucide="terminal"></i> Behind the Scenes (Code)</h3>
+        <p style="color: hsl(var(--secondary)); font-weight: 700;">Logic for the financial settlement:</p>
+        <div class="tech-grid" style="margin-top: 2rem;">
+            <div class="tech-item">
+                <strong>Currency Formatter</strong>
+                <p>We use a custom <code>fmt()</code> utility with <code>.toLocaleString()</code>. It automatically adds the dollar sign and commas (like $10,000) for you.</p>
+            </div>
+            <div class="tech-item">
+                <strong>Summing Engine</strong>
+                <p>To find the Total Net Pay, we use <code>.reduce()</code>. It loops through the entire payroll list and adds up the final numbers in one second.</p>
+            </div>
+            <div class="tech-item">
+                <strong>Visible Filter</strong>
+                <p>We use <code>hasAccess()</code> to decide what data to fetch. If you aren't HR, the system only asks the database for **your** ID.</p>
+            </div>
+            <div class="tech-item">
+                <strong>Visual Indicators</strong>
+                <p>We use <code>text-destructive</code> for deductions and <code>text-[hsl(142,72%,40%)]</code> for bonuses to make the table read like a bank statement.</p>
+            </div>
+        </div>
+        <pre class="code-block" style="margin-top: 2rem;"><code>// Summing the visible data (Total Net)
+const totalNet = visibleData.reduce((sum, p) => sum + p.netPay, 0);</code></pre>
+    </div>
+</div>
+
+<!-- SECTION 05: HOW TO USE IT -->
+<div class="doc-section" style="margin-top: 5rem; border-top: 4px solid hsl(var(--border)); padding-top: 4rem;">
+    <span class="neo-section-title">05. How to use this page</span>
+    <p style="margin-bottom: 2rem;">Reviewing your salary? Here’s the best way to leverage Payroll:</p>
+    
+    <div class="grid-layout" style="grid-template-columns: repeat(3, 1fr);">
+        <div class="neo-card spotlight" style="padding: 1.5rem; text-align: left;">
+            <div style="font-weight: 800; font-size: 0.8rem; margin-bottom: 0.5rem;">STEP 1: CHECK NET PAY</div>
+            <p style="font-size: 0.75rem;">Your **Net Pay** is your final take-home salary. This is what will appear in your bank account at the end of the month.</p>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem; text-align: left;">
+            <div style="font-weight: 800; font-size: 0.8rem; margin-bottom: 0.5rem;">STEP 2: REVIEW TAXES</div>
+            <p style="font-size: 0.75rem;">Look at the **Deductions** column (in red). This shows how much money was directed toward taxes, insurance, or pension plans.</p>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem; text-align: left;">
+            <div style="font-weight: 800; font-size: 0.8rem; margin-bottom: 0.5rem;">STEP 3: CELEBRATE BONUSES</div>
+            <p style="font-size: 0.75rem;">If you see a green number in the **Bonus** column, congratulations! This is extra reward money added to your base salary.</p>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 06: ACCESS & PERMISSIONS -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">06. Who can do what? (RBAC)</span>
+    <table class="neo-table" style="margin-top: 2rem;">
+        <thead>
+            <tr>
+                <th>Action</th>
+                <th>Admin</th>
+                <th>HR</th>
+                <th>Manager</th>
+                <th>Employee</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Enter Module</td><td>✅ Yes</td><td>✅ Yes</td><td>✅ Yes</td><td>✅ Yes</td></tr>
+            <tr><td>See Everyone's Pay</td><td>✅ Yes</td><td>✅ Yes</td><td>❌ No</td><td>❌ No</td></tr>
+            <tr><td>See Company Total</td><td>✅ Yes</td><td>✅ Yes</td><td>❌ No</td><td>❌ No</td></tr>
+            <tr><td>Update Salary amount</td><td>✅ Yes</td><td>✅ Yes</td><td>❌ No</td><td>❌ No</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="neo-card spotlight" style="margin-top: 5rem; background: hsl(var(--primary) / 0.1); border-style: dashed;">
+    <h3><i data-lucide="info"></i> Quick Tip</h3>
+    <p>Everything in Payroll is **Locked to your ID**. Even if a manager picks "Manager" at login, they can still only see their own salary to ensure full privacy!</p>
+</div>

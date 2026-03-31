@@ -1,0 +1,142 @@
+<div class="module-hero">
+    <span class="neo-badge accent">Module 08: The Culture Hub</span>
+    <h2 class="gradient-text" style="font-size: 3.5rem;">Celebrations</h2>
+    <p class="module-summary" style="max-width: 800px;">The Celebrations module is the "Heart" of the company. It’s a special place where we recognize and celebrate the milestones in every team member's life, from their birthday cake to their big work anniversaries. It keeps the team close and the morale high!</p>
+</div>
+
+<!-- SECTION 01: TODAY'S PARTY -->
+<div class="doc-section">
+    <span class="neo-section-title">01. Today's Spotlight</span>
+    <p style="margin-bottom: 2rem;">If someone has a special day today, they get the "Main Stage" at the top of the page. This card only appears when there’s a reason to party, making sure you never miss a chance to say "Congratulations!"</p>
+    
+    <div class="neo-card spotlight" style="padding: 2.5rem; text-align: center; border-color: hsl(var(--primary)); background: hsl(var(--primary) / 0.05);">
+        <div style="font-size: 2.5rem; font-weight: 800; color: hsl(var(--primary)); margin-bottom: 1rem;"><i data-lucide="party-popper" style="width: 48px; height: 48px; vertical-align: middle;"></i> Today's Celebrations!</div>
+        <div style="display: flex; gap: 2rem; justify-content: center; margin-top: 1.5rem;">
+            <div class="neo-card spotlight" style="padding: 1rem; background: hsl(var(--card)); min-width: 200px;">
+                <div style="font-size: 2rem; margin-bottom: 0.5rem;">🎂</div>
+                <div style="font-weight: 800;">John Doe</div>
+                <div style="font-size: 0.75rem; opacity: 0.8;">Birthday Today!</div>
+            </div>
+            <div class="neo-card spotlight" style="padding: 1rem; background: hsl(var(--card)); min-width: 200px;">
+                <div style="font-size: 2rem; margin-bottom: 0.5rem;">🎉</div>
+                <div style="font-weight: 800;">Jane Smith</div>
+                <div style="font-size: 0.75rem; opacity: 0.8;">3-Year Anniversary!</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 02: UPCOMING COUNTDOWNS -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">02. Upcoming Preview</span>
+    <div class="grid-layout" style="margin-top: 2rem;">
+        <div class="neo-card spotlight">
+            <h3><i data-lucide="cake"></i> Birthdays (Next 8)</h3>
+            <p style="margin-bottom: 1.5rem;">A list of the next eight people to celebrate another year. Every entry shows their name, department, and a countdown badge (like "5d" for 5 days away).</p>
+            <div class="neo-badge" style="background: hsl(var(--primary) / 0.1); color: hsl(var(--primary));">5 Days Left</div>
+        </div>
+        <div class="neo-card spotlight">
+            <h3><i data-lucide="calendar"></i> Anniversaries (Next 8)</h3>
+            <p style="margin-bottom: 1.5rem;">Celebrating loyalty! This list shows when people joined the company and how many years they will be marking. It’s perfect for planning anniversary shout-outs.</p>
+            <div class="neo-badge" style="background: hsl(var(--secondary) / 0.1); color: hsl(var(--secondary));">2 Years Served</div>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 03: MONTHLY OVERVIEW -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">03. This Month's Overview</span>
+    <p style="margin-bottom: 2rem;">Teams use this section for planning ahead. It shows every celebration scheduled for the current month in a clean grid, so HR can organize birthday cards or monthly team lunches in advance.</p>
+    
+    <div class="grid-layout" style="grid-template-columns: repeat(3, 1fr); gap: 1rem;">
+        <div class="neo-card spotlight" style="padding: 1rem; display: flex; align-items: center; gap: 1rem;">
+            <div style="width: 40px; height: 40px; background: hsl(var(--primary)); color: white; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-weight: 900;">MM</div>
+            <div>
+                <div style="font-weight: 800; font-size: 0.85rem;">Mark Miller</div>
+                <div style="font-size: 0.7rem; opacity: 0.7;">🎂 March 15</div>
+            </div>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1rem; display: flex; align-items: center; gap: 1rem;">
+            <div style="width: 40px; height: 40px; background: hsl(var(--primary)); color: white; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-weight: 900;">LS</div>
+            <div>
+                <div style="font-weight: 800; font-size: 0.85rem;">Lucy Stone</div>
+                <div style="font-size: 0.7rem; opacity: 0.7;">🎉 March 28</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 04: ENGINEERING BLUEPRINT -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">04. Engineering Blueprint</span>
+    <div class="neo-card technical">
+        <h3><i data-lucide="terminal"></i> Behind the Scenes (Code)</h3>
+        <p style="color: hsl(var(--secondary)); font-weight: 700;">Here’s the developer’s "magic" for the celebrations:</p>
+        <div class="tech-grid" style="margin-top: 2rem;">
+            <div class="tech-item">
+                <strong>Smart Countdown</strong>
+                <p>We use a function called <code>getDaysUntil</code> that handles wrapping dates (like if a birthday is in January and it's currently December).</p>
+            </div>
+            <div class="tech-item">
+                <strong>Year Math</strong>
+                <p>We calculate tenure by subtracting the <code>joinYear</code> from the current year, providing an accurate "X-Year" badge.</p>
+            </div>
+            <div class="tech-item">
+                <strong>Avatar System</strong>
+                <p>If an employee hasn't uploaded a photo, the <code>AvatarFallback</code> component generates a badge with their first and last initials.</p>
+            </div>
+            <div class="tech-item">
+                <strong>Auto-Display</strong>
+                <p>The "Today's Celebrations" card uses conditional rendering (<code>&&</code>) to stay hidden unless someone’s "celebration day" matches today's date.</p>
+            </div>
+        </div>
+        <pre class="code-block" style="margin-top: 2rem;"><code>// Anniversary Year Calculation Logic
+years: today.getFullYear() - c.joinYear + (isCelebratedThisYear ? 0 : -1)</code></pre>
+    </div>
+</div>
+
+<!-- SECTION 05: HOW TO USE IT -->
+<div class="doc-section" style="margin-top: 5rem; border-top: 4px solid hsl(var(--border)); padding-top: 4rem;">
+    <span class="neo-section-title">05. How to use this page</span>
+    <p style="margin-bottom: 2rem;">Want to spread some joy? Here’s the best way to use the Celebrations hub:</p>
+    
+    <div class="grid-layout" style="grid-template-columns: repeat(3, 1fr);">
+        <div class="neo-card spotlight" style="padding: 1.5rem; text-align: left;">
+            <div style="font-weight: 800; font-size: 0.8rem; margin-bottom: 0.5rem;">STEP 1: CHECK THE SPOTLIGHT</div>
+            <p style="font-size: 0.75rem;">Check the top section every morning. If you see a name in the spotlight, reach out to them and say Happy Birthday or Congrats!</p>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem; text-align: left;">
+            <div style="font-weight: 800; font-size: 0.8rem; margin-bottom: 0.5rem;">STEP 2: PRE-PLAN PARTIES</div>
+            <p style="font-size: 0.75rem;">Use the "Upcoming" lists to see if anyone has a milestone (like 5 or 10 years) coming up next week so you can order a cake.</p>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem; text-align: left;">
+            <div style="font-weight: 800; font-size: 0.8rem; margin-bottom: 0.5rem;">STEP 3: VIEW THE OVERVIEW</div>
+            <p style="font-size: 0.75rem;">Check the monthly grid at the bottom to see every celebration for the whole month in one single glance.</p>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 06: ACCESS & PERMISSIONS -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">06. Who can see this? (RBAC)</span>
+    <table class="neo-table" style="margin-top: 2rem;">
+        <thead>
+            <tr>
+                <th>Role</th>
+                <th>Can View Today?</th>
+                <th>Can View All Lists?</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Admin</td><td>✅ Yes</td><td>✅ Yes</td></tr>
+            <tr><td>HR</td><td>✅ Yes</td><td>✅ Yes</td></tr>
+            <tr><td>Manager</td><td>✅ Yes</td><td>✅ Yes</td></tr>
+            <tr><td>Employee</td><td>✅ Yes</td><td>✅ Yes</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="neo-card spotlight" style="margin-top: 5rem; background: hsl(var(--primary) / 0.1); border-style: dashed;">
+    <h3><i data-lucide="cake"></i> Special Note</h3>
+    <p>Privacy is important! While we celebrate the *day* of birth, the <strong>Year of Birth</strong> is never shown to other employees. We only show the birthday and the number of years someone has been part of the company.</p>
+</div>

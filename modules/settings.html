@@ -1,0 +1,139 @@
+<div class="module-hero">
+    <span class="neo-badge accent">Module 27: The Command Center</span>
+    <h2 class="gradient-text" style="font-size: 3.5rem;">Settings & Preferences</h2>
+    <p class="module-summary" style="max-width: 800px;">The Settings module is the company's "Command Center." It’s the one place where every employee can make the app their own. Update your profile, choose how you want to be notified, and even switch the whole app to a stylish Dark Mode with a single click.</p>
+</div>
+
+<!-- SECTION 01: PERSONAL PROFILE -->
+<div class="doc-section">
+    <span class="neo-section-title">01. Your Digital Identity</span>
+    <p style="margin-bottom: 2rem;">Your profile card is your "Digital Business Card." It shows your job title, department, and current role. You can update your **Name**, **Email**, and **Phone** number here to ensure everyone can reach you easily. If you haven't uploaded a photo yet, the app uses your initials as a placeholder.</p>
+    
+    <div class="neo-card spotlight" style="padding: 2.5rem; background: hsl(var(--card)); border-style: solid; max-width: 400px; margin: 0 auto; display: flex; align-items: center; gap: 1.5rem;">
+        <div style="width: 60px; height: 60px; background: hsl(var(--primary)); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.25rem;">JD</div>
+        <div style="text-align: left;">
+            <p style="font-weight: 900; font-size: 1.1rem; margin-bottom: 2px;">John Doe</p>
+            <p style="font-size: 0.75rem; opacity: 0.6;">Admin · Engineering</p>
+            <div style="margin-top: 10px; display: flex; gap: 5px;">
+               <div class="neo-badge" style="font-size: 0.6rem;">EDIT PROFILE</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 02: NOTIFICATION CENTER -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">02. Controlling the Noise</span>
+    <p style="margin-bottom: 2rem;">Too many emails? No problem. The **Notification Center** gives you full control. Use the toggle switches to decide exactly which alerts you want to see via **Email** or as a **Push Notification** on your phone.</p>
+    
+    <div class="grid-layout" style="grid-template-columns: repeat(2, 1fr); gap: 1.5rem;">
+        <div class="neo-card spotlight" style="padding: 1.5rem; background: hsl(var(--card)); border-style: solid;">
+            <h4 style="font-weight: 900; margin-bottom: 1rem;"><i data-lucide="mail"></i> Email Alerts</h4>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+                <span style="font-size: 0.75rem;">Leave Approvals</span>
+                <div style="width: 32px; height: 16px; background: hsl(var(--primary)); border-radius: 8px; position: relative;"><div style="position: absolute; right: 2px; top: 2px; width: 12px; height: 12px; background: hsl(var(--card)); border-radius: 50%;"></div></div>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-size: 0.75rem;">Payroll News</span>
+                <div style="width: 32px; height: 16px; background: #ddd; border-radius: 8px; position: relative;"><div style="position: absolute; left: 2px; top: 2px; width: 12px; height: 12px; background: hsl(var(--card)); border-radius: 50%;"></div></div>
+            </div>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem; background: hsl(var(--card)); border-style: solid;">
+            <h4 style="font-weight: 900; margin-bottom: 1rem;"><i data-lucide="smartphone"></i> Push Alerts</h4>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-size: 0.75rem;">Recruitment updates</span>
+                <div style="width: 32px; height: 16px; background: hsl(var(--primary)); border-radius: 8px; position: relative;"><div style="position: absolute; right: 2px; top: 2px; width: 12px; height: 12px; background: hsl(var(--card)); border-radius: 50%;"></div></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 03: APPEARANCE & DARK MODE -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">03. Dark Mode & Customization</span>
+    <div class="neo-card spotlight" style="margin-top: 2rem; background: hsl(var(--card)); border-style: dashed; padding: 2.5rem; text-align: center;">
+        <h3><i data-lucide="palette"></i> Make it Your Own</h3>
+        <p>Working late at night? Flip the **Dark Mode** switch. The whole app will instantly swap its white background for a sleek, comfortable black theme. You can also turn on the **Compact Sidebar** if you want more room for your work!</p>
+        <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 1.5rem;">
+           <span class="neo-badge" style="background: hsl(var(--primary)); color: white;"><i data-lucide="moon"></i> DARK MODE ON</span>
+           <span class="neo-badge" style="background: hsl(var(--card));"><i data-lucide="sidebar"></i> COMPACT MENU</span>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 04: ENGINEERING BLUEPRINT -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">04. Engineering Blueprint</span>
+    <div class="neo-card technical">
+        <h3><i data-lucide="terminal"></i> Behind the Scenes (Code)</h3>
+        <p style="color: hsl(var(--secondary)); font-weight: 700;">Logic for the Command Center:</p>
+        <div class="tech-grid" style="margin-top: 2rem;">
+            <div class="tech-item">
+                <strong>Staggered Cards</strong>
+                <p>We use a <code>StaggerContainer</code> to animate the entry. When you open settings, the cards (Profile, Security, Appearance) pop in one-by-one sequentially.</p>
+            </div>
+            <div class="tech-item">
+                <strong>Theme Toggling</strong>
+                <p>We use one line of code: <code>classList.toggle("dark")</code>. It adds or removes the "dark" theme class from the top of the HTML page in real-time.</p>
+            </div>
+            <div class="tech-item">
+                <strong>Local State</strong>
+                <p>Changes are held in a <code>profile</code> object. They only become permanent once you click the "Save Profile" button, triggering a success toast.</p>
+            </div>
+            <div class="tech-item">
+                <strong>Toast Feedback</strong>
+                <p>We used the <code>useToast</code> hook to give you instant confirmation message (like "Profile Updated") at the bottom of the screen.</p>
+            </div>
+        </div>
+        <pre class="code-block" style="margin-top: 2rem;"><code>// Theme Toggling Logic
+onCheckedChange={(v) => document.documentElement.classList.toggle("dark", v)}</code></pre>
+    </div>
+</div>
+
+<!-- SECTION 05: HOW TO USE IT -->
+<div class="doc-section" style="margin-top: 5rem; border-top: 4px solid hsl(var(--border)); padding-top: 4rem;">
+    <span class="neo-section-title">05. How to use this page</span>
+    <p style="margin-bottom: 2rem;">Setting up your workspace? Here’s the best way to leverage Settings:</p>
+    
+    <div class="grid-layout" style="grid-template-columns: repeat(3, 1fr);">
+        <div class="neo-card spotlight" style="padding: 1.5rem; text-align: left;">
+            <div style="font-weight: 800; font-size: 0.8rem; margin-bottom: 0.5rem;">STEP 1: UPDATE YOUR ID</div>
+            <p style="font-size: 0.75rem;">Make sure your **Job Title** and **Phone** are correct. This ensures the Org Chart and People directory are always up to date.</p>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem; text-align: left;">
+            <div style="font-weight: 800; font-size: 0.8rem; margin-bottom: 0.5rem;">STEP 2: FIX YOUR THEME</div>
+            <p style="font-size: 0.75rem;">Scroll down to the **Appearance** section. If the white screen is too bright, toggle the **Dark Mode** switch to save your eyes.</p>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem; text-align: left;">
+            <div style="font-weight: 800; font-size: 0.8rem; margin-bottom: 0.5rem;">STEP 3: SAVE YOUR CHANGES</div>
+            <p style="font-size: 0.75rem;">Don't forget to click the **Save** button in each section. Look for the floating "Success" message to be sure it worked!</p>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 06: ACCESS & PERMISSIONS -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">06. Who can do what? (RBAC)</span>
+    <table class="neo-table" style="margin-top: 2rem;">
+        <thead>
+            <tr>
+                <th>Action</th>
+                <th>Admin</th>
+                <th>HR</th>
+                <th>Manager</th>
+                <th>Employee</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Enter Settings Module</td><td>✅ Yes</td><td>✅ Yes</td><td>✅ Yes</td><td>✅ Yes</td></tr>
+            <tr><td>Update Own Profile</td><td>✅ Yes</td><td>✅ Yes</td><td>✅ Yes</td><td>✅ Yes</td></tr>
+            <tr><td>Change Own Theme</td><td>✅ Yes</td><td>✅ Yes</td><td>✅ Yes</td><td>✅ Yes</td></tr>
+            <tr><td>Update Others' Profiles</td><td>✅ Yes</td><td>✅ Yes</td><td>❌ No</td><td>❌ No</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="neo-card spotlight" style="margin-top: 5rem; background: hsl(var(--primary) / 0.1); border-style: dashed;">
+    <h3><i data-lucide="info"></i> Quick Tip</h3>
+    <p>Settings are **Personal to You**. No one else can see your notification preferences or theme choices—this is YOUR version of Company Bull!</p>
+</div>

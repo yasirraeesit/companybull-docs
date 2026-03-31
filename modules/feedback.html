@@ -1,0 +1,153 @@
+<div class="module-hero">
+    <span class="neo-badge accent">Module 18: The Voice of the Team</span>
+    <h2 class="gradient-text" style="font-size: 3.5rem;">Feedback & Surveys</h2>
+    <p class="module-summary" style="max-width: 800px;">The Feedback & Surveys module is the "Suggestion Box" of Company Bull. It’s where every employee can help improve the culture by sharing anonymous thoughts and participating in company-wide polls. It’s built to ensure that no voice is left unheard.</p>
+</div>
+
+<!-- SECTION 01: FIVE-STAR FEEDBACK -->
+<div class="doc-section">
+    <span class="neo-section-title">01. Quick Feedback Form</span>
+    <p style="margin-bottom: 2rem;">Sometimes you just want to share a quick thought. Our 5-Star Form is perfect for that. Pick a category, give a star rating, type your message, and hit send. It’s simple, fast, and completely anonymous.</p>
+    
+    <div class="grid-layout" style="grid-template-columns: 1fr 1.5fr; gap: 2rem;">
+        <div class="neo-card spotlight" style="padding: 2rem; background: hsl(var(--card)); border-style: solid;">
+            <p style="font-weight: 800; font-size: 0.8rem; margin-bottom: 1rem;">Pick a Category:</p>
+            <div class="neo-badge" style="width: 100%; margin-bottom: 0.5rem; text-align: left;">Workplace Environment</div>
+            <div class="neo-badge" style="width: 100%; margin-bottom: 0.5rem; text-align: left;">Management</div>
+            <div class="neo-badge" style="width: 100%; margin-bottom: 0.5rem; text-align: left;">Company Culture</div>
+        </div>
+        <div class="neo-card spotlight" style="padding: 2rem; background: hsl(var(--primary) / 0.03); text-align: center;">
+            <p style="font-weight: 800; font-size: 0.8rem; margin-bottom: 1.5rem;">Give Your Rating:</p>
+            <div style="display: flex; gap: 0.5rem; justify-content: center; font-size: 2rem; color: #fbbf24;">
+                <i data-lucide="star" style="fill: #fbbf24;"></i>
+                <i data-lucide="star" style="fill: #fbbf24;"></i>
+                <i data-lucide="star" style="fill: #fbbf24;"></i>
+                <i data-lucide="star" style="fill: #fbbf24;"></i>
+                <i data-lucide="star" style="opacity: 0.2;"></i>
+            </div>
+            <p style="font-size: 0.75rem; margin-top: 1rem; opacity: 0.6;">"The stars glow when you hover over them!"</p>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 02: ACTIVE SURVEYS -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">02. Company-Wide Surveys</span>
+    <p style="margin-bottom: 2rem;">For big company decisions, we use **Surveys**. Each survey is a specialized card that shows the title, the due date, and how many questions are inside. You can also see the "Response Rate" from your co-workers in real-time.</p>
+    
+    <div class="neo-card spotlight" style="padding: 2rem; background: hsl(var(--card));">
+        <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
+            <div>
+                <h4 style="font-weight: 900;">2024 Culture Pulse Survey</h4>
+                <p style="font-size: 0.75rem; opacity: 0.5;">5 Questions • Due: June 15</p>
+            </div>
+            <div class="neo-badge" style="background: hsl(142 72% 40% / 0.1); color: hsl(142 72% 40%);">Active</div>
+        </div>
+        <div style="margin-top: 1.5rem;">
+            <div style="display: flex; justify-content: space-between; font-weight: 800; font-size: 0.75rem; margin-bottom: 0.5rem;">
+                <span>Responses: 40/71</span>
+                <span>56%</span>
+            </div>
+            <div style="height: 10px; background: #eee; border-radius: 5px; overflow: hidden;">
+                <div style="width: 56%; height: 100%; background: hsl(var(--primary));"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 03: STATUS GUIDE -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">03. The Survey Status Guide</span>
+    <p style="margin-bottom: 2rem;">Surveys go through three simple stages. The color of the badge tells you if you should "Take Action" or if the results are already being analyzed by the team.</p>
+    
+    <div class="grid-layout" style="grid-template-columns: repeat(3, 1fr); gap: 1rem; text-align: center;">
+        <div class="neo-card spotlight" style="padding: 1.5rem;">
+            <div class="neo-badge" style="background: hsl(142 72% 40% / 0.1); color: hsl(142 72% 40%); width: 100%;"><i data-lucide="clock" style="width: 14px; vertical-align: middle;"></i> Active</div>
+            <p style="font-size: 0.7rem; margin-top: 0.5rem;">Open for your vote</p>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem;">
+            <div class="neo-badge" style="background: hsl(var(--muted-foreground) / 0.1); color: hsl(var(--muted-foreground)); width: 100%;"><i data-lucide="check-circle-2" style="width: 14px; vertical-align: middle;"></i> Completed</div>
+            <p style="font-size: 0.7rem; margin-top: 0.5rem;">Survey is closed</p>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem;">
+            <div class="neo-badge" style="background: hsl(38 92% 50% / 0.1); color: hsl(38 92% 50%); width: 100%;"><i data-lucide="file-edit" style="width: 14px; vertical-align: middle;"></i> Draft</div>
+            <p style="font-size: 0.7rem; margin-top: 0.5rem;">Still being built</p>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 04: ENGINEERING BLUEPRINT -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">04. Engineering Blueprint</span>
+    <div class="neo-card technical">
+        <h3><i data-lucide="terminal"></i> Behind the Scenes (Code)</h3>
+        <p style="color: hsl(var(--secondary)); font-weight: 700;">Logic for the feedback engine:</p>
+        <div class="tech-grid" style="margin-top: 2rem;">
+            <div class="tech-item">
+                <strong>Interactive Stars</strong>
+                <p>We use <code>onMouseEnter</code> to update a "Hover Score," making stars light up in yellow *before* you even click them.</p>
+            </div>
+            <div class="tech-item">
+                <strong>Status Logic</strong>
+                <p>We use a <code>statusConfig</code> object to map "Survey Status" (Active, Completed) to their specific icons and colors automatically.</p>
+            </div>
+            <div class="tech-item">
+                <strong>Response %</strong>
+                <p>The progress bars are driven by simple math: <code>Math.round((responses / total) * 100)</code>.</p>
+            </div>
+            <div class="tech-item">
+                <strong>Toast Feedback</strong>
+                <p>Once you hit "Submit," a toast triggers to confirm anonymity, and the whole form clears itself using <code>setRating(0)</code>.</p>
+            </div>
+        </div>
+        <pre class="code-block" style="margin-top: 2rem;"><code>// Star Glowing Logic
+s <= (hoverRating || rating) ? "fill-yellow-400" : "text-muted/30"</code></pre>
+    </div>
+</div>
+
+<!-- SECTION 05: HOW TO USE IT -->
+<div class="doc-section" style="margin-top: 5rem; border-top: 4px solid hsl(var(--border)); padding-top: 4rem;">
+    <span class="neo-section-title">05. How to use this page</span>
+    <p style="margin-bottom: 2rem;">Help build a better company? Here’s how to use the Feedback module:</p>
+    
+    <div class="grid-layout" style="grid-template-columns: repeat(3, 1fr);">
+        <div class="neo-card spotlight" style="padding: 1.5rem; text-align: left;">
+            <div style="font-weight: 800; font-size: 0.8rem; margin-bottom: 0.5rem;">STEP 1: QUICK TIPS</div>
+            <p style="font-size: 0.75rem;">If you see a bug in the office or a great new perk idea, just use the **Quick Feedback** form. You don't need a name, just a message.</p>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem; text-align: left;">
+            <div style="font-weight: 800; font-size: 0.8rem; margin-bottom: 0.5rem;">STEP 2: WATCH THE DEADLINE</div>
+            <p style="font-size: 0.75rem;">Check the **Surveys** section regularly. Most surveys have a deadline (e.g., June 15) and will turn "Completed" after that.</p>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem; text-align: left;">
+            <div style="font-weight: 800; font-size: 0.8rem; margin-bottom: 0.5rem;">STEP 3: TAKE THE SURVEY</div>
+            <p style="font-size: 0.75rem;">If a survey is **Active**, click the "Take Survey" button. It will open the full question list so your vote can be counted.</p>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 06: ACCESS & PERMISSIONS -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">06. Who can do what? (RBAC)</span>
+    <table class="neo-table" style="margin-top: 2rem;">
+        <thead>
+            <tr>
+                <th>Action</th>
+                <th>Admin</th>
+                <th>HR</th>
+                <th>Employee</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Create New Survey</td><td>✅ Yes</td><td>✅ Yes</td><td>❌ No</td></tr>
+            <tr><td>Submit Quick Feedback</td><td>✅ Yes</td><td>✅ Yes</td><td>✅ Yes</td></tr>
+            <tr><td>Take Active Survey</td><td>✅ Yes</td><td>✅ Yes</td><td>✅ Yes</td></tr>
+            <tr><td>See Submission Names</td><td>✅ Yes</td><td>✅ Yes</td><td>❌ No</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="neo-card spotlight" style="margin-top: 5rem; background: hsl(var(--primary) / 0.1); border-style: dashed;">
+    <h3><i data-lucide="info"></i> Quick Tip</h3>
+    <p>Everything in Feedback is **Confidential**. We want your honest thoughts to help make Company Bull the best place to work!</p>
+</div>

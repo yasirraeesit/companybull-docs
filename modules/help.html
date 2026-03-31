@@ -1,0 +1,136 @@
+<div class="module-hero">
+    <span class="neo-badge accent">Module 20: The Knowledge Base</span>
+    <h2 class="gradient-text" style="font-size: 3.5rem;">Help & FAQ</h2>
+    <p class="module-summary" style="max-width: 800px;">The Help & FAQ module is the company's "Source of Truth." It’s a 24/7 self-service portal where you can find answers to every common question—from booking holidays to setting up your work laptop. It’s designed to save you time and help you get back to work faster.</p>
+</div>
+
+<!-- SECTION 01: FINDING ANSWERS -->
+<div class="doc-section">
+    <span class="neo-section-title">01. Smart Searching & Category Pills</span>
+    <p style="margin-bottom: 2rem;">Don't scroll through hundreds of questions. Use the **Smart Search Bar** at the top to find keywords immediately. We’ve also added **Category Pills** (like Benefits, Tech, or HR) so you can narrow down your problem with a single click.</p>
+    
+    <div class="neo-card spotlight" style="padding: 2.5rem; text-align: center; background: hsl(var(--card)); border-style: solid;">
+        <div style="display: flex; gap: 1rem; align-items: center; justify-content: center; flex-wrap: wrap;">
+            <div class="neo-badge" style="background: hsl(var(--primary) / 0.1); color: hsl(var(--primary));"><i data-lucide="search" style="width: 14px; vertical-align: middle;"></i> Search: "Leave"</div>
+            <div class="neo-badge" style="background: hsl(var(--secondary) / 0.1); color: hsl(var(--secondary));">All</div>
+            <div class="neo-badge" style="background: hsl(var(--secondary) / 0.05); color: hsl(var(--secondary)); opacity: 0.5;">Benefits</div>
+            <div class="neo-badge" style="background: hsl(var(--secondary) / 0.05); color: hsl(var(--secondary)); opacity: 0.5;">Tech Support</div>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 02: THE FAQ ACCORDION -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">02. Collapsible FAQ Accordion</span>
+    <p style="margin-bottom: 2rem;">We use an "Accordion" to keep the page clean. Click a question, and the answer slides down gracefully. We’ve tagged every question with a category badge so you know exactly which department it belongs to.</p>
+    
+    <div class="neo-card spotlight" style="padding: 1.5rem; background: hsl(var(--card));">
+        <div style="padding: 1rem; border: 1px solid #eee; border-radius: 8px; margin-bottom: 1rem; display: flex; align-items: center; justify-content: space-between;">
+            <div style="display: flex; align-items: center; gap: 0.75rem;">
+                <span style="font-weight: 800;">How do I request a day off?</span>
+                <div class="neo-badge" style="font-size: 0.6rem;">HR</div>
+            </div>
+            <i data-lucide="chevron-down" style="width: 16px; opacity: 0.5;"></i>
+        </div>
+        <div style="padding: 1rem; border: 1px solid hsl(var(--primary)); border-radius: 8px; background: hsl(var(--primary) / 0.03);">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.5rem;">
+                <div style="display: flex; align-items: center; gap: 0.75rem;">
+                    <span style="font-weight: 900;">Where is the Wi-Fi password?</span>
+                    <div class="neo-badge" style="font-size: 0.6rem;">Tech</div>
+                </div>
+                <i data-lucide="chevron-up" style="width: 16px; color: hsl(var(--primary));"></i>
+            </div>
+            <p style="font-size: 0.85rem; opacity: 0.7;">"You can find the office Wi-Fi password printed on the back of your building security pass!"</p>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 03: STILL NEED HELP? -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">03. Support & Human Help</span>
+    <div class="neo-card spotlight" style="margin-top: 2rem; background: hsl(var(--card)); border-style: dashed; padding: 2.5rem; text-align: center;">
+        <h3><i data-lucide="help-circle"></i> Still need help?</h3>
+        <p>If you can’t find your answer in the FAQ, our support team is standing by. You can start a **Live Chat** or send an **Email** to get personal help from an HR expert.</p>
+        <div class="grid-layout" style="grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-top: 1.5rem;">
+            <div class="neo-badge" style="padding: 0.75rem; border-style: solid; background: hsl(var(--card));"><i data-lucide="mail"></i> Email Support</div>
+            <div class="neo-badge" style="padding: 0.75rem; background: hsl(var(--primary)); color: white;"><i data-lucide="message-square"></i> Start Live Chat</div>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 04: ENGINEERING BLUEPRINT -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">04. Engineering Blueprint</span>
+    <div class="neo-card technical">
+        <h3><i data-lucide="terminal"></i> Behind the Scenes (Code)</h3>
+        <p style="color: hsl(var(--secondary)); font-weight: 700;">How we built the self-service hub:</p>
+        <div class="tech-grid" style="margin-top: 2rem;">
+            <div class="tech-item">
+                <strong>Dynamic Categories</strong>
+                <p>We use <code>new Set()</code> to automatically build the category filter buttons based on the data in <code>faqItems</code>—no manual list needed!</p>
+            </div>
+            <div class="tech-item">
+                <strong>Multi-Open Logic</strong>
+                <p>The Accordion is set to <code>type="multiple"</code>, so you can open as many questions as you want at the same time to compare answers.</p>
+            </div>
+            <div class="tech-item">
+                <strong>Deep Matching</strong>
+                <p>The search logic is smart. It doesn’t just check the **Questions**; it also scans through every **Answer** to find the keyword you typed.</p>
+            </div>
+            <div class="tech-item">
+                <strong>Lucide Icons</strong>
+                <p>We use icons like <code>HelpCircle</code>, <code>Mail</code>, and <code>MessageSquare</code> to help users identify support actions instantly.</p>
+            </div>
+        </div>
+        <pre class="code-block" style="margin-top: 2rem;"><code>// Search logic checking both Q and A
+const matchSearch = f.question.includes(q) || f.answer.includes(q);</code></pre>
+    </div>
+</div>
+
+<!-- SECTION 05: HOW TO USE IT -->
+<div class="doc-section" style="margin-top: 5rem; border-top: 4px solid hsl(var(--border)); padding-top: 4rem;">
+    <span class="neo-section-title">05. How to use this page</span>
+    <p style="margin-bottom: 2rem;">Need an answer fast? Here’s the best way to get help:</p>
+    
+    <div class="grid-layout" style="grid-template-columns: repeat(3, 1fr);">
+        <div class="neo-card spotlight" style="padding: 1.5rem; text-align: left;">
+            <div style="font-weight: 800; font-size: 0.8rem; margin-bottom: 0.5rem;">STEP 1: TYPE A KEYWORD</div>
+            <p style="font-size: 0.75rem;">Instead of reading every question, type one word (like "Tax" or "Holiday") into the search bar for the fastest results.</p>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem; text-align: left;">
+            <div style="font-weight: 800; font-size: 0.8rem; margin-bottom: 0.5rem;">STEP 2: FILTER BY TOPIIC</div>
+            <p style="font-size: 0.75rem;">Use the **Category Buttons**. If you have a question about benefits, click the "Benefits" pill to hide everything else.</p>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem; text-align: left;">
+            <div style="font-weight: 800; font-size: 0.8rem; margin-bottom: 0.5rem;">STEP 3: COMPARE ANSWERS</div>
+            <p style="font-size: 0.75rem;">Click as many questions as you like. They will stay open so you can read through multiple answers at once.</p>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 06: ACCESS & PERMISSIONS -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">06. Who can do what? (RBAC)</span>
+    <table class="neo-table" style="margin-top: 2rem;">
+        <thead>
+            <tr>
+                <th>Action</th>
+                <th>Admin</th>
+                <th>HR</th>
+                <th>Manager</th>
+                <th>Employee</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Enter FAQ Module</td><td>✅ Yes</td><td>✅ Yes</td><td>✅ Yes</td><td>✅ Yes</td></tr>
+            <tr><td>View All Answers</td><td>✅ Yes</td><td>✅ Yes</td><td>✅ Yes</td><td>✅ Yes</td></tr>
+            <tr><td>Update FAQ Items</td><td>✅ Yes</td><td>✅ Yes</td><td>❌ No</td><td>❌ No</td></tr>
+            <tr><td>Live Chat Access</td><td>✅ Yes</td><td>✅ Yes</td><td>✅ Yes</td><td>✅ Yes</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="neo-card spotlight" style="margin-top: 5rem; background: hsl(var(--primary) / 0.1); border-style: dashed;">
+    <h3><i data-lucide="info"></i> Quick Tip</h3>
+    <p>Everything in the Help module is **Public to Employees**. We want you to find answers instantly without having to wait for an email back from HR!</p>
+</div>

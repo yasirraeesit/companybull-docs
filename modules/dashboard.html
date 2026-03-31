@@ -1,0 +1,149 @@
+<div class="module-hero">
+    <span class="neo-badge accent">Module 10: The Command Center</span>
+    <h2 class="gradient-text" style="font-size: 3.5rem;">Dashboard</h2>
+    <p class="module-summary" style="max-width: 800px;">The Dashboard is the "Nerve Center" of Company Bull. It’s a powerful, live overview of everything happening in the business—from workforce growth and recruitment to payroll and attendance trends. It’s designed to help leaders make data-driven decisions at a single glance.</p>
+</div>
+
+<!-- SECTION 01: THE BIG NUMBERS -->
+<div class="doc-section">
+    <span class="neo-section-title">01. Key Metrics (KPIs)</span>
+    <p style="margin-bottom: 2rem;">At the very top, you’ll see four colorful cards. These are the most important numbers for any manager to track. They show you exactly where you stand today compared to last month.</p>
+    
+    <div class="grid-layout" style="grid-template-columns: repeat(4, 1fr); gap: 1rem;">
+        <div class="stat-card" style="background: hsl(var(--primary)); color: white;">
+            <p style="font-size: 0.7rem; font-weight: 800; opacity: 0.8;">TOTAL EMPLOYEES</p>
+            <h4 style="font-size: 2.5rem; font-family: var(--font-mono);">71</h4>
+            <p style="font-size: 0.7rem;">📈 +3 this month</p>
+        </div>
+        <div class="stat-card" style="background: hsl(var(--secondary)); color: white;">
+            <p style="font-size: 0.7rem; font-weight: 800; opacity: 0.8;">DEPARTMENTS</p>
+            <h4 style="font-size: 2.5rem; font-family: var(--font-mono);">7</h4>
+            <p style="font-size: 0.7rem;">📈 2 new roles</p>
+        </div>
+        <div class="stat-card" style="background: hsl(var(--accent)); color: white;">
+            <p style="font-size: 0.7rem; font-weight: 800; opacity: 0.8;">ATTENDANCE</p>
+            <h4 style="font-size: 2.5rem; font-family: var(--font-mono);">95%</h4>
+            <p style="font-size: 0.7rem;">📈 +2% increase</p>
+        </div>
+        <div class="stat-card" style="background: hsl(210 100% 52%); color: white;">
+            <p style="font-size: 0.7rem; font-weight: 800; opacity: 0.8;">OPEN POSITIONS</p>
+            <h4 style="font-size: 2.5rem; font-family: var(--font-mono);">4</h4>
+            <p style="font-size: 0.7rem;">📈 12 applicants</p>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 02: THE CHART GALLERY -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">02. Visual Insights</span>
+    <p style="margin-bottom: 2rem;">Numbers can be boring, so we use beautiful charts to bring your data to life. These charts help you spot trends, like whether attendance is going up or which departments are the most expensive.</p>
+    
+    <div class="grid-layout" style="margin-top: 2rem;">
+        <div class="neo-card spotlight">
+            <h3><i data-lucide="bar-chart-3"></i> Workforce Map</h3>
+            <p>A simple bar chart showing how many people are in each department. It helps you see which teams are growing and which need more support.</p>
+        </div>
+        <div class="neo-card spotlight">
+            <h3><i data-lucide="line-chart"></i> Attendance Trend</h3>
+            <p>A smooth area chart that tracks daily attendance over the last 6 months. It’s perfect for seeing your seasonal "ups and downs."</p>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 03: THE ACTIVITY HEARTBEAT -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">03. The Live Heartbeat</span>
+    <div class="neo-card spotlight" style="margin-top: 2rem; background: hsl(var(--card)); border-style: solid;">
+        <h3><i data-lucide="zap"></i> Recent System Activity</h3>
+        <p>This is a live feed of everything your team is doing. It captures the "Who, What, and When" of every major change in the company.</p>
+        <div class="neo-card technical" style="margin-top: 2rem; background: hsl(var(--background));">
+            <div style="display: flex; align-items: center; gap: 1rem; padding: 0.5rem;">
+                <div class="neo-badge">User Plus</div>
+                <p style="font-size: 0.8rem; font-weight: 800;">John Doe <strong>hired</strong> Sarah Jane</p>
+                <div style="margin-left: auto; font-family: var(--font-mono); font-size: 0.7rem; opacity: 0.5;">2m ago</div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 1rem; padding: 0.5rem; border-top: 1px solid #eee;">
+                <div class="neo-badge">Dollar Sign</div>
+                <p style="font-size: 0.8rem; font-weight: 800;">Payroll <strong>processed</strong> for Marketing</p>
+                <div style="margin-left: auto; font-family: var(--font-mono); font-size: 0.7rem; opacity: 0.5;">1h ago</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 04: ENGINEERING BLUEPRINT -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">04. Engineering Blueprint</span>
+    <div class="neo-card technical">
+        <h3><i data-lucide="terminal"></i> Behind the Scenes (Code)</h3>
+        <p style="color: hsl(var(--secondary)); font-weight: 700;">How we built this high-performance landing page:</p>
+        <div class="tech-grid" style="margin-top: 2rem;">
+            <div class="tech-item">
+                <strong>Recharts Lab</strong>
+                <p>We use <strong>Recharts</strong> for every visual. They are "Responsive," meaning they resize perfectly for mobile phones or huge monitors.</p>
+            </div>
+            <div class="tech-item">
+                <strong>Role Filtering</strong>
+                <p>The <code>visibleStats</code> array uses a role-check to hide sensitive data (like Salary) if you are just a regular Employee.</p>
+            </div>
+            <div class="tech-item">
+                <strong>Framer Motion</strong>
+                <p>The small "slide-in" effects on the stats and activity use <code>StaggerContainer</code> to make the page feel alive.</p>
+            </div>
+            <div class="tech-item">
+                <strong>Custom Tooltips</strong>
+                <p>Every chart has a custom <code>Tooltip</code> that uses the Neo-Brutalist shadow and font style to match our app.</p>
+            </div>
+        </div>
+        <pre class="code-block" style="margin-top: 2rem;"><code>// Role Distribution Logic
+{ name: "Admin", value: employees.filter((e) => e.role === "Admin").length }</code></pre>
+    </div>
+</div>
+
+<!-- SECTION 05: HOW TO USE IT -->
+<div class="doc-section" style="margin-top: 5rem; border-top: 4px solid hsl(var(--border)); padding-top: 4rem;">
+    <span class="neo-section-title">05. How to use this page</span>
+    <p style="margin-bottom: 2rem;">Ready to direct your team? Here’s the best way to leverage the Dashboard:</p>
+    
+    <div class="grid-layout" style="grid-template-columns: repeat(3, 1fr);">
+        <div class="neo-card spotlight" style="padding: 1.5rem; text-align: left;">
+            <div style="font-weight: 800; font-size: 0.8rem; margin-bottom: 0.5rem;">STEP 1: SCAN THE KPIS</div>
+            <p style="font-size: 0.75rem;">Check the top row of cards first. If any color turns red or shows a downward trend, you should investigate those modules immediately.</p>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem; text-align: left;">
+            <div style="font-weight: 800; font-size: 0.8rem; margin-bottom: 0.5rem;">STEP 2: PIPELINE CHECK</div>
+            <p style="font-size: 0.75rem;">Admins and HR should check the <strong>Recruitment Pipeline</strong> pie chart to see how many people are stuck in the "Interview" phase.</p>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem; text-align: left;">
+            <div style="font-weight: 800; font-size: 0.8rem; margin-bottom: 0.5rem;">STEP 3: ACTIVITY CATCH-UP</div>
+            <p style="font-size: 0.75rem;">Before starting your tasks, scroll the <strong>Recent Activity</strong> list at the bottom to see what has changed since you last logged in.</p>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 06: ACCESS & PERMISSIONS -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">06. Who can see what? (RBAC)</span>
+    <table class="neo-table" style="margin-top: 2rem;">
+        <thead>
+            <tr>
+                <th>Element</th>
+                <th>Admin</th>
+                <th>HR</th>
+                <th>Manager</th>
+                <th>Employee</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Total Employees</td><td>✅ Yes</td><td>✅ Yes</td><td>✅ Yes</td><td>❌ No</td></tr>
+            <tr><td>Open Positions</td><td>✅ Yes</td><td>✅ Yes</td><td>❌ No</td><td>❌ No</td></tr>
+            <tr><td>Activity Feed</td><td>✅ Yes</td><td>✅ Yes</td><td>✅ Yes</td><td>✅ Yes</td></tr>
+            <tr><td>Salary Charts</td><td>✅ Yes</td><td>✅ Yes</td><td>❌ No</td><td>❌ No</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="neo-card spotlight" style="margin-top: 5rem; background: hsl(var(--secondary) / 0.1); border-style: dashed;">
+    <h3><i data-lucide="info"></i> Quick Tip</h3>
+    <p>Everything on the Dashboard is **Cached**. It loads the latest data from the central API every time you log in, so you’re always seeing the real truth.</p>
+</div>

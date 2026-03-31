@@ -1,0 +1,125 @@
+<div class="module-hero">
+    <span class="neo-badge accent">Module 04: The Newsroom</span>
+    <h2 class="gradient-text" style="font-size: 3.5rem;">Announcements</h2>
+    <p class="module-summary" style="max-width: 800px;">The Announcements module is where the whole company stays connected. It’s like a digital bulletin board where you can see the latest news, updates from HR, or technical wins from the engineering team. We made it clear and easy to read so you never miss an important update.</p>
+</div>
+
+<!-- SECTION 01: PINNED VS REGULAR -->
+<div class="doc-section">
+    <span class="neo-section-title">01. Important News Stays at the Top</span>
+    <p style="margin-bottom: 2rem;">Some news is too important to miss! We use a "Pinning" system to make sure critical updates stay at the very top of the list, even when new messages are added.</p>
+    
+    <div class="grid-layout">
+        <div class="neo-card spotlight">
+            <h3><i data-lucide="pin"></i> Pinned Posts</h3>
+            <p>If an announcement is "Pinned," it gets a special light-purple background and a pin icon. This tells everyone, "Hey, read this first!"</p>
+        </div>
+        <div class="neo-card spotlight">
+            <h3><i data-lucide="megaphone"></i> Regular News</h3>
+            <p>Normal updates appear below the pinned ones in chronological order. They are clean, simple, and easy to scroll through.</p>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 02: CATEGORIZATION GUIDE -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">02. Colored Categories</span>
+    <p style="margin-bottom: 2rem;">To help you find what you’re looking for, every announcement has a colored "Badge." This tells you which department the news is coming from.</p>
+    
+    <div class="grid-layout" style="grid-template-columns: repeat(5, 1fr); gap: 1rem; text-align: center;">
+        <div class="neo-badge" style="background: hsl(var(--primary) / 0.1); color: hsl(var(--primary));">Company</div>
+        <div class="neo-badge" style="background: hsl(280 65% 55% / 0.1); color: hsl(280 65% 55%);">HR</div>
+        <div class="neo-badge" style="background: hsl(220 70% 50% / 0.1); color: hsl(220 70% 50%);">Engineering</div>
+        <div class="neo-badge" style="background: hsl(38 92% 50% / 0.1); color: hsl(38 92% 50%);">Facilities</div>
+        <div class="neo-badge" style="background: hsl(142 72% 40% / 0.1); color: hsl(142 72% 40%);">Sales</div>
+    </div>
+</div>
+
+<!-- SECTION 03: POSTING UPDATES -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">03. Posting New Updates</span>
+    <div class="neo-card spotlight" style="margin-top: 2rem;">
+        <h3><i data-lucide="plus-circle"></i> The "New Announcement" Button</h3>
+        <p>If you are an <strong>Admin</strong>, <strong>HR</strong>, or <strong>Manager</strong>, you will see a "New Announcement" button. When you click it, a simple form slides down so you can write your message.</p>
+        <ul class="feat-list" style="margin-top: 1.5rem;">
+            <li><span class="feat-tag">Title</span> Grab people's attention.</li>
+            <li><span class="feat-tag">Content</span> Write the full message.</li>
+            <li><span class="feat-tag">Publish</span> Send it to the board instantly!</li>
+        </ul>
+    </div>
+</div>
+
+<!-- SECTION 04: ENGINEERING BLUEPRINT -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">04. Engineering Blueprint</span>
+    <div class="neo-card technical">
+        <h3><i data-lucide="terminal"></i> Technical Details (For Developers)</h3>
+        <p style="color: hsl(var(--secondary)); font-weight: 700;">Here’s how we built the code for this module:</p>
+        <div class="tech-grid" style="margin-top: 2rem;">
+            <div class="tech-item">
+                <strong>Components</strong>
+                <p>Card, Badge, Avatar, Button, Textarea, Input.</p>
+            </div>
+            <div class="tech-item">
+                <strong>State</strong>
+                <p><code>showForm</code> (boolean: toggles the "New Announcement" editor).</p>
+            </div>
+            <div class="tech-item">
+                <strong>Icons</strong>
+                <p>Lucide-React (Pin, Megaphone, Plus).</p>
+            </div>
+            <div class="tech-item">
+                <strong>Context</strong>
+                <p><code>useAuth</code> check: <code>hasAccess("Admin", "HR", "Manager")</code>.</p>
+            </div>
+        </div>
+        <pre class="code-block" style="margin-top: 2rem;"><code>// Splitting Pinned vs Regular Items
+const pinned = announcements.filter((a) => a.pinned);
+const rest = announcements.filter((a) => !a.pinned);</code></pre>
+    </div>
+</div>
+
+<!-- SECTION 05: ACCESS & PERMISSIONS -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">05. Who can do what? (RBAC)</span>
+    <table class="neo-table" style="margin-top: 2rem;">
+        <thead>
+            <tr>
+                <th>Role</th>
+                <th>Can Read News?</th>
+                <th>Can Post New News?</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Admin</td><td>✅ Yes</td><td>✅ Yes</td></tr>
+            <tr><td>HR</td><td>✅ Yes</td><td>✅ Yes</td></tr>
+            <tr><td>Manager</td><td>✅ Yes</td><td>✅ Yes</td></tr>
+            <tr><td>Employee</td><td>✅ Yes</td><td>❌ No</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="doc-section" style="margin-top: 5rem; border-top: 4px solid hsl(var(--border)); padding-top: 4rem;">
+    <span class="neo-section-title">06. How to use this page</span>
+    <p style="margin-bottom: 2rem;">Want to stay in the loop? Here’s how to use the Announcements board:</p>
+    
+    <div class="grid-layout" style="grid-template-columns: repeat(3, 1fr);">
+        <div class="neo-card spotlight" style="padding: 1.5rem; text-align: left;">
+            <div style="font-weight: 800; font-size: 0.8rem; margin-bottom: 0.5rem;">STEP 1: CHECK THE PINNED</div>
+            <p style="font-size: 0.75rem;">Always look at the top of the list first. If there’s urgent news, it will be "Pinned" there with a special icon.</p>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem; text-align: left;">
+            <div style="font-weight: 800; font-size: 0.8rem; margin-bottom: 0.5rem;">STEP 2: SCAN THE COLORS</div>
+            <p style="font-size: 0.75rem;">Look at the colored badges to quickly find news from your specific department or from HR.</p>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem; text-align: left;">
+            <div style="font-weight: 800; font-size: 0.8rem; margin-bottom: 0.5rem;">STEP 3: POST A MESSAGE</div>
+            <p style="font-size: 0.75rem;">If you’re a manager, use the <strong>Plus (+)</strong> button to start writing. Your team will see it instantly!</p>
+        </div>
+    </div>
+</div>
+
+<div class="neo-card spotlight" style="margin-top: 5rem; background: hsl(var(--secondary) / 0.1); border-style: dashed;">
+    <h3><i data-lucide="info"></i> Quick Tip</h3>
+    <p>Announcements use the <strong>Avatar</strong> component. If an author doesn't have a photo, it automatically shows their initials (like "JD" for John Doe) in the primary color!</p>
+</div>

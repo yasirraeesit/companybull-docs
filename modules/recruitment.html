@@ -1,0 +1,161 @@
+<div class="module-hero">
+    <span class="neo-badge accent">Module 26: The Hiring Hub</span>
+    <h2 class="gradient-text" style="font-size: 3.5rem;">Recruitment</h2>
+    <p class="module-summary" style="max-width: 800px;">The Recruitment module is the company's "Grow Gear." It’s where HR and Admins track every open job role and watch as candidates move from "Applied" to "Hired." It’s designed to ensure we find the best talent and keep the hiring process moving fast.</p>
+</div>
+
+<!-- SECTION 01: OPEN POSITIONS TABLE -->
+<div class="doc-section">
+    <span class="neo-section-title">01. Active Job Board</span>
+    <p style="margin-bottom: 2rem;">When we need a new team member, it starts here. The **Open Positions** table lists every active job role. You can see the department, where the role is located (like Remote or NY), and exactly how many people have already sent in their resumes.</p>
+    
+    <div class="neo-card spotlight" style="padding: 2rem; background: hsl(var(--card)); border-style: solid;">
+        <table class="neo-table">
+            <thead>
+                <tr>
+                    <th>Position</th>
+                    <th>Location</th>
+                    <th>Applicants</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="font-weight: 800;">Senior React Dev</td>
+                    <td><i data-lucide="map-pin"></i> Remote</td>
+                    <td><i data-lucide="users"></i> 12</td>
+                    <td><div class="neo-badge">Open</div></td>
+                </tr>
+                <tr>
+                    <td style="font-weight: 800;">Product Manager</td>
+                    <td><i data-lucide="map-pin"></i> NY</td>
+                    <td><i data-lucide="users"></i> 5</td>
+                    <td><div class="neo-badge" style="opacity: 0.5;">Closed</div></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- SECTION 02: TALENT PIPELINE -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">02. The Candidate Roadmap</span>
+    <p style="margin-bottom: 2rem;">Once a candidate applies, they enter the **Hiring Pipeline**. We’ve broken this down into five colorful stages. As a candidate passes their tests, HR "moves" them from left to right—from their first application to finally signing their contract!</p>
+    
+    <div class="grid-layout" style="grid-template-columns: repeat(3, 1fr); gap: 1rem;">
+        <div class="neo-card spotlight" style="padding: 1.5rem; background: hsl(var(--primary) / 0.05); border-color: hsl(var(--primary) / 0.2);">
+            <div style="display:flex; justify-content: space-between; margin-bottom: 1rem;">
+                <h4 style="font-weight: 900; font-size: 0.75rem;">APPLIED</h4>
+                <div class="neo-badge">4</div>
+            </div>
+            <div style="font-size: 0.7rem; background: hsl(var(--card)); border: 1px solid #ddd; padding: 5px; border-radius: 4px; margin-bottom: 5px;">Sarah J.</div>
+            <div style="font-size: 0.7rem; background: hsl(var(--card)); border: 1px solid #ddd; padding: 5px; border-radius: 4px;">Mark T.</div>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem; background: hsl(38 92% 50% / 0.05); border-color: hsl(38 92% 50% / 0.2);">
+            <div style="display:flex; justify-content: space-between; margin-bottom: 1rem;">
+                <h4 style="font-weight: 900; font-size: 0.75rem; color: hsl(38 92% 50%);">INTERVIEW</h4>
+                <div class="neo-badge">2</div>
+            </div>
+            <div style="font-size: 0.7rem; background: hsl(var(--card)); border: 1px solid #ddd; padding: 5px; border-radius: 4px;">Emily R.</div>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem; background: hsl(142 72% 40% / 0.05); border-color: hsl(142 72% 40% / 0.2);">
+            <div style="display:flex; justify-content: space-between; margin-bottom: 1rem;">
+                <h4 style="font-weight: 900; font-size: 0.75rem; color: hsl(142 72% 40%);">OFFER</h4>
+                <div class="neo-badge">1</div>
+            </div>
+            <div style="font-size: 0.7rem; background: hsl(var(--card)); border: 1px solid #ddd; padding: 5px; border-radius: 4px;">David L.</div>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 03: ACCESS RESTRICTION -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">03. High-Security Hiring</span>
+    <div class="neo-card spotlight" style="margin-top: 2rem; background: hsl(var(--card)); border-style: dashed; padding: 2.5rem; text-align: center;">
+        <h3><i data-lucide="shield-alert"></i> Access Restricted</h3>
+        <p>Hiring is sensitive! Regular employees and even some managers cannot enter this portal. Only the **HR** and **Admin** teams have the "Keys" to see candidate names and job statuses. If anyone else tries to enter, the system blocks them automatically.</p>
+        <div style="margin-top: 1.5rem;">
+           <span class="neo-badge" style="background: hsl(var(--card));">HR ONLY</span>
+           <span class="neo-badge" style="background: hsl(var(--card));">ADMIN ONLY</span>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 04: ENGINEERING BLUEPRINT -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">04. Engineering Blueprint</span>
+    <div class="neo-card technical">
+        <h3><i data-lucide="terminal"></i> Behind the Scenes (Code)</h3>
+        <p style="color: hsl(var(--secondary)); font-weight: 700;">How we handle the recruitment flow:</p>
+        <div class="tech-grid" style="margin-top: 2rem;">
+            <div class="tech-item">
+                <strong>Staggered Pipelines</strong>
+                <p>We use <code>StaggerContainer</code> to animate the stages. When you load the page, the cards slide in one by one from left to right (Applied → Hired).</p>
+            </div>
+            <div class="tech-item">
+                <strong>Stage Styling</strong>
+                <p>The <code>STAGE_COLORS</code> array maps each stage to its own signature color, like Orange for Interviews and Green for Offers.</p>
+            </div>
+            <div class="tech-item">
+                <strong>Auth Gating</strong>
+                <p>We check <code>hasAccess("Admin", "HR")</code> at the top of the file. If you don't have permission, the app returns a "Blocked" screen before any data is even fetched.</p>
+            </div>
+            <div class="tech-item">
+                <strong>Candidate Mapping</strong>
+                <p>The pipeline is "Nested." We loop through the **Stages**, and then inside each stage, we loop through the **Candidates** to draw their name tags.</p>
+            </div>
+        </div>
+        <pre class="code-block" style="margin-top: 2rem;"><code>// Protecting the route
+if (!hasAccess("Admin", "HR")) {
+  return <AccessRestrictedView />;
+}</code></pre>
+    </div>
+</div>
+
+<!-- SECTION 05: HOW TO USE IT -->
+<div class="doc-section" style="margin-top: 5rem; border-top: 4px solid hsl(var(--border)); padding-top: 4rem;">
+    <span class="neo-section-title">05. How to use this page</span>
+    <p style="margin-bottom: 2rem;">Running the hiring team? Here’s the best way to leverage Recruitment:</p>
+    
+    <div class="grid-layout" style="grid-template-columns: repeat(3, 1fr);">
+        <div class="neo-card spotlight" style="padding: 1.5rem; text-align: left;">
+            <div style="font-weight: 800; font-size: 0.8rem; margin-bottom: 0.5rem;">STEP 1: ADD A JOB ROLE</div>
+            <p style="font-size: 0.75rem;">Click the **+ New Posting** button at the top right to start a search for a new team member. It will appear in the table instantly.</p>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem; text-align: left;">
+            <div style="font-weight: 800; font-size: 0.8rem; margin-bottom: 0.5rem;">STEP 2: WATCH THE PIPELINE</div>
+            <p style="font-size: 0.75rem;">Check the **Hiring Pipeline** every morning. If a candidate is stuck in "Phone Screen" for a week, reach out to their recruiter!</p>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem; text-align: left;">
+            <div style="font-weight: 800; font-size: 0.8rem; margin-bottom: 0.5rem;">STEP 3: SEND AN OFFER</div>
+            <p style="font-size: 0.75rem;">Once a candidate finishes their final interview, move them to the green **Offer** stage to start the background check.</p>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 06: ACCESS & PERMISSIONS -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">06. Who can do what? (RBAC)</span>
+    <table class="neo-table" style="margin-top: 2rem;">
+        <thead>
+            <tr>
+                <th>Action</th>
+                <th>Admin</th>
+                <th>HR</th>
+                <th>Manager</th>
+                <th>Employee</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Enter Recruitment Hub</td><td>✅ Yes</td><td>✅ Yes</td><td>❌ No</td><td>❌ No</td></tr>
+            <tr><td>See Candidate Names</td><td>✅ Yes</td><td>✅ Yes</td><td>❌ No</td><td>❌ No</td></tr>
+            <tr><td>Post New Job</td><td>✅ Yes</td><td>✅ Yes</td><td>❌ No</td><td>❌ No</td></tr>
+            <tr><td>Move Candidate Stages</td><td>✅ Yes</td><td>✅ Yes</td><td>❌ No</td><td>❌ No</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="neo-card spotlight" style="margin-top: 5rem; background: hsl(var(--primary) / 0.1); border-style: dashed;">
+    <h3><i data-lucide="info"></i> Quick Tip</h3>
+    <p>The Recruitment module is **Locked to Employees**. This ensures that the privacy of applicants is protected and our internal teams aren't distracted by "who's being interviewed!"</p>
+</div>

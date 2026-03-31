@@ -1,0 +1,153 @@
+<div class="module-hero">
+    <span class="neo-badge accent">Module 07: The Security Log</span>
+    <h2 class="gradient-text" style="font-size: 3.5rem;">Audit Log</h2>
+    <p class="module-summary" style="max-width: 800px;">The Audit Log is the company’s "Security Camera." It records every important action taken by every user in the app. This makes sure there’s total transparency and accountability for every change, from hiring new people to processing payroll.</p>
+</div>
+
+<!-- SECTION 01: EVENT TRACKERS -->
+<div class="doc-section">
+    <span class="neo-section-title">01. At-a-Glance Trackers</span>
+    <p style="margin-bottom: 2rem;">At the top of the page, you'll see three cards that give you a high-level overview of system activity. This helps you quickly see how busy the system has been lately.</p>
+    
+    <div class="grid-layout" style="grid-template-columns: repeat(3, 1fr); gap: 1rem;">
+        <div class="stat-card">
+            <h4><i data-lucide="shield" style="width: 24px; vertical-align: middle;"></i> 200+</h4>
+            <p>Total Events</p>
+        </div>
+        <div class="stat-card" style="border-color: hsl(38, 92%, 50%);">
+            <h4><i data-lucide="calendar" style="width: 24px; vertical-align: middle;"></i> 45</h4>
+            <p>This Month</p>
+        </div>
+        <div class="stat-card" style="border-color: hsl(280, 65%, 55%);">
+            <h4><i data-lucide="users" style="width: 24px; vertical-align: middle;"></i> 12</h4>
+            <p>Active Users</p>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 02: FINDING THE NEEDLE -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">02. Search & Filter System</span>
+    <div class="grid-layout" style="margin-top: 2rem;">
+        <div class="neo-card spotlight">
+            <h3><i data-lucide="search"></i> The Search Bar</h3>
+            <p>You can search for anything—a user's name, a specific department, or even a detail like "Payroll Processed." The table updates instantly as you type.</p>
+        </div>
+        <div class="neo-card spotlight">
+            <h3><i data-lucide="filter"></i> Action Dropdown</h3>
+            <p>To narrow things down, you can filter by <strong>Action Type</strong>. For example, if you only want to see "Leave Requests," you can select that from the dropdown to hide everything else.</p>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 03: THE COLOR CODE OF ACTIONS -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">03. The Color Code of Actions</span>
+    <p style="margin-bottom: 2rem;">Every action in the log has a colored "Badge." This helps you scan the list and understand the "Mood" of the action in half a second.</p>
+    
+    <div class="grid-layout" style="grid-template-columns: repeat(4, 1fr); gap: 1rem; text-align: center;">
+        <div class="neo-card spotlight" style="padding: 1.5rem;">
+            <div class="neo-badge" style="background: hsl(142 72% 40% / 0.1); color: hsl(142 72% 40%); width: 100%;">GREEN</div>
+            <p style="font-size: 0.7rem; margin-top: 0.5rem;">Creation / Approval</p>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem;">
+            <div class="neo-badge" style="background: hsl(0 84% 60% / 0.1); color: hsl(0 84% 60%); width: 100%;">RED</div>
+            <p style="font-size: 0.7rem; margin-top: 0.5rem;">Rejection / Delete</p>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem;">
+            <div class="neo-badge" style="background: hsl(var(--primary) / 0.1); color: hsl(var(--primary)); width: 100%;">PURPLE</div>
+            <p style="font-size: 0.7rem; margin-top: 0.5rem;">Payroll / Process</p>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem;">
+            <div class="neo-badge" style="background: hsl(var(--muted) / 1); color: hsl(var(--muted-foreground)); width: 100%;">GREY</div>
+            <p style="font-size: 0.7rem; margin-top: 0.5rem;">Settings / Misc</p>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 04: CSV EXPORT ENGINE -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">04. The Data Export Engine</span>
+    <div class="neo-card spotlight" style="margin-top: 2rem; background: hsl(var(--card)); border-style: solid;">
+        <h3><i data-lucide="download"></i> Download Audit Log (CSV)</h3>
+        <p>This is a powerful feature that lets you download the entire history as a <strong>CSV file</strong> (which works in Excel). Unlike other "Export" buttons in the app, this one is fully functional!</p>
+        <div class="neo-card technical" style="margin-top: 2rem; background: hsl(var(--background));">
+            <div style="font-weight: 800; font-size: 0.7rem; margin-bottom: 0.5rem;">The Code Logic (Blob)</div>
+            <p style="font-size: 0.75rem;">We generate a "Blob" of text in the browser, create a temporary link, and "click" it automatically to start the download.</p>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 05: ENGINEERING BLUEPRINT -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">05. Engineering Blueprint</span>
+    <div class="neo-card technical">
+        <h3><i data-lucide="terminal"></i> Behind the Scenes (Code)</h3>
+        <p style="color: hsl(var(--secondary)); font-weight: 700;">Here’s the developer’s "recipe" for the Audit Log:</p>
+        <div class="tech-grid" style="margin-top: 2rem;">
+            <div class="tech-item">
+                <strong>Filtering Logic</strong>
+                <p>We use <code>toLowerCase()</code> and <code>includes()</code> to filter through thousands of logs instantly while the user types.</p>
+            </div>
+            <div class="tech-item">
+                <strong>Action Mapping</strong>
+                <p>A simple object called <code>actionColors</code> maps every possible action string to a color CSS class.</p>
+            </div>
+            <div class="tech-item">
+                <strong>Components</strong>
+                <p>Badge, Card, Input, Select, Table.</p>
+            </div>
+            <div class="tech-item">
+                <strong>Export API</strong>
+                <p>Uses the standard <code>Blob</code> and <code>URL.createObjectURL</code> browser APIs.</p>
+            </div>
+        </div>
+        <pre class="code-block" style="margin-top: 2rem;"><code>// Finding dynamic unique actions from the logs
+const actions = [...new Set(auditLog.map((l) => l.action))];</code></pre>
+    </div>
+</div>
+
+<!-- SECTION 06: ACCESS & PERMISSIONS -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">06. Who can see this? (RBAC)</span>
+    <table class="neo-table" style="margin-top: 2rem;">
+        <thead>
+            <tr>
+                <th>Role</th>
+                <th>Can View Logs?</th>
+                <th>Can Export Logs?</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Admin</td><td>✅ Yes</td><td>✅ Yes</td></tr>
+            <tr><td>HR</td><td>✅ Yes</td><td>✅ Yes</td></tr>
+            <tr><td>Manager</td><td>❌ No</td><td>❌ No</td></tr>
+            <tr><td>Employee</td><td>❌ No</td><td>❌ No</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="doc-section" style="margin-top: 5rem; border-top: 4px solid hsl(var(--border)); padding-top: 4rem;">
+    <span class="neo-section-title">07. How to use this page</span>
+    <p style="margin-bottom: 2rem;">Investigating an event? Here’s how to use the Audit Log effectively:</p>
+    
+    <div class="grid-layout" style="grid-template-columns: repeat(3, 1fr);">
+        <div class="neo-card spotlight" style="padding: 1.5rem; text-align: left;">
+            <div style="font-weight: 800; font-size: 0.8rem; margin-bottom: 0.5rem;">STEP 1: USE THE SEARCH</div>
+            <p style="font-size: 0.75rem;">Type a name or action (like "Payroll") into the search bar. This filters the list to only show matching rows.</p>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem; text-align: left;">
+            <div style="font-weight: 800; font-size: 0.8rem; margin-bottom: 0.5rem;">STEP 2: FILTER BY ACTION</div>
+            <p style="font-size: 0.75rem;">Use the dropdown to see only specific types of events, like "Leave Approved" or "Employee Created."</p>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem; text-align: left;">
+            <div style="font-weight: 800; font-size: 0.8rem; margin-bottom: 0.5rem;">STEP 3: DOWNLOAD CSV</div>
+            <p style="font-size: 0.75rem;">Click the <strong>Export CSV</strong> button at the top right to download the logs for offline analysis or auditing.</p>
+        </div>
+    </div>
+</div>
+
+<div class="neo-card spotlight" style="margin-top: 5rem; background: hsl(var(--primary) / 0.1); border-style: dashed;">
+    <h3><i data-lucide="info"></i> Privacy Note</h3>
+    <p>Safety first! Only **Admin** and **HR** roles can see the Audit Log. Even Managers are restricted from this view, as it contains sensitive data about role changes and payroll processing.</p>
+</div>

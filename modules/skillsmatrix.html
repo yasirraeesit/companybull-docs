@@ -1,0 +1,165 @@
+<div class="module-hero">
+    <span class="neo-badge accent">Module 28: The Talent Map</span>
+    <h2 class="gradient-text" style="font-size: 3.5rem;">Skills Matrix</h2>
+    <p class="module-summary" style="max-width: 800px;">The Skills Matrix is the company's "Brainpower Map." It’s a powerful grid that shows exactly what every person is good at. From coding to project management, this tool helps you find the right expert for any project and identifies where the team might need more training.</p>
+</div>
+
+<!-- SECTION 01: THE COMPETENCY GRID -->
+<div class="doc-section">
+    <span class="neo-section-title">01. The Skills vs. Staff Grid</span>
+    <p style="margin-bottom: 2rem;">The heart of this module is the **Mastery Table**. Every row is an employee, and every column is a skill. At the intersection, you’ll see a percentage and a **Mini Progress Bar**. This gives you an instant "Visual Score" of how much that person knows about a certain topic.</p>
+    
+    <div class="neo-card spotlight" style="padding: 2.5rem; background: hsl(var(--card)); border-style: solid; overflow-x: auto;">
+        <table class="neo-table" style="min-width: 500px;">
+            <thead>
+                <tr>
+                    <th style="position: sticky; left: 0; background: hsl(var(--card)); z-index: 2;">Employee</th>
+                    <th>React</th>
+                    <th>Node.js</th>
+                    <th>Design</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="position: sticky; left: 0; background: hsl(var(--card)); font-weight: 800;">John Doe</td>
+                    <td>
+                        <div style="display: flex; flex-direction: column; align-items: center; gap: 4px;">
+                            <span style="font-weight: 900; color: #16a34a; font-size: 0.7rem;">95%</span>
+                            <div style="width: 50px; height: 6px; background: #eee; border-radius: 3px; overflow: hidden;"><div style="width: 95%; height: 100%; background: #16a34a;"></div></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div style="display: flex; flex-direction: column; align-items: center; gap: 4px;">
+                            <span style="font-weight: 900; color: #2563eb; font-size: 0.7rem;">82%</span>
+                            <div style="width: 50px; height: 6px; background: #eee; border-radius: 3px; overflow: hidden;"><div style="width: 82%; height: 100%; background: #2563eb;"></div></div>
+                        </div>
+                    </td>
+                    <td><span style="opacity: 0.2;">—</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- SECTION 02: MASTERY TIERS -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">02. Expert to Beginner Tiers</span>
+    <p style="margin-bottom: 2rem;">We don't just show numbers! Our system uses **Smart Labels** and colors to help you quickly identify top-tier talent. This makes it easy to find an "Expert" for a critical bug or a "Beginner" who might need extra help from a mentor.</p>
+    
+    <div class="grid-layout" style="grid-template-columns: repeat(4, 1fr); gap: 1rem; text-align: center;">
+        <div class="neo-card spotlight" style="padding: 1.5rem; border-color: #16a34a;">
+            <div class="neo-badge" style="background: rgba(34, 197, 94, 0.1); color: #16a34a; width: 100%;">Expert (90%+)</div>
+            <p style="font-size: 0.7rem; margin-top: 0.5rem;">Can lead projects</p>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem; border-color: #2563eb;">
+            <div class="neo-badge" style="background: rgba(37, 99, 235, 0.1); color: #2563eb; width: 100%;">Advanced (80%+)</div>
+            <p style="font-size: 0.7rem; margin-top: 0.5rem;">Works independently</p>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem; border-color: #f97316;">
+            <div class="neo-badge" style="background: rgba(249, 115, 22, 0.1); color: #f97316; width: 100%;">Intermediate (70%+)</div>
+            <p style="font-size: 0.7rem; margin-top: 0.5rem;">Standard proficiency</p>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem;">
+            <div class="neo-badge" style="width: 100%;">Beginner</div>
+            <p style="font-size: 0.7rem; margin-top: 0.5rem;">Developing knowledge</p>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 03: SKILL SUMMARY CARDS -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">03. Company-Wide Knowledge Stats</span>
+    <div class="neo-card spotlight" style="margin-top: 2rem; background: hsl(var(--card)); border-style: dashed; padding: 2.5rem; text-align: center;">
+        <h3><i data-lucide="bar-chart-3"></i> Average Skill Mastery</h3>
+        <p>At the bottom of the matrix, we show **Skill Summary Cards**. These boxes tell you the "Average Score" for each technology across the entire company. It’s an amazing way to see if your team is getting stronger over time.</p>
+        <div class="grid-layout" style="grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-top: 1.5rem;">
+            <div class="neo-card spotlight" style="padding: 1rem; text-align: left;">
+                <div style="display: flex; justify-content: space-between; font-weight: 800; font-size: 0.8rem; margin-bottom: 5px;">React <span class="neo-badge">85%</span></div>
+                <div style="height: 6px; background: #eee; border-radius: 3px; overflow: hidden;"><div style="width: 85%; height: 100%; background: #2563eb;"></div></div>
+                <p style="font-size: 0.6rem; margin-top: 5px; opacity: 0.5;">Used by 12 employees</p>
+            </div>
+            <div class="neo-card spotlight" style="padding: 1rem; text-align: left;">
+                <div style="display: flex; justify-content: space-between; font-weight: 800; font-size: 0.8rem; margin-bottom: 5px;">Python <span class="neo-badge">92%</span></div>
+                <div style="height: 6px; background: #eee; border-radius: 3px; overflow: hidden;"><div style="width: 92%; height: 100%; background: #16a34a;"></div></div>
+                <p style="font-size: 0.6rem; margin-top: 5px; opacity: 0.5;">Used by 5 employees</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 04: ENGINEERING BLUEPRINT -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">04. Engineering Blueprint</span>
+    <div class="neo-card technical">
+        <h3><i data-lucide="terminal"></i> Behind the Scenes (Code)</h3>
+        <p style="color: hsl(var(--secondary)); font-weight: 700;">How we built the competency map:</p>
+        <div class="tech-grid" style="margin-top: 2rem;">
+            <div class="tech-item">
+                <strong>Skill Aggregation</strong>
+                <p>We use <code>flatMap()</code> and <code>new Set()</code> to automatically pull every unique skill from hundreds of employee records into one single list.</p>
+            </div>
+            <div class="tech-item">
+                <strong>Sticky Headers</strong>
+                <p>We use <code>sticky left-0</code> and <code>bg-card</code> in CSS to make sure the "Employee Name" column stays visible even when you scroll the huge table sideways.</p>
+            </div>
+            <div class="tech-item">
+                <strong>Math for Averages</strong>
+                <p>The Summary Cards use a <code>.reduce()</code> loop to add up all scores and divide them by the number of experts to find the "Team Average."</p>
+            </div>
+            <div class="tech-item">
+                <strong>Grid Filtering</strong>
+                <p>The search bar doesn't just hide employees—it hides **Skill Columns**! If you search for "Java," only skills related to Java will stay visible in the table.</p>
+            </div>
+        </div>
+        <pre class="code-block" style="margin-top: 2rem;"><code>// Finding unique skills automatically
+const allSkills = [...new Set(employeeSkills.flatMap(es => es.skills.map(s => s.name)))].sort();</code></pre>
+    </div>
+</div>
+
+<!-- SECTION 05: HOW TO USE IT -->
+<div class="doc-section" style="margin-top: 5rem; border-top: 4px solid hsl(var(--border)); padding-top: 4rem;">
+    <span class="neo-section-title">05. How to use this page</span>
+    <p style="margin-bottom: 2rem;">Looking for an expert? Here’s the best way to leverage the Skills Matrix:</p>
+    
+    <div class="grid-layout" style="grid-template-columns: repeat(3, 1fr);">
+        <div class="neo-card spotlight" style="padding: 1.5rem; text-align: left;">
+            <div style="font-weight: 800; font-size: 0.8rem; margin-bottom: 0.5rem;">STEP 1: FILTER THE VIEW</div>
+            <p style="font-size: 0.75rem;">Type a specific technology (like "React") into the search bar. This hides all other columns so you can focus on one skill at a time.</p>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem; text-align: left;">
+            <div style="font-weight: 800; font-size: 0.8rem; margin-bottom: 0.5rem;">STEP 2: FIND THE GAPS</div>
+            <p style="font-size: 0.75rem;">Look at the **Skill Summary Cards**. If an important skill has a low average (e.g., 50%), it might be time to organize a training workshop!</p>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem; text-align: left;">
+            <div style="font-weight: 800; font-size: 0.8rem; margin-bottom: 0.5rem;">STEP 3: IDENTIFY LEADERS</div>
+            <p style="font-size: 0.75rem;">Search for the green **Expert** labels. These are your senior leads who can help mentor others and review code on high-risk projects.</p>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 06: ACCESS & PERMISSIONS -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">06. Who can do what? (RBAC)</span>
+    <table class="neo-table" style="margin-top: 2rem;">
+        <thead>
+            <tr>
+                <th>Action</th>
+                <th>Admin</th>
+                <th>HR</th>
+                <th>Manager</th>
+                <th>Employee</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Enter Matrix Module</td><td>✅ Yes</td><td>✅ Yes</td><td>✅ Yes</td><td>✅ Yes</td></tr>
+            <tr><td>View All Skill Scores</td><td>✅ Yes</td><td>✅ Yes</td><td>✅ Yes</td><td>✅ Yes</td></tr>
+            <tr><td>Update Own Skills</td><td>✅ Yes</td><td>✅ Yes</td><td>✅ Yes</td><td>✅ Yes</td></tr>
+            <tr><td>Update Others' Skills</td><td>✅ Yes</td><td>✅ Yes</td><td>❌ No</td><td>❌ No</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="neo-card spotlight" style="margin-top: 5rem; background: hsl(var(--primary) / 0.1); border-style: dashed;">
+    <h3><i data-lucide="info"></i> Quick Tip</h3>
+    <p>Everything in the Skills Matrix is **Public**. We want to encourage employees to find each other and collaborate on projects based on their strengths!</p>
+</div>

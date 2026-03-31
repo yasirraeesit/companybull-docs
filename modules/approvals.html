@@ -1,0 +1,157 @@
+<div class="module-hero">
+    <span class="neo-badge accent">Module 05: The Approvals Manager</span>
+    <h2 class="gradient-text" style="font-size: 3.5rem;">Approvals</h2>
+    <p class="module-summary" style="max-width: 800px;">The Approvals module is the company’s task-checker. It’s where managers and administrators review requests for things like time off, work expenses, or new equipment. It makes sure every decision is tracked and nothing gets forgotten.</p>
+</div>
+
+<!-- SECTION 01: THE DASHBOARD VIEW -->
+<div class="doc-section">
+    <span class="neo-section-title">01. At-a-Glance Dashboard</span>
+    <p style="margin-bottom: 2rem;">At the top of the page, there are three colorful cards that show the current status of all requests. This helps you quickly see how much work is left to do.</p>
+    
+    <div class="grid-layout" style="grid-template-columns: repeat(3, 1fr); gap: 1rem;">
+        <div class="stat-card" style="border-color: hsl(38 92% 50%);">
+            <h4><i data-lucide="clock" style="width: 24px; vertical-align: middle;"></i> Pending</h4>
+            <p>Waiting for a decision</p>
+        </div>
+        <div class="stat-card" style="border-color: hsl(142 72% 40%);">
+            <h4><i data-lucide="check-circle-2" style="width: 24px; vertical-align: middle;"></i> Approved</h4>
+            <p>Work is finished</p>
+        </div>
+        <div class="stat-card" style="border-color: hsl(var(--destructive));">
+            <h4><i data-lucide="x-circle" style="width: 24px; vertical-align: middle;"></i> Rejected</h4>
+            <p>Request denied</p>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 02: PENDING VS PROCESSED -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">02. Pending vs. Processed</span>
+    <div class="grid-layout" style="margin-top: 2rem;">
+        <div class="neo-card spotlight">
+            <h3><i data-lucide="shield-check"></i> Pending Tab</h3>
+            <p>This is your "To-Do" list. It shows every request that needs an answer right now. If there are no requests, you'll see a friendly "All caught up!" message.</p>
+        </div>
+        <div class="neo-card spotlight">
+            <h3><i data-lucide="history"></i> Processed Tab</h3>
+            <p>This is your "Archive." Once a request is approved or rejected, it moves here. It’s a great way to look back at past decisions for auditing.</p>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 03: REQUEST TYPES & ICONS -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">03. Request Types & Icons</span>
+    <p style="margin-bottom: 2rem;">Every request has a unique emoji and badge so you can quickly tell what it is about without reading the whole title.</p>
+    
+    <div class="grid-layout" style="grid-template-columns: repeat(4, 1fr); gap: 1rem; text-align: center;">
+        <div class="neo-card spotlight" style="padding: 1.5rem;">
+            <div style="font-size: 2rem;">🏖️</div>
+            <div style="font-weight: 800; font-size: 0.7rem; margin-top: 0.5rem;">LEAVE</div>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem;">
+            <div style="font-size: 2rem;">💰</div>
+            <div style="font-weight: 800; font-size: 0.7rem; margin-top: 0.5rem;">EXPENSE</div>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem;">
+            <div style="font-size: 2rem;">🛒</div>
+            <div style="font-weight: 800; font-size: 0.7rem; margin-top: 0.5rem;">PURCHASE</div>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem;">
+            <div style="font-size: 2rem;">📚</div>
+            <div style="font-weight: 800; font-size: 0.7rem; margin-top: 0.5rem;">TRAINING</div>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 04: HOW TO APPROVE OR REJECT -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">04. Taking Action</span>
+    <div class="neo-card spotlight" style="margin-top: 2rem; background: hsl(var(--card)); border-style: solid;">
+        <h3><i data-lucide="user-plus"></i> Approve or Reject</h3>
+        <p>If you have permission, you'll see two buttons on every request card:</p>
+        <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+            <div class="neo-badge" style="background: hsl(142 72% 40% / 0.1); color: hsl(142 72% 40%);">Approve Member</div>
+            <div class="neo-badge" style="background: hsl(0 84% 60% / 0.1); color: hsl(0 84% 60%);">Reject Request</div>
+        </div>
+        <p style="margin-top: 1.5rem; font-style: italic; font-size: 0.85rem;">Note: When you click a button, a "Toast" message appears to confirm it happened successfully.</p>
+    </div>
+</div>
+
+<!-- SECTION 05: ENGINEERING BLUEPRINT -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">05. Engineering Blueprint</span>
+    <div class="neo-card technical">
+        <h3><i data-lucide="terminal"></i> Behind the Scenes (Code)</h3>
+        <p style="color: hsl(var(--secondary)); font-weight: 700;">Here’s how we built the code for this module:</p>
+        <div class="tech-grid" style="margin-top: 2rem;">
+            <div class="tech-item">
+                <strong>Main Component</strong>
+                <p><code>Approvals.jsx</code></p>
+            </div>
+            <div class="tech-item">
+                <strong>Components</strong>
+                <p>Tabs, Card, Badge, Button, EmptyState.</p>
+            </div>
+            <div class="tech-item">
+                <strong>State</strong>
+                <p><code>items</code> (managed with <code>useState</code> to update UI immediately).</p>
+            </div>
+            <div class="tech-item">
+                <strong>Visibility Logic</strong>
+                <p>Managers see ALL; Employees see ONLY their own requests.</p>
+            </div>
+        </div>
+        <pre class="code-block" style="margin-top: 2rem;"><code>// Filtering Logic based on Role
+const visible = canApprove 
+  ? items 
+  : items.filter((r) => r.requesterId === user?.id);</code></pre>
+    </div>
+</div>
+
+<!-- SECTION 06: ACCESS & PERMISSIONS -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">06. Who can do what? (RBAC)</span>
+    <table class="neo-table" style="margin-top: 2rem;">
+        <thead>
+            <tr>
+                <th>Role</th>
+                <th>Can View Own?</th>
+                <th>Can View All?</th>
+                <th>Can Approve/Reject?</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Admin</td><td>✅ Yes</td><td>✅ Yes</td><td>✅ Yes</td></tr>
+            <tr><td>HR</td><td>✅ Yes</td><td>✅ Yes</td><td>✅ Yes</td></tr>
+            <tr><td>Manager</td><td>✅ Yes</td><td>✅ Yes</td><td>✅ Yes</td></tr>
+            <tr><td>Employee</td><td>✅ Yes</td><td>❌ No</td><td>❌ No</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="doc-section" style="margin-top: 5rem; border-top: 4px solid hsl(var(--border)); padding-top: 4rem;">
+    <span class="neo-section-title">07. How to use this page</span>
+    <p style="margin-bottom: 2rem;">Need to clear your desk? Here’s how to handle approval requests:</p>
+    
+    <div class="grid-layout" style="grid-template-columns: repeat(3, 1fr);">
+        <div class="neo-card spotlight" style="padding: 1.5rem; text-align: left;">
+            <div style="font-weight: 800; font-size: 0.8rem; margin-bottom: 0.5rem;">STEP 1: VIEW PENDING</div>
+            <p style="font-size: 0.75rem;">Start on the <strong>Pending</strong> tab. This is where all new requests show up for your review.</p>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem; text-align: left;">
+            <div style="font-weight: 800; font-size: 0.8rem; margin-bottom: 0.5rem;">STEP 2: TAKE ACTION</div>
+            <p style="font-size: 0.75rem;">Read the request details and click <strong>Approve</strong> or <strong>Reject</strong>. The item will vanish and move to the archive.</p>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem; text-align: left;">
+            <div style="font-weight: 800; font-size: 0.8rem; margin-bottom: 0.5rem;">STEP 3: CHECK HISTORY</div>
+            <p style="font-size: 0.75rem;">Switch to the <strong>Processed</strong> tab if you ever need to see a record of what you decided in the past.</p>
+        </div>
+    </div>
+</div>
+
+<div class="neo-card spotlight" style="margin-top: 5rem; background: hsl(var(--primary) / 0.1); border-style: dashed;">
+    <h3><i data-lucide="info"></i> Quick Tip</h3>
+    <p>We use the <strong>EmptyState</strong> component to make the page look clean when you are all caught up. No messy blank pages, just a clear "All caught up!" message.</p>
+</div>

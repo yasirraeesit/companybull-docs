@@ -1,0 +1,149 @@
+<div class="module-hero">
+    <span class="neo-badge accent">Module 16: The Money Tracker</span>
+    <h2 class="gradient-text" style="font-size: 3.5rem;">Expense Management</h2>
+    <p class="module-summary" style="max-width: 800px;">The Expense Management module is where we handle the company’s "Reimbursements." It’s a transparent system for employees to submit claims for travel, office supplies, or meals, and for managers to quickly approve or reject them to keep the budget on track.</p>
+</div>
+
+<!-- SECTION 01: THE FINANCIAL SCOREBOARD -->
+<div class="doc-section">
+    <span class="neo-section-title">01. The Monthly Scoreboard</span>
+    <p style="margin-bottom: 2rem;">At the very top, we show three colorful summary cards. These give you an instant "Pulse Check" of the company’s spending. It helps HR see how much money is currently "On Hold" (Pending) and how much has already been cleared.</p>
+    
+    <div class="grid-layout" style="grid-template-columns: repeat(3, 1fr); gap: 1rem;">
+        <div class="stat-card">
+            <h4><i data-lucide="dollar-sign" style="width: 24px; vertical-align: middle;"></i> Total</h4>
+            <p style="font-size: 1.5rem; font-weight: 900;">$15,200.00</p>
+            <p style="font-size: 0.7rem; opacity: 0.5;">All claims combined</p>
+        </div>
+        <div class="stat-card" style="border-color: hsl(38, 92%, 50%);">
+            <h4><i data-lucide="receipt" style="width: 24px; vertical-align: middle;"></i> Pending</h4>
+            <p style="font-size: 1.5rem; font-weight: 900; color: hsl(38, 92%, 50%);">$4,500.00</p>
+            <p style="font-size: 0.7rem; opacity: 0.5;">Needs approval</p>
+        </div>
+        <div class="stat-card" style="border-color: hsl(142, 72%, 40%);">
+            <h4><i data-lucide="check-circle-2" style="width: 24px; vertical-align: middle;"></i> Approved</h4>
+            <p style="font-size: 1.5rem; font-weight: 900; color: hsl(142, 72%, 40%);">$10,700.00</p>
+            <p style="font-size: 0.7rem; opacity: 0.5;">Ready to pay</p>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 02: CATEGORIZATION -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">02. Claim Status Guide</span>
+    <p style="margin-bottom: 2rem;">Every expense is tracked with a status badge. This ensures that employees always know exactly where their money is in the system, and managers know which ones require an urgent signature.</p>
+    
+    <div class="grid-layout" style="grid-template-columns: repeat(3, 1fr); gap: 1rem; text-align: center;">
+        <div class="neo-card spotlight" style="padding: 1.5rem;">
+            <div class="neo-badge" style="background: hsl(38 92% 50% / 0.1); color: hsl(38 92% 50%); width: 100%;">Pending</div>
+            <p style="font-size: 0.7rem; margin-top: 0.5rem;">Waiting for review</p>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem;">
+            <div class="neo-badge" style="background: hsl(142 72% 40% / 0.1); color: hsl(142 72% 40%); width: 100%;">Approved</div>
+            <p style="font-size: 0.7rem; margin-top: 0.5rem;">Verified and cleared</p>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem;">
+            <div class="neo-badge" style="background: hsl(0 84% 60% / 0.1); color: hsl(0 84% 60%); width: 100%;">Rejected</div>
+            <p style="font-size: 0.7rem; margin-top: 0.5rem;">Returned for details</p>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 03: RECEIPT VALIDATION -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">03. The Paper Trail (Receipts)</span>
+    <div class="neo-card spotlight" style="margin-top: 2rem; background: hsl(var(--card)); border-style: solid;">
+        <h3><i data-lucide="camera"></i> Receipt Verification</h3>
+        <p>No receipt, no reimbursement! Our system uses simple symbols in the table so managers don't even have to open a file to see if the "Proof of Purchase" was attached.</p>
+        <div class="neo-card technical" style="margin-top: 2rem; background: hsl(var(--background));">
+            <div style="display: flex; align-items: center; gap: 2rem; justify-content: center;">
+                <div style="text-align: center;">
+                    <span style="font-size: 1.5rem; color: hsl(142, 72%, 40%); font-weight: 900;">✓</span>
+                    <p style="font-size: 0.7rem;">Attached</p>
+                </div>
+                <div style="text-align: center;">
+                    <span style="font-size: 1.5rem; color: hsl(0, 84%, 60%); font-weight: 900;">✗</span>
+                    <p style="font-size: 0.7rem;">Missing</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 04: ENGINEERING BLUEPRINT -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">04. Engineering Blueprint</span>
+    <div class="neo-card technical">
+        <h3><i data-lucide="terminal"></i> Behind the Scenes (Code)</h3>
+        <p style="color: hsl(var(--secondary)); font-weight: 700;">How we handle the financial logic:</p>
+        <div class="tech-grid" style="margin-top: 2rem;">
+            <div class="tech-item">
+                <strong>Summing Engine</strong>
+                <p>We use <code>.reduce()</code> to add up every dollar amount in the array to give you those "Total" and "Pending" scoreboard numbers.</p>
+            </div>
+            <div class="tech-item">
+                <strong>Conditional Headers</strong>
+                <p>The "Employee" column in the table is conditional. It only shows up for Admins/Managers so employees don't see who else is getting reimbursed.</p>
+            </div>
+            <div class="tech-item">
+                <strong>Dual Search</strong>
+                <p>The search bar is smart: it checks both the **Category** (like Travel) and the **Description** (like Flight to London) at the same time.</p>
+            </div>
+            <div class="tech-item">
+                <strong>Amount Formatting</strong>
+                <p>We use <code>.toLocaleString()</code> to make sure those big numbers have commas (like $10,000) for easy reading.</p>
+            </div>
+        </div>
+        <pre class="code-block" style="margin-top: 2rem;"><code>// Calculating the Pending balance (Logic)
+const totalPending = allExpenses.filter((e) => e.status === "Pending")
+  .reduce((sum, e) => sum + e.amount, 0);</code></pre>
+    </div>
+</div>
+
+<!-- SECTION 05: HOW TO USE IT -->
+<div class="doc-section" style="margin-top: 5rem; border-top: 4px solid hsl(var(--border)); padding-top: 4rem;">
+    <span class="neo-section-title">05. How to use this page</span>
+    <p style="margin-bottom: 2rem;">Ready to get your money back? Here’s the best way to leverage the Expenses hub:</p>
+    
+    <div class="grid-layout" style="grid-template-columns: repeat(3, 1fr);">
+        <div class="neo-card spotlight" style="padding: 1.5rem; text-align: left;">
+            <div style="font-weight: 800; font-size: 0.8rem; margin-bottom: 0.5rem;">STEP 1: SUBMIT EARLY</div>
+            <p style="font-size: 0.75rem;">Click the blue **+ Submit Expense** button as soon as you have your receipt. Don't wait until the end of the month!</p>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem; text-align: left;">
+            <div style="font-weight: 800; font-size: 0.8rem; margin-bottom: 0.5rem;">STEP 2: CHECK THE STATUS</div>
+            <p style="font-size: 0.75rem;">Use the **Status Dropdown** to see if your claim is still "Pending." If it’s "Rejected," reach out to HR for more details.</p>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem; text-align: left;">
+            <div style="font-weight: 800; font-size: 0.8rem; margin-bottom: 0.5rem;">STEP 3: (FOR MANAGERS)</div>
+            <p style="font-size: 0.75rem;">Check the Scoreboard daily. If the "Pending" total is high, it means your team is waiting on you for their reimbursements.</p>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 06: ACCESS & PERMISSIONS -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">06. Who can do what? (RBAC)</span>
+    <table class="neo-table" style="margin-top: 2rem;">
+        <thead>
+            <tr>
+                <th>Action</th>
+                <th>Admin</th>
+                <th>HR</th>
+                <th>Manager</th>
+                <th>Employee</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Enter Module</td><td>✅ Yes</td><td>✅ Yes</td><td>✅ Yes</td><td>✅ Yes</td></tr>
+            <tr><td>View All Expenses</td><td>✅ Yes</td><td>✅ Yes</td><td>✅ Yes (Dept Only)</td><td>❌ No</td></tr>
+            <tr><td>Approve Claims</td><td>✅ Yes</td><td>✅ Yes</td><td>✅ Yes</td><td>❌ No</td></tr>
+            <tr><td>Submit Own Claim</td><td>✅ Yes</td><td>✅ Yes</td><td>✅ Yes</td><td>✅ Yes</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="neo-card spotlight" style="margin-top: 5rem; background: hsl(var(--primary) / 0.1); border-style: dashed;">
+    <h3><i data-lucide="info"></i> Quick Tip</h3>
+    <p>Everything on the Expenses page is **Interactive**. If you search for "Travel," the scoreboard totals will update to show you the total money spent on travel *only*!</p>
+</div>

@@ -1,0 +1,157 @@
+<div class="module-hero">
+    <span class="neo-badge accent">Module 13: The Talent Scout</span>
+    <h2 class="gradient-text" style="font-size: 3.5rem;">Employee Comparison</h2>
+    <p class="module-summary" style="max-width: 800px;">The Employee Comparison tool is the "Battle of the Best." It’s a side-by-side view where HR and Managers can pick any two team members and see exactly how they stack up in terms of performance, salary, and technical expertise. It’s perfect for making fair promotion decisions!</p>
+</div>
+
+<!-- SECTION 01: THE SELECTOR BAR -->
+<div class="doc-section">
+    <span class="neo-section-title">01. The Selection Bar</span>
+    <p style="margin-bottom: 2rem;">At the top of the page, you’ll find two simple dropdown menus. Use these to pick the two employees you want to compare. As soon as you select a second name, the entire page updates automatically with their "Battle Stats."</p>
+    
+    <div class="neo-card spotlight" style="padding: 1.5rem; text-align: center; background: hsl(var(--card)); border-style: solid;">
+        <div style="display: flex; justify-content: center; align-items: center; gap: 2rem;">
+            <div class="neo-badge">Pick Employee A</div>
+            <div style="font-size: 1.5rem; font-weight: 900; color: hsl(var(--muted-foreground));"><i data-lucide="arrow-left-right"></i></div>
+            <div class="neo-badge">Pick Employee B</div>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 02: COMPARISON PROFILES -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">02. Side-By-Side Profiles</span>
+    <p style="margin-bottom: 2rem;">The first card shows the most basic info: their avatars, job titles, and departments. This makes it easy to see if you are comparing two people in the same role or across different teams.</p>
+    
+    <div class="neo-card spotlight" style="padding: 2.5rem; text-align: center; border-color: hsl(var(--primary)); background: hsl(var(--primary) / 0.05);">
+        <div style="display: flex; gap: 3rem; justify-content: center; align-items: center;">
+            <div>
+                <div style="width: 64px; height: 64px; background: hsl(var(--primary)); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 900; margin-bottom: 0.5rem; box-shadow: var(--neo-shadow-sm);">AB</div>
+                <h4 style="font-weight: 800;">Alice Blue</h4>
+                <p style="font-size: 0.75rem;">Senior Dev</p>
+            </div>
+            <div style="font-size: 2rem; font-weight: 900; color: hsl(var(--muted-foreground)); opacity: 0.5;">VS</div>
+            <div>
+                <div style="width: 64px; height: 64px; background: hsl(var(--primary)); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 900; margin-bottom: 0.5rem; box-shadow: var(--neo-shadow-sm);">CR</div>
+                <h4 style="font-weight: 800;">Charlie Red</h4>
+                <p style="font-size: 0.75rem;">Dev Lead</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 03: THE DATA DUEL -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">03. The Data Duel (Row by Row)</span>
+    <p style="margin-bottom: 2rem;">This section dives deep into the numbers. We compare everything from their "Join Date" to their "Net Pay." Our system is smart: it automatically **bolds the higher number** in blue so you can see who has the most seniority or the highest salary at a glance.</p>
+    
+    <div class="neo-card spotlight" style="padding: 1.5rem; background: hsl(var(--card));">
+        <div style="display: grid; grid-template-columns: 1fr 100px 1fr; gap: 1rem; text-align: center; border-bottom: 1px solid #eee; padding: 0.5rem 0;">
+            <div style="font-weight: 700; color: hsl(var(--primary));">$85,000</div>
+            <div style="font-size: 0.7rem; opacity: 0.5; align-self: center;">SALARY</div>
+            <div style="font-weight: 500;">$82,000</div>
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 100px 1fr; gap: 1rem; text-align: center; padding: 0.5rem 0;">
+            <div style="font-weight: 500;">2022</div>
+            <div style="font-size: 0.7rem; opacity: 0.5; align-self: center;">JOIN DATE</div>
+            <div style="font-weight: 700; color: hsl(var(--primary));">2021</div>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 04: THE SKILLS GAP -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">04. Skill-Gap Visuals</span>
+    <p style="margin-bottom: 2rem;">This is the most powerful part of the tool. It shows a list of every technical skill both employees have. The blue bars grow horizontally to show who has the most "React" experience or who is a "Leadership" pro.</p>
+    
+    <div class="neo-card spotlight" style="padding: 2rem;">
+        <p style="text-align: center; font-size: 0.75rem; font-weight: 800; margin-bottom: 1rem;">Skill: React</p>
+        <div style="display: flex; align-items: center; gap: 1rem;">
+            <div style="flex: 1; height: 8px; background: #eee; border-radius: 4px; overflow: hidden; transform: scaleX(-1);">
+                <div style="width: 85%; height: 100%; background: hsl(var(--primary));"></div>
+            </div>
+            <div style="font-weight: 900; font-size: 0.8rem;">85 VS 70</div>
+            <div style="flex: 1; height: 8px; background: #eee; border-radius: 4px; overflow: hidden;">
+                <div style="width: 70%; height: 100%; background: hsl(var(--primary));"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 05: ENGINEERING BLUEPRINT -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">05. Engineering Blueprint</span>
+    <div class="neo-card technical">
+        <h3><i data-lucide="terminal"></i> Behind the Scenes (Code)</h3>
+        <p style="color: hsl(var(--secondary)); font-weight: 700;">How we built the comparison engine:</p>
+        <div class="tech-grid" style="margin-top: 2rem;">
+            <div class="tech-item">
+                <strong>Highlighting Engine</strong>
+                <p>We use a custom <code>compareRow</code> helper. It compares the two values and adds a <code>text-primary font-bold</code> class based on which value is higher.</p>
+            </div>
+            <div class="tech-item">
+                <strong>Skill Union</strong>
+                <p>Since different people have different skills, we use <code>new Set()</code> to merge their skill lists into one unique list for the UI.</p>
+            </div>
+            <div class="tech-item">
+                <strong>Progress Bars</strong>
+                <p>The Skill-Gap view uses dual <code>Progress</code> components from our UI library, letting you see technical expertise as a percentage.</p>
+            </div>
+            <div class="tech-item">
+                <strong>Data Linking</strong>
+                <p>This module is heavily linked. It pulls basic data from <code>employees.json</code>, skill data from <code>skills.json</code>, and pay data from <code>payroll.json</code>.</p>
+            </div>
+        </div>
+        <pre class="code-block" style="margin-top: 2rem;"><code>// Highlighting the winner (Logic)
+const better = highlight && valA !== valB;
+{better && valA > valB ? "font-bold text-primary" : ""}</code></pre>
+    </div>
+</div>
+
+<!-- SECTION 06: HOW TO USE IT -->
+<div class="doc-section" style="margin-top: 5rem; border-top: 4px solid hsl(var(--border)); padding-top: 4rem;">
+    <span class="neo-section-title">06. How to use this page</span>
+    <p style="margin-bottom: 2rem;">Conducting a performance review? Here’s the best way to leverage the comparison tool:</p>
+    
+    <div class="grid-layout" style="grid-template-columns: repeat(3, 1fr);">
+        <div class="neo-card spotlight" style="padding: 1.5rem; text-align: left;">
+            <div style="font-weight: 800; font-size: 0.8rem; margin-bottom: 0.5rem;">STEP 1: CHOOSE CONTENDERS</div>
+            <p style="font-size: 0.75rem;">Pick two employees from the same level (e.g., two Senior Devs) to see who is performing more effectively.</p>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem; text-align: left;">
+            <div style="font-weight: 800; font-size: 0.8rem; margin-bottom: 0.5rem;">STEP 2: CHECK SALARY EQUITY</div>
+            <p style="font-size: 0.75rem;">Compare their "Net Pay" to ensure that people in similar roles and with similar skills are being paid fairly.</p>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem; text-align: left;">
+            <div style="font-weight: 800; font-size: 0.8rem; margin-bottom: 0.5rem;">STEP 3: IDENTIFY GAPS</div>
+            <p style="font-size: 0.75rem;">Look for "Empty Skills" (the gray lines). If one person is missing a skill that the other has, you can plan training for them.</p>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 07: ACCESS & PERMISSIONS -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">07. Who can see this? (RBAC)</span>
+    <table class="neo-table" style="margin-top: 2rem;">
+        <thead>
+            <tr>
+                <th>Action</th>
+                <th>Admin</th>
+                <th>HR</th>
+                <th>Manager</th>
+                <th>Employee</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Compare Basic Info</td><td>✅ Yes</td><td>✅ Yes</td><td>✅ Yes</td><td>❌ No</td></tr>
+            <tr><td>Compare Skills</td><td>✅ Yes</td><td>✅ Yes</td><td>✅ Yes</td><td>❌ No</td></tr>
+            <tr><td>Compare Salaries</td><td>✅ Yes</td><td>✅ Yes</td><td>❌ No</td><td>❌ No</td></tr>
+            <tr><td>See Net Pay</td><td>✅ Yes</td><td>✅ Yes</td><td>❌ No</td><td>❌ No</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="neo-card spotlight" style="margin-top: 5rem; background: hsl(var(--primary) / 0.1); border-style: dashed;">
+    <h3><i data-lucide="info"></i> Quick Tip</h3>
+    <p>We use the **ArrowLeftRight** icon between the selectors to remind you that data is flowing from both sides into the comparison engine.</p>
+</div>

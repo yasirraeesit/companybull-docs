@@ -1,0 +1,145 @@
+<div class="module-hero">
+    <span class="neo-badge accent">Module 12: The Secure Vault</span>
+    <h2 class="gradient-text" style="font-size: 3.5rem;">Document Manager</h2>
+    <p class="module-summary" style="max-width: 800px;">The Document Manager is the company’s "Digital Filing Cabinet." It’s a secure place where all important paperwork—like contracts, legal agreements, and medical certificates—is stored safely. It ensures that the right people have access to the right files at the right time.</p>
+</div>
+
+<!-- SECTION 01: DOCUMENT SCOREBOARD -->
+<div class="doc-section">
+    <span class="neo-section-title">01. The Document Scoreboard</span>
+    <p style="margin-bottom: 2rem;">At the top of the manager, you’ll see three summary cards. These give you a quick "Health Check" of your digital files, showing you how many total documents are stored and how many are currently active.</p>
+    
+    <div class="grid-layout" style="grid-template-columns: repeat(3, 1fr); gap: 1rem;">
+        <div class="stat-card">
+            <h4><i data-lucide="file-text" style="width: 24px; vertical-align: middle;"></i> 150+</h4>
+            <p>Total Documents</p>
+        </div>
+        <div class="stat-card" style="border-color: hsl(142, 72%, 40%);">
+            <h4><i data-lucide="check-circle" style="width: 24px; vertical-align: middle;"></i> 142</h4>
+            <p>Active Files</p>
+        </div>
+        <div class="stat-card" style="border-color: hsl(280, 65%, 55%);">
+            <h4><i data-lucide="filter" style="width: 24px; vertical-align: middle;"></i> 5</h4>
+            <p>File Types</p>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 02: CATEGORIZATION -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">02. Categorization & Search</span>
+    <p style="margin-bottom: 2rem;">We use a "Color-Coding" system to help you identify files instantly. Whether it’s a legal contract or a medical note, the color of the badge tells you exactly what you’re looking at.</p>
+    
+    <div class="grid-layout" style="grid-template-columns: repeat(5, 1fr); gap: 1rem; text-align: center;">
+        <div class="neo-card spotlight" style="padding: 1rem;">
+            <div class="neo-badge" style="background: hsl(var(--primary) / 0.1); color: hsl(var(--primary)); width: 100%;">Contract</div>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1rem;">
+            <div class="neo-badge" style="background: hsl(0 84% 60% / 0.1); color: hsl(0 84% 60%); width: 100%;">Legal</div>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1rem;">
+            <div class="neo-badge" style="background: hsl(280 65% 55% / 0.1); color: hsl(280 65% 55%); width: 100%;">Review</div>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1rem;">
+            <div class="neo-badge" style="background: hsl(38 92% 50% / 0.1); color: hsl(38 92% 50%); width: 100%;">Medical</div>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1rem;">
+            <div class="neo-badge" style="background: hsl(142 72% 40% / 0.1); color: hsl(142 72% 40%); width: 100%;">Certificate</div>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 03: FILE ACTIONS -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">03. Action Center</span>
+    <div class="grid-layout" style="margin-top: 2rem;">
+        <div class="neo-card spotlight">
+            <h3><i data-lucide="upload"></i> Simple Upload</h3>
+            <p>Adding a new file is easy. Click the **Upload** button at the top to add a document to an employee’s profile. (Currently simulates an upload for demo purposes).</p>
+        </div>
+        <div class="neo-card spotlight">
+            <h3><i data-lucide="download"></i> Fast Download</h3>
+            <p>Need a copy? Every file in the list has a small **Download** icon on the right. One click saves the file directly to your computer.</p>
+        </div>
+        <div class="neo-card spotlight">
+            <h3><i data-lucide="trash-2"></i> Controlled Delete</h3>
+            <p>Mistakes happen. HR and Admins can delete documents using the red trash icon. Regular employees **cannot** delete files once they are uploaded.</p>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 04: ENGINEERING BLUEPRINT -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">04. Engineering Blueprint</span>
+    <div class="neo-card technical">
+        <h3><i data-lucide="terminal"></i> Behind the Scenes (Code)</h3>
+        <p style="color: hsl(var(--secondary)); font-weight: 700;">How we keep your files safe and organized:</p>
+        <div class="tech-grid" style="margin-top: 2rem;">
+            <div class="tech-item">
+                <strong>Privacy Logic</strong>
+                <p>We use a filter to check <code>hasAccess("Admin", "HR")</code>. If true, the user sees all files. If false, they only see files where the <code>employeeId</code> matches their own.</p>
+            </div>
+            <div class="tech-item">
+                <strong>Dynamic Stats</strong>
+                <p>The scoreboard counts are calculated in real-time using <code>.length</code> and <code>.filter()</code> on the document array.</p>
+            </div>
+            <div class="tech-item">
+                <strong>Search Engine</strong>
+                <p>The search bar is "Smart"—it checks both the **Filename** and the **Employee Name** at the same time.</p>
+            </div>
+            <div class="tech-item">
+                <strong>Toast Feedback</strong>
+                <p>Every action (Download, Delete, Upload) triggers a "Toast" notification at the bottom of the screen to confirm it worked.</p>
+            </div>
+        </div>
+        <pre class="code-block" style="margin-top: 2rem;"><code>// Filter for employees to only see their OWN files
+const allDocs = isAdmin ? documents : documents.filter(d => d.id === user.id);</code></pre>
+    </div>
+</div>
+
+<!-- SECTION 05: HOW TO USE IT -->
+<div class="doc-section" style="margin-top: 5rem; border-top: 4px solid hsl(var(--border)); padding-top: 4rem;">
+    <span class="neo-section-title">05. How to use this page</span>
+    <p style="margin-bottom: 2rem;">Keeping your records tidy? Here’s the best way to manage your documents:</p>
+    
+    <div class="grid-layout" style="grid-template-columns: repeat(3, 1fr);">
+        <div class="neo-card spotlight" style="padding: 1.5rem; text-align: left;">
+            <div style="font-weight: 800; font-size: 0.8rem; margin-bottom: 0.5rem;">STEP 1: USE THE FILTERS</div>
+            <p style="font-size: 0.75rem;">Instead of scrolling through hundreds of files, use the **Type Dropdown** to see only "Contracts" or "Certificates" instantly.</p>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem; text-align: left;">
+            <div style="font-weight: 800; font-size: 0.8rem; margin-bottom: 0.5rem;">STEP 2: SEARCH BY NAME</div>
+            <p style="font-size: 0.75rem;">(HR only) Type an employee’s name into the search bar to see every document associated with that specific person.</p>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem; text-align: left;">
+            <div style="font-weight: 800; font-size: 0.8rem; margin-bottom: 0.5rem;">STEP 3: DOWNLOAD & REVIEW</div>
+            <p style="font-size: 0.75rem;">Always verify the "Upload Date" before downloading to make sure you are looking at the most recent version of a contract.</p>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 06: ACCESS & PERMISSIONS -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">06. Who can do what? (RBAC)</span>
+    <table class="neo-table" style="margin-top: 2rem;">
+        <thead>
+            <tr>
+                <th>Action</th>
+                <th>Admin</th>
+                <th>HR</th>
+                <th>Employee</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>View Everyone's Docs</td><td>✅ Yes</td><td>✅ Yes</td><td>❌ No</td></tr>
+            <tr><td>Download Files</td><td>✅ Yes</td><td>✅ Yes</td><td>✅ Yes (Own Only)</td></tr>
+            <tr><td>Delete Documents</td><td>✅ Yes</td><td>✅ Yes</td><td>❌ No</td></tr>
+            <tr><td>Upload Documents</td><td>✅ Yes</td><td>✅ Yes</td><td>✅ Yes (Own Profile)</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="neo-card spotlight" style="margin-top: 5rem; background: hsl(var(--primary) / 0.1); border-style: dashed;">
+    <h3><i data-lucide="shield"></i> Privacy Note</h3>
+    <p>Safety first! Regular employees can **never** see the documents of their co-workers. Only the HR team and Admins have global access to ensure payroll and legal compliance.</p>
+</div>

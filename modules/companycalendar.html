@@ -1,0 +1,153 @@
+<div class="module-hero">
+    <span class="neo-badge accent">Module 09: The Shared Planner</span>
+    <h2 class="gradient-text" style="font-size: 3.5rem;">Company Calendar</h2>
+    <p class="module-summary" style="max-width: 800px;">The Company Calendar is the "Big Picture" for the whole office. It’s a shared map where every meeting, social event, and project deadline is marked clearly. It helps teams stay synchronized and makes sure everyone knows when the next public holiday is coming!</p>
+</div>
+
+<!-- SECTION 01: INTERACTIVE GRID -->
+<div class="doc-section">
+    <span class="neo-section-title">01. The Monthly Grid</span>
+    <p style="margin-bottom: 2rem;">The heart of the module is an interactive grid that updates as you navigate through the year. It’s smart enough to know exactly which day of the week every month starts on, so your schedule is always perfectly accurate.</p>
+    
+    <div class="neo-card spotlight" style="padding: 2.5rem; text-align: center; background: hsl(var(--card)); border-style: solid;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+            <div class="neo-badge" style="cursor: pointer;"><i data-lucide="chevron-left" style="width: 16px; vertical-align: middle;"></i> Previous</div>
+            <div style="font-size: 1.5rem; font-weight: 900;">March 2026</div>
+            <div class="neo-badge" style="cursor: pointer;">Next <i data-lucide="chevron-right" style="width: 16px; vertical-align: middle;"></i></div>
+        </div>
+        
+        <div style="display: grid; grid-template-columns: repeat(7, 1fr); gap: 0.5rem;">
+            <!-- Day labels -->
+            <div style="font-weight: 800; font-size: 0.7rem; opacity: 0.5;">SUN</div>
+            <div style="font-weight: 800; font-size: 0.7rem; opacity: 0.5;">MON</div>
+            <div style="font-weight: 800; font-size: 0.7rem; opacity: 0.5;">TUE</div>
+            <div style="font-weight: 800; font-size: 0.7rem; opacity: 0.5;">WED</div>
+            <div style="font-weight: 800; font-size: 0.7rem; opacity: 0.5;">THU</div>
+            <div style="font-weight: 800; font-size: 0.7rem; opacity: 0.5;">FRI</div>
+            <div style="font-weight: 800; font-size: 0.7rem; opacity: 0.5;">SAT</div>
+            <!-- Sample Day with Event -->
+            <div style="height: 60px; border: 2px dashed #eee;"></div>
+            <div style="height: 60px; border: 2px dashed #eee;"></div>
+            <div style="height: 60px; border: 2px solid hsl(var(--primary)); background: hsl(var(--primary) / 0.05); text-align: left; padding: 0.25rem;">
+                <span style="font-weight: 900; font-size: 0.75rem; color: hsl(var(--primary));">10</span>
+                <div class="neo-badge" style="font-size: 0.5rem; padding: 0.1rem 0.25rem; margin-top: 0.25rem; background: hsl(var(--primary) / 0.1); color: hsl(var(--primary)); width: 100%;">Team Sync</div>
+            </div>
+        </div>
+        <p style="margin-top: 1.5rem; font-size: 0.85rem; font-style: italic;">Note: Today’s date is always highlighted with a bright blue border!</p>
+    </div>
+</div>
+
+<!-- SECTION 02: EVENT TYPE GUIDE -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">02. Event Type Guide</span>
+    <p style="margin-bottom: 2rem;">Every event has its own color and icon so you can see at a glance if you’re looking at a serious deadline or a fun office party.</p>
+    
+    <div class="grid-layout" style="grid-template-columns: repeat(4, 1fr); gap: 1rem; text-align: center;">
+        <div class="neo-card spotlight" style="padding: 1.5rem;">
+            <div style="font-size: 2rem;">📅</div>
+            <div class="neo-badge" style="background: hsl(var(--primary) / 0.1); color: hsl(var(--primary)); width: 100%; margin-top: 0.5rem;">Meeting</div>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem;">
+            <div style="font-size: 2rem;">🎉</div>
+            <div class="neo-badge" style="background: hsl(280 65% 55% / 0.1); color: hsl(280 65% 55%); width: 100%; margin-top: 0.5rem;">Event</div>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem;">
+            <div style="font-size: 2rem;">⚠️</div>
+            <div class="neo-badge" style="background: hsl(0 84% 60% / 0.1); color: hsl(0 84% 60%); width: 100%; margin-top: 0.5rem;">Deadline</div>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem;">
+            <div style="font-size: 2rem;">🌴</div>
+            <div class="neo-badge" style="background: hsl(142 72% 40% / 0.1); color: hsl(142 72% 40%); width: 100%; margin-top: 0.5rem;">Holiday</div>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 03: UPCOMING LIST -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">03. The Quick-Scan Sidebar</span>
+    <div class="neo-card spotlight" style="margin-top: 2rem;">
+        <h3><i data-lucide="list"></i> Upcoming Events Sidebar</h3>
+        <p>Don’t want to hunt for events in the grid? The sidebar on the right lists the next <strong>six events</strong> in order. It tells you the exact date, time, and even which department is involved.</p>
+        <div class="neo-card technical" style="margin-top: 1.5rem; background: hsl(var(--background));">
+            <p style="font-size: 0.85rem;">"March 12 • 10:00 AM • <strong>Marketing Sync</strong>"</p>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 04: ENGINEERING BLUEPRINT -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">04. Engineering Blueprint</span>
+    <div class="neo-card technical">
+        <h3><i data-lucide="terminal"></i> Behind the Scenes (Code)</h3>
+        <p style="color: hsl(var(--secondary)); font-weight: 700;">Here’s the developer’s "recipe" for building the grid:</p>
+        <div class="tech-grid" style="margin-top: 2rem;">
+            <div class="tech-item">
+                <strong>Dynamic Grid</strong>
+                <p>We use a custom <code>daysInMonth</code> helper to calculate how many cells to render for every month (28-31).</p>
+            </div>
+            <div class="tech-item">
+                <strong>Off-Sets</strong>
+                <p>We calculate the <code>firstDay</code> of the month (0-6) and render empty "spacer" cells to push the numbers to the right week-column.</p>
+            </div>
+            <div class="tech-item">
+                <strong>Event Matching</strong>
+                <p>The <code>eventsForDay</code> function scans the mock data in real-time to find which titles belong in which numbered box.</p>
+            </div>
+            <div class="tech-item">
+                <strong>Navigation</strong>
+                <p>The <code>prev</code> and <code>next</code> functions handle the "Month Wrap" (e.g., if you go back from Jan 2026, it takes you to Dec 2025).</p>
+            </div>
+        </div>
+        <pre class="code-block" style="margin-top: 2rem;"><code>// Finding events for a specific day cell
+const eventsForDay = (d) => {
+  const dateStr = `${year}-${(month + 1).padStart(2, "0")}-${d.padStart(2, "0")}`;
+  return calendarEvents.filter((e) => e.date === dateStr);
+};</code></pre>
+    </div>
+</div>
+
+<!-- SECTION 05: HOW TO USE IT -->
+<div class="doc-section" style="margin-top: 5rem; border-top: 4px solid hsl(var(--border)); padding-top: 4rem;">
+    <span class="neo-section-title">05. How to use this page</span>
+    <p style="margin-bottom: 2rem;">Need to plan your week? Here’s the best way to use the Company Calendar:</p>
+    
+    <div class="grid-layout" style="grid-template-columns: repeat(3, 1fr);">
+        <div class="neo-card spotlight" style="padding: 1.5rem; text-align: left;">
+            <div style="font-weight: 800; font-size: 0.8rem; margin-bottom: 0.5rem;">STEP 1: SYNC YOUR WEEK</div>
+            <p style="font-size: 0.75rem;">Check the grid every Monday morning to see if there are any department-wide meetings you need to prepare for.</p>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem; text-align: left;">
+            <div style="font-weight: 800; font-size: 0.8rem; margin-bottom: 0.5rem;">STEP 2: WATCH FOR DEADLINES</div>
+            <p style="font-size: 0.75rem;">Look for the red **⚠️ Deadline** badges. These are non-negotiable project dates that the whole team is tracking.</p>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem; text-align: left;">
+            <div style="font-weight: 800; font-size: 0.8rem; margin-bottom: 0.5rem;">STEP 3: PLAN FOR HOLIDAYS</div>
+            <p style="font-size: 0.75rem;">Switch to future months to see when the office will be closed for public holidays so you can plan your own personal leave around them.</p>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 06: ACCESS & PERMISSIONS -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">06. Who can do what? (RBAC)</span>
+    <table class="neo-table" style="margin-top: 2rem;">
+        <thead>
+            <tr>
+                <th>Role</th>
+                <th>Can View Events?</th>
+                <th>Can Post Events?</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Admin</td><td>✅ Yes</td><td>✅ Yes</td></tr>
+            <tr><td>HR</td><td>✅ Yes</td><td>✅ Yes</td></tr>
+            <tr><td>Manager</td><td>✅ Yes</td><td>✅ Yes (Own Dept)</td></tr>
+            <tr><td>Employee</td><td>✅ Yes</td><td>❌ No</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="neo-card spotlight" style="margin-top: 5rem; background: hsl(var(--primary) / 0.1); border-style: dashed;">
+    <h3><i data-lucide="info"></i> Quick Tip</h3>
+    <p>We use a "Ghost" button style for the navigation chevrons so the page looks clean and focused on the dates, not the controls.</p>
+</div>

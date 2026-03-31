@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CompanyBull Docs | Modular Documentation Explorer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="dns-prefetch" href="https://unpkg.com">
+</head>
+<body>
+    <div class="master-layout">
+        <aside class="module-sidebar" id="sidebar">
+            <header class="sidebar-header">
+                <div class="logo">
+                    <h1 class="gradient-text">CB Docs</h1>
+                </div>
+                <!-- COLLAPSE TOGGLE -->
+                <button id="sidebar-collapse-btn" class="sidebar-toggle-btn">
+                    <i data-lucide="chevron-left"></i>
+                </button>
+                <div class="search-container">
+                    <input type="text" id="module-search" placeholder="Search 29 modules..." class="neo-input">
+                </div>
+            </header>
+            <nav class="module-list" id="module-list">
+                <!-- Modules will be listed here dynamically via script.js -->
+            </nav>
+        </aside>
+
+        <main class="module-content">
+            <header class="content-header glass-effect">
+                <div class="breadcrumb">Modules / <span id="current-module-name">Analytics</span></div>
+                <div class="header-actions">
+                    <button id="theme-toggle" class="neo-badge">Dark Mode</button>
+                </div>
+            </header>
+
+            <article id="module-viewport" class="animate-fade-in">
+                <!-- Dynamic Content Injected Here -->
+                <div class="neo-card" style="margin: 4rem;">
+                    <h3 class="gradient-text">Initializing Docs...</h3>
+                    <p>Fetching architectural modules. This requires a local server.</p>
+                </div>
+            </article>
+
+            <footer class="content-footer" id="module-footer">
+                <button id="footer-toggle-btn" class="footer-toggle-btn">
+                    <i data-lucide="chevron-down"></i>
+                </button>
+                <div class="nav-btns">
+                    <button id="prev-module-btn" class="neo-btn disabled">Prev Module</button>
+                    <button id="next-module-btn" class="neo-btn">Next Module</button>
+                </div>
+            </footer>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+    <script>lucide.createIcons();</script>
+</body>
+</html>

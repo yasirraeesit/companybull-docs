@@ -1,0 +1,122 @@
+<div class="module-hero">
+    <span class="neo-badge accent">Module 17: The Data Hub</span>
+    <h2 class="gradient-text" style="font-size: 3.5rem;">Export Center</h2>
+    <p class="module-summary" style="max-width: 800px;">The Export Center is the company's "Safe" for data. It’s where Admins and HR can take every bit of information—from employee lists to payroll numbers—and turn it into portable Excel-style files (CSV). It’s perfect for backups, audits, or sharing reports with the board.</p>
+</div>
+
+<!-- SECTION 01: REPORT CATEGORIES -->
+<div class="doc-section">
+    <span class="neo-section-title">01. The Five Key Reports</span>
+    <p style="margin-bottom: 2rem;">We’ve organized your data into five main "Bucket" categories. Each one contains everything you need for that specific area of the business. Every card shows you exactly how many rows of data you’re about to download.</p>
+    
+    <div class="grid-layout" style="grid-template-columns: repeat(3, 1fr); gap: 1rem;">
+        <div class="neo-card spotlight" style="padding: 1.5rem; text-align: left;">
+            <div style="font-size: 2rem; margin-bottom: 0.5rem;">👤</div>
+            <h4 style="font-weight: 800;">Employees</h4>
+            <p style="font-size: 0.75rem; opacity: 0.7;">Full roster, contact info, and current job titles.</p>
+            <div class="neo-badge" style="margin-top: 1rem; width: 100%;">71 Records</div>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem; text-align: left;">
+            <div style="font-size: 2rem; margin-bottom: 0.5rem;">💰</div>
+            <h4 style="font-weight: 800;">Payroll</h4>
+            <p style="font-size: 0.75rem; opacity: 0.7;">Net pay, bonuses, and tax deductions history.</p>
+            <div class="neo-badge" style="margin-top: 1rem; width: 100%;">12 Records</div>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem; text-align: left;">
+            <div style="font-size: 2rem; margin-bottom: 0.5rem;">📋</div>
+            <h4 style="font-weight: 800;">Attendance</h4>
+            <p style="font-size: 0.75rem; opacity: 0.7;">Check-in/out times for every employee, every day.</p>
+            <div class="neo-badge" style="margin-top: 1rem; width: 100%;">200+ Records</div>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 02: BULK EXPORT -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">02. Total System Backup</span>
+    <div class="neo-card spotlight" style="margin-top: 2rem; background: hsl(var(--card)); border-style: solid; text-align: center;">
+        <h3><i data-lucide="download"></i> Export All Data</h3>
+        <p>In a rush? The **Export All** button at the top right is a "Power User" tool. With one single click, the system builds every single report and downloads all five files to your computer at once.</p>
+        <div style="margin-top: 1.5rem;">
+            <div class="neo-badge" style="background: hsl(var(--primary)); color: white; padding: 1rem 2rem;">START BACKUP</div>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 03: ENGINEERING BLUEPRINT -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">03. Engineering Blueprint</span>
+    <div class="neo-card technical">
+        <h3><i data-lucide="terminal"></i> Behind the Scenes (Code)</h3>
+        <p style="color: hsl(var(--secondary)); font-weight: 700;">How we generate spreadsheets in the browser:</p>
+        <div class="tech-grid" style="margin-top: 2rem;">
+            <div class="tech-item">
+                <strong>CSV Generator</strong>
+                <p>We use a custom <code>downloadCSV()</code> function. It takes our raw JavaScript data and joins it together with commas (like <code>Name,Salary,Rank</code>).</p>
+            </div>
+            <div class="tech-item">
+                <strong>Memory Blobs</strong>
+                <p>We don't need a server! We create a temporary "Blob" (a piece of data) in your computer's RAM to build the file instantly.</p>
+            </div>
+            <div class="tech-item">
+                <strong>URL Revoke</strong>
+                <p>To keep the browser fast, we "Revoke" (destroy) the temporary download link as soon as the file is safely saved to your computer.</p>
+            </div>
+            <div class="tech-item">
+                <strong>Lucide Icons</strong>
+                <p>We use <code>FileSpreadsheet</code> and <code>FileText</code> icons to distinguish between the Excel-style exports and text reports.</p>
+            </div>
+        </div>
+        <pre class="code-block" style="margin-top: 2rem;"><code>// Native CSV Generation Logic
+const csv = [headers.join(","), ...rows.map(r => r.join(","))].join("\n");
+const blob = new Blob([csv], { type: "text/csv" });</code></pre>
+    </div>
+</div>
+
+<!-- SECTION 04: HOW TO USE IT -->
+<div class="doc-section" style="margin-top: 5rem; border-top: 4px solid hsl(var(--border)); padding-top: 4rem;">
+    <span class="neo-section-title">04. How to use this page</span>
+    <p style="margin-bottom: 2rem;">Preparing for an end-of-year audit? Here’s how to use the Export Center:</p>
+    
+    <div class="grid-layout" style="grid-template-columns: repeat(3, 1fr);">
+        <div class="neo-card spotlight" style="padding: 1.5rem; text-align: left;">
+            <div style="font-weight: 800; font-size: 0.8rem; margin-bottom: 0.5rem;">STEP 1: CHOOSE YOUR DATA</div>
+            <p style="font-size: 0.75rem;">Identify which "Report Card" has the data you need (e.g., choose **Expenses** if you are checking travel receipts).</p>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem; text-align: left;">
+            <div style="font-weight: 800; font-size: 0.8rem; margin-bottom: 0.5rem;">STEP 2: CHECK THE COUNTER</div>
+            <p style="font-size: 0.75rem;">Look at the **Record Count** badge. If it says "0 records," you might need to add data in that module first before exporting.</p>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem; text-align: left;">
+            <div style="font-weight: 800; font-size: 0.8rem; margin-bottom: 0.5rem;">STEP 3: DOWNLOAD & OPEN</div>
+            <p style="font-size: 0.75rem;">Click **Download CSV**. The file will appear in your Downloads folder. You can open it in **Excel**, **Google Sheets**, or any text editor.</p>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 05: ACCESS & PERMISSIONS -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">05. Who can see this? (RBAC)</span>
+    <table class="neo-table" style="margin-top: 2rem;">
+        <thead>
+            <tr>
+                <th>Action</th>
+                <th>Admin</th>
+                <th>HR</th>
+                <th>Manager</th>
+                <th>Employee</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Enter Export Center</td><td>✅ Yes</td><td>✅ Yes</td><td>❌ No</td><td>❌ No</td></tr>
+            <tr><td>Download Payroll</td><td>✅ Yes</td><td>✅ Yes</td><td>❌ No</td><td>❌ No</td></tr>
+            <tr><td>Download Attendance</td><td>✅ Yes</td><td>✅ Yes</td><td>✅ Yes (Own)</td><td>❌ No</td></tr>
+            <tr><td>"Export All" Feature</td><td>✅ Yes</td><td>✅ Yes</td><td>❌ No</td><td>❌ No</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="neo-card spotlight" style="margin-top: 5rem; background: hsl(var(--primary) / 0.1); border-style: dashed;">
+    <h3><i data-lucide="info"></i> Quick Tip</h3>
+    <p>Everything in the Export Center is **Anonymous to Employees**. Only the high-level management team can access this portal to protect the privacy of personal salaries and history.</p>
+</div>

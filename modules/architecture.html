@@ -1,0 +1,69 @@
+<div class="module-hero">
+    <span class="neo-badge accent">The "Brains" of the App</span>
+    <h2 class="gradient-text" style="font-size: 3.5rem;">How it Works</h2>
+    <p class="module-summary" style="max-width: 800px;">Ever wondered how everything fits together? Company Bull is built using a few simple main parts that work together to keep everything running fast and safe. We use a set of "standard" tools so any developer can easily understand the code.</p>
+</div>
+
+<div class="grid-layout" style="grid-template-columns: 2fr 1fr;">
+    <div class="neo-card technical">
+        <h3><i data-lucide="help-circle"></i> The Tech Stack</h3>
+        <div class="tech-grid" style="grid-template-columns: 1fr 1fr;">
+            <div class="tech-item" style="border-bottom: 1px dashed hsl(var(--border) / 0.5); padding-bottom: 2rem;">
+                <strong>Frontend (The Part You See)</strong>
+                <p style="font-size: 0.85rem;">This is built with <strong>React</strong>. It’s what users see and interact with. It’s fast and smooth, so it feels like a real app, not just a website.</p>
+            </div>
+            <div class="tech-item" style="border-bottom: 1px dashed hsl(var(--border) / 0.5); padding-bottom: 2rem;">
+                <strong>Backend (The Brain)</strong>
+                <p style="font-size: 0.85rem;">This is built with <strong>Node.js and Express</strong>. It’s the "hidden" part that handles all the heavy logic and processes requests from the frontend.</p>
+            </div>
+            <div class="tech-item" style="padding-top: 2rem;">
+                <strong>Database (The Memory)</strong>
+                <p style="font-size: 0.85rem;">We use <strong>MongoDB</strong> to store all your data securely. It remembers every employee, every task, and every cent spent.</p>
+            </div>
+            <div class="tech-item" style="padding-top: 2rem;">
+                <strong>State (The Context)</strong>
+                <p style="font-size: 0.85rem;">This is how we remember who is logged in and what they are allowed to see as they move through the app.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="neo-card spotlight">
+        <h3><i data-lucide="folder"></i> Where is the code?</h3>
+        <p style="margin-bottom: 1rem;">Everything is neatly organized. Here is where the main parts are:</p>
+        <ul class="feat-list" style="font-family: var(--font-mono); font-size: 0.75rem;">
+            <li>+ companybull-client/</li>
+            <li>&nbsp;&nbsp;+ src/pages/ (All 29 modules)</li>
+            <li>+ companybull-backend/</li>
+            <li>&nbsp;&nbsp;+ models/ (The data structure)</li>
+            <li>&nbsp;&nbsp;+ routes/ (The API endpoints)</li>
+        </ul>
+    </div>
+</div>
+
+<div class="doc-section" style="margin-top: 4rem;">
+    <h3 style="margin-bottom: 2rem;"><i data-lucide="refresh-cw"></i> How Data Moves</h3>
+    <p style="margin-bottom: 2rem;">Making sure data moves correctly is essential. Here is the 4-step path it follows:</p>
+    <div class="grid-layout" style="grid-template-columns: repeat(4, 1fr); gap: 1rem; text-align: center;">
+        <div class="neo-card" style="padding: 1.5rem; background: hsl(var(--primary) / 0.05);">
+            <div style="font-weight: 800; font-size: 0.8rem; margin-bottom: 0.5rem;">1. ACTION</div>
+            <p style="font-size: 0.75rem;">A user clicks a button or fills a form in the React app.</p>
+        </div>
+        <div class="neo-card" style="padding: 1.5rem; background: hsl(var(--secondary) / 0.05);">
+            <div style="font-weight: 800; font-size: 0.8rem; margin-bottom: 0.5rem;">2. REQUEST</div>
+            <p style="font-size: 0.75rem;">The app sends a "message" to the backend server with the data.</p>
+        </div>
+        <div class="neo-card" style="padding: 1.5rem; background: hsl(var(--accent) / 0.05);">
+            <div style="font-weight: 800; font-size: 0.8rem; margin-bottom: 0.5rem;">3. PROCESS</div>
+            <p style="font-size: 0.75rem;">The backend server checks the data and does what’s needed.</p>
+        </div>
+        <div class="neo-card" style="padding: 1.5rem; background: hsl(var(--foreground) / 0.05);">
+            <div style="font-weight: 800; font-size: 0.8rem; margin-bottom: 0.5rem;">4. SAVE</div>
+            <p style="font-size: 0.75rem;">Everything is saved in the database so it’s ready for next time.</p>
+        </div>
+    </div>
+</div>
+
+<div class="neo-card spotlight" style="margin-top: 3rem; border-top: 8px solid hsl(var(--secondary));">
+    <h3><i data-lucide="lock"></i> Security First</h3>
+    <p>We take security seriously. Every time the app asks for data from the backend, the server checks who is asking. If they aren't authorized (like an employee trying to see the overall payroll), the server simply says "No."</p>
+</div>

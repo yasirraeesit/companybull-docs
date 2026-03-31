@@ -1,0 +1,164 @@
+<div class="module-hero">
+    <span class="neo-badge accent">Module 14: The Personal Portfolio</span>
+    <h2 class="gradient-text" style="font-size: 3.5rem;">Employee Profile</h2>
+    <p class="module-summary" style="max-width: 800px;">The Employee Profile is a "Deep Dive" into every person at Company Bull. It’s where we keep a detailed history of their career, their technical skills, and their important documents. It’s designed to help team members track their growth and managers prepare for performance reviews.</p>
+</div>
+
+<!-- SECTION 01: THE QUICK-INFO SIDEBAR -->
+<div class="doc-section">
+    <span class="neo-section-title">01. The Profile Sidebar</span>
+    <p style="margin-bottom: 2rem;">On the left side of the page, we show the "Essentials." This includes the employee’s photo (avatar), job title, department, and contact details. It’s the first thing you see and gives you the most important facts immediately.</p>
+    
+    <div class="grid-layout" style="grid-template-columns: 1fr 2fr; gap: 2rem;">
+        <div class="neo-card spotlight" style="padding: 2.5rem; text-align: center; background: hsl(var(--card)); border-style: solid;">
+            <div style="width: 80px; height: 80px; background: hsl(var(--primary)); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; font-weight: 900; margin: 0 auto 1.5rem; box-shadow: var(--neo-shadow-sm);">AB</div>
+            <h4 style="font-size: 1.5rem; font-weight: 900;">Alice Blue</h4>
+            <p style="font-size: 0.85rem; opacity: 0.7;">Senior Software Engineer</p>
+            <div style="display: flex; gap: 0.5rem; justify-content: center; margin-top: 1rem;">
+                <div class="neo-badge">Active</div>
+                <div class="neo-badge" style="background: hsl(var(--secondary) / 0.1); color: hsl(var(--secondary));">Admin</div>
+            </div>
+            <div style="margin-top: 2rem; text-align: left; border-top: 1px solid #eee; padding-top: 1rem;">
+                <p style="font-size: 0.75rem; font-weight: 800;"><i data-lucide="mail"></i> alice@companybull.com</p>
+                <p style="font-size: 0.75rem; font-weight: 800; margin-top: 0.5rem;"><i data-lucide="phone"></i> +1 234 567 890</p>
+            </div>
+        </div>
+        <div class="neo-card spotlight" style="background: hsl(var(--primary) / 0.03); border-style: dashed;">
+            <h3 style="margin-bottom: 1rem;"><i data-lucide="dollar-sign"></i> Annual Salary</h3>
+            <p style="font-size: 2.5rem; font-weight: 900; font-family: var(--font-mono);">$125,000.00</p>
+            <p style="font-size: 0.85rem; opacity: 0.6; margin-top: 0.5rem;">"Salary details are private and only visible to the HR team and Admins."</p>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 02: THE CAREER TIMELINE -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">02. The Career Timeline</span>
+    <p style="margin-bottom: 2rem;">The **Timeline** tab build a vertical map of the employee's history. It’s like a story of their time at the company, from the very first day they were hired to their latest promotion or award.</p>
+    
+    <div class="neo-card spotlight" style="padding: 2.5rem; background: hsl(var(--card));">
+        <div style="position: relative; padding-left: 2rem;">
+            <div style="position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: hsl(var(--primary) / 0.1); border-radius: 2px;"></div>
+            
+            <div style="margin-bottom: 2rem; position: relative;">
+                <div style="position: absolute; left: -2.5rem; top: 0; width: 1.5rem; height: 1.5rem; background: hsl(var(--card)); border: 2px solid hsl(var(--primary)); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 10px;">🎉</div>
+                <div class="neo-badge" style="margin-bottom: 0.5rem;">Hired</div>
+                <p style="font-weight: 900;">Joined the Engineering Team</p>
+                <p style="font-size: 0.75rem; opacity: 0.5;">January 12, 2023</p>
+            </div>
+            
+            <div style="position: relative;">
+                <div style="position: absolute; left: -2.5rem; top: 0; width: 1.5rem; height: 1.5rem; background: hsl(var(--card)); border: 2px solid hsl(var(--primary)); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 10px;">🚀</div>
+                <div class="neo-badge" style="margin-bottom: 0.5rem;">Promotion</div>
+                <p style="font-weight: 900;">Promoted to Senior Engineer</p>
+                <p style="font-size: 0.75rem; opacity: 0.5;">February 05, 2024</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 03: THE SKILL RADAR -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">03. Technical Skills Inventory</span>
+    <p style="margin-bottom: 2rem;">The **Skills** tab lists every professional skill the employee has. We use simple blue progress bars (0-100%) to show their mastery level. This is great for finding the right expert for a new project.</p>
+    
+    <div class="neo-card spotlight" style="padding: 2.5rem;">
+        <div style="margin-bottom: 1.5rem;">
+            <div style="display: flex; justify-content: space-between; font-weight: 800; font-size: 0.85rem; margin-bottom: 0.5rem;">
+                <span>React Development</span>
+                <span>95%</span>
+            </div>
+            <div style="height: 10px; background: #eee; border-radius: 5px; overflow: hidden;">
+                <div style="width: 95%; height: 100%; background: hsl(var(--primary));"></div>
+            </div>
+        </div>
+        <div>
+            <div style="display: flex; justify-content: space-between; font-weight: 800; font-size: 0.85rem; margin-bottom: 0.5rem;">
+                <span>Project Management</span>
+                <span>70%</span>
+            </div>
+            <div style="height: 10px; background: #eee; border-radius: 5px; overflow: hidden;">
+                <div style="width: 70%; height: 100%; background: hsl(var(--primary));"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 04: ENGINEERING BLUEPRINT -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">04. Engineering Blueprint</span>
+    <div class="neo-card technical">
+        <h3><i data-lucide="terminal"></i> Behind the Scenes (Code)</h3>
+        <p style="color: hsl(var(--secondary)); font-weight: 700;">How we built this high-fidelity profile view:</p>
+        <div class="tech-grid" style="margin-top: 2rem;">
+            <div class="tech-item">
+                <strong>Axios Data Fetch</strong>
+                <p>We use <code>axios.get()</code> and the <code>id</code> from the URL to load every unique employee's data from our backend API.</p>
+            </div>
+            <div class="tech-item">
+                <strong>Tabs Logic</strong>
+                <p>The <code>TabsContent</code> components handle the heavy lifting of hiding and showing the Timeline vs the Skills without reloading the page.</p>
+            </div>
+            <div class="tech-item">
+                <strong>Timeline Icons</strong>
+                <p>A simple "Icon Mapping" object (<code>timelineIcons</code>) tells the system which emoji (🎉 or 🚀) to use based on the event type.</p>
+            </div>
+            <div class="tech-item">
+                <strong>Safety Guards</strong>
+                <p>The code includes a <code>!hasAccess</code> check to ensure that employees cannot "spy" on other people's profiles unless they are Managers or HR.</p>
+            </div>
+        </div>
+        <pre class="code-block" style="margin-top: 2rem;"><code>// Grabbing the ID from the URL
+const { id } = useParams();
+// Loading...
+const res = await axios.get(`/api/employees/${id}`);</code></pre>
+    </div>
+</div>
+
+<!-- SECTION 05: HOW TO USE IT -->
+<div class="doc-section" style="margin-top: 5rem; border-top: 4px solid hsl(var(--border)); padding-top: 4rem;">
+    <span class="neo-section-title">05. How to use this page</span>
+    <p style="margin-bottom: 2rem;">Want to know your team better? Here’s the best way to leverage the Employee Profile:</p>
+    
+    <div class="grid-layout" style="grid-template-columns: repeat(3, 1fr);">
+        <div class="neo-card spotlight" style="padding: 1.5rem; text-align: left;">
+            <div style="font-weight: 800; font-size: 0.8rem; margin-bottom: 0.5rem;">STEP 1: REVIEW THE HISTORY</div>
+            <p style="font-size: 0.75rem;">Before a 1-on-1 meeting, check the **Timeline** to see the employee’s journey. It’s a great way to start a conversation about their growth.</p>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem; text-align: left;">
+            <div style="font-weight: 800; font-size: 0.8rem; margin-bottom: 0.5rem;">STEP 2: FIND SKILL GAPS</div>
+            <p style="font-size: 0.75rem;">Check the **Skills** tab. If a team member has high scores in a specific area, they can act as a "Mentor" for others.</p>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem; text-align: left;">
+            <div style="font-weight: 800; font-size: 0.8rem; margin-bottom: 0.5rem;">STEP 3: DOWNLOAD FILES</div>
+            <p style="font-size: 0.75rem;">(HR only) Use the **Documents** tab to find old contracts or medical notes without leaving the employee’s profile.</p>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 06: ACCESS & PERMISSIONS -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">06. Who can do what? (RBAC)</span>
+    <table class="neo-table" style="margin-top: 2rem;">
+        <thead>
+            <tr>
+                <th>View Profile Of...</th>
+                <th>Admin</th>
+                <th>HR</th>
+                <th>Manager</th>
+                <th>Self</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Yourself</td><td>✅ Yes</td><td>✅ Yes</td><td>✅ Yes</td><td>✅ Yes</td></tr>
+            <tr><td>Other Employees</td><td>✅ Yes</td><td>✅ Yes</td><td>✅ Yes</td><td>❌ No</td></tr>
+            <tr><td>Salary Numbers</td><td>✅ Yes</td><td>✅ Yes</td><td>❌ No</td><td>❌ No</td></tr>
+            <tr><td>Documents List</td><td>✅ Yes</td><td>✅ Yes</td><td>❌ No</td><td>✅ Yes</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="neo-card spotlight" style="margin-top: 5rem; background: hsl(var(--primary) / 0.1); border-style: dashed;">
+    <h3><i data-lucide="award"></i> Special Feature</h3>
+    <p>Everything on this page is **Dynamic**. If an employee gets promoted today, the Timeline and Job Title will update instantly across the whole app.</p>
+</div>

@@ -1,0 +1,148 @@
+<div class="module-hero">
+    <span class="neo-badge accent">Module 15: The Workforce Directory</span>
+    <h2 class="gradient-text" style="font-size: 3.5rem;">Employees</h2>
+    <p class="module-summary" style="max-width: 800px;">The Employees module is the "Main Directory" of Company Bull. This is the place where every single team member is listed, managed, and hired. It’s designed to give managers total control over their workforce and help employees find their co-workers quickly.</p>
+</div>
+
+<!-- SECTION 01: SEARCHING & FILTERING -->
+<div class="doc-section">
+    <span class="neo-section-title">01. Finding the Right Person</span>
+    <p style="margin-bottom: 2rem;">If you have a big team, you don’t want to scroll forever. We’ve built a "Smart Filter" system at the top of the page. You can search by **Name** or **Job Title**, and narrow things down by **Department** or **Role** instantly.</p>
+    
+    <div class="neo-card spotlight" style="padding: 2.5rem; text-align: center; background: hsl(var(--card)); border-style: solid;">
+        <div style="display: flex; gap: 1rem; align-items: center; justify-content: center; flex-wrap: wrap;">
+            <div class="neo-badge" style="background: hsl(var(--primary) / 0.1); color: hsl(var(--primary));"><i data-lucide="search" style="width: 14px; vertical-align: middle;"></i> Search: "Engineering"</div>
+            <div class="neo-badge" style="background: hsl(var(--secondary) / 0.1); color: hsl(var(--secondary));"><i data-lucide="filter" style="width: 14px; vertical-align: middle;"></i> Dept: "Marketing"</div>
+            <div class="neo-badge" style="background: hsl(var(--accent) / 0.1); color: hsl(var(--accent));"><i data-lucide="shield" style="width: 14px; vertical-align: middle;"></i> Role: "Manager"</div>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 02: THE EMPLOYEE TABLE -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">02. The Live Directory Table</span>
+    <p style="margin-bottom: 2rem;">The table is the heart of the page. It’s clean and fast, showing you the most important facts for every person. We even use "Status Color Codes" so you can see if someone is currently working or taking a break.</p>
+    
+    <div class="neo-card spotlight" style="padding: 1.5rem; background: hsl(var(--card));">
+        <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; font-weight: 800; font-size: 0.7rem; opacity: 0.5; border-bottom: 2px solid #eee; padding-bottom: 0.5rem; margin-bottom: 1rem;">
+            <span>EMPLOYEE</span>
+            <span>JOB TITLE</span>
+            <span>DEPARTMENT</span>
+            <span>STATUS</span>
+            <span style="text-align: right;">ACTIONS</span>
+        </div>
+        <!-- Sample Row -->
+        <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; align-items: center; font-size: 0.85rem; padding: 0.5rem 0;">
+            <div style="display: flex; align-items: center; gap: 0.5rem;">
+                <div style="width: 24px; height: 24px; background: hsl(var(--primary)); color: white; border-radius: 50%; font-size: 8px; display: flex; align-items: center; justify-content: center; font-weight: 900;">JD</div>
+                <span>John Doe</span>
+            </div>
+            <span>Senior Dev</span>
+            <span>Engineering</span>
+            <div class="neo-badge" style="background: hsl(142 72% 40% / 0.1); color: hsl(142 72% 40%); font-size: 0.6rem;">Active</div>
+            <div style="text-align: right;">
+                <i data-lucide="edit" style="width: 16px; opacity: 0.5;"></i>
+                <i data-lucide="eye" style="width: 16px; opacity: 0.5; margin-left: 0.5rem;"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 03: THE MANAGER'S TOOLS -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">03. The Hiring & Editing Flow</span>
+    <p style="margin-bottom: 2rem;">Admins and HR have special "Super Powers" on this page. They can add new employees or update existing ones using the **Add Employee** and **Edit** buttons. These buttons open a "Dialog" (a popup box) that lets you change roles, status, or job titles.</p>
+    
+    <div class="grid-layout" style="grid-template-columns: repeat(3, 1fr); gap: 1rem;">
+        <div class="neo-card spotlight">
+            <h3><i data-lucide="plus"></i> New Hire</h3>
+            <p>The "Add" form makes sure you collect all the essential data: Name, Email, Job Title, and Role.</p>
+        </div>
+        <div class="neo-card spotlight">
+            <h3><i data-lucide="edit"></i> Updating Details</h3>
+            <p>If someone changes their job title or moves to a new department, just click the "Pencil" icon to update them instantly.</p>
+        </div>
+        <div class="neo-card spotlight">
+            <h3><i data-lucide="eye"></i> Full Profile</h3>
+            <p>The "Eye" icon takes you to the deep-dive profile where you can see their skills and documents.</p>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 04: ENGINEERING BLUEPRINT -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">04. Engineering Blueprint</span>
+    <div class="neo-card technical">
+        <h3><i data-lucide="terminal"></i> Behind the Scenes (Code)</h3>
+        <p style="color: hsl(var(--secondary)); font-weight: 700;">How we built this high-performance directory:</p>
+        <div class="tech-grid" style="margin-top: 2rem;">
+            <div class="tech-item">
+                <strong>API CRUD</strong>
+                <p>We use <code>axios.get()</code>, <code>axios.post()</code>, and <code>axios.put()</code> to connect directly to the backend database at <code>:5000/api/employees</code>.</p>
+            </div>
+            <div class="tech-item">
+                <strong>Framer Motion</strong>
+                <p>Every row in the table uses a <code>motion.tr</code> stagger effect, making the list slide in one-by-one when you open the page.</p>
+            </div>
+            <div class="tech-item">
+                <strong>Access Control</strong>
+                <p>The <code>baseList</code> logic ensures that regular employees only see their own entry, while managers sees the whole team.</p>
+            </div>
+            <div class="tech-item">
+                <strong>Dialog States</strong>
+                <p>We use local states (<code>isAddDialogOpen</code>, <code>isEditDialogOpen</code>) to manage the visibility of the popup forms.</p>
+            </div>
+        </div>
+        <pre class="code-block" style="margin-top: 2rem;"><code>// Adding a new employee (API logic)
+const res = await axios.post("/api/employees", newEmployee);
+setEmployeeList([...employeeList, res.data]);</code></pre>
+    </div>
+</div>
+
+<!-- SECTION 05: HOW TO USE IT -->
+<div class="doc-section" style="margin-top: 5rem; border-top: 4px solid hsl(var(--border)); padding-top: 4rem;">
+    <span class="neo-section-title">05. How to use this page</span>
+    <p style="margin-bottom: 2rem;">Keeping your team organized? Here’s the best way to leverage the Employees hub:</p>
+    
+    <div class="grid-layout" style="grid-template-columns: repeat(3, 1fr);">
+        <div class="neo-card spotlight" style="padding: 1.5rem; text-align: left;">
+            <div style="font-weight: 800; font-size: 0.8rem; margin-bottom: 0.5rem;">STEP 1: ADD YOUR NEW HIRES</div>
+            <p style="font-size: 0.75rem;">Click the blue **+ Add Employee** button as soon as a new contract is signed. This gives them instant access to the portal.</p>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem; text-align: left;">
+            <div style="font-weight: 800; font-size: 0.8rem; margin-bottom: 0.5rem;">STEP 2: MANAGE STATUS</div>
+            <p style="font-size: 0.75rem;">If someone goes on parental leave, use the "Edit" tool to change their status to **On Leave** to keep the department data accurate.</p>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem; text-align: left;">
+            <div style="font-weight: 800; font-size: 0.8rem; margin-bottom: 0.5rem;">STEP 3: QUICK VIEW</div>
+            <p style="font-size: 0.75rem;">Use the **Eye** icon instead of the "Edit" pencil if you just want to read someone's phone number or check their job title.</p>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 06: ACCESS & PERMISSIONS -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">06. Who can do what? (RBAC)</span>
+    <table class="neo-table" style="margin-top: 2rem;">
+        <thead>
+            <tr>
+                <th>Action</th>
+                <th>Admin</th>
+                <th>HR</th>
+                <th>Manager</th>
+                <th>Employee</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Add Employee</td><td>✅ Yes</td><td>✅ Yes</td><td>❌ No</td><td>❌ No</td></tr>
+            <tr><td>Edit Employee</td><td>✅ Yes</td><td>✅ Yes</td><td>❌ No</td><td>❌ No</td></tr>
+            <tr><td>View All People</td><td>✅ Yes</td><td>✅ Yes</td><td>✅ Yes</td><td>❌ No</td></tr>
+            <tr><td>View Own Profile</td><td>✅ Yes</td><td>✅ Yes</td><td>✅ Yes</td><td>✅ Yes</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="neo-card spotlight" style="margin-top: 5rem; background: hsl(var(--primary) / 0.1); border-style: dashed;">
+    <h3><i data-lucide="check"></i> Status Colors Guide</h3>
+    <p>Always watch the status column! **Active** (Green) means they are at work. **On Leave** (Orange) means they are out for a while. **Inactive** (Red) means they no longer work here.</p>
+</div>

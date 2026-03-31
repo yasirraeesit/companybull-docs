@@ -1,0 +1,169 @@
+<div class="module-hero">
+    <span class="neo-badge accent">Module 03: The Reports Section</span>
+    <h2 class="gradient-text" style="font-size: 3.5rem;">Analytics & Reports</h2>
+    <p class="module-summary" style="max-width: 800px;">The Analytics module is like a dashboard for your company. It shows you everything from how many people work in each department to how much you’re spending on salaries. We use clear charts to make it easy to see trends and make decisions.</p>
+</div>
+
+<!-- SECTION 01: THE BIG NUMBERS -->
+<div class="doc-section">
+    <span class="neo-section-title">01. The "Big Four" Stats</span>
+    <p style="margin-bottom: 2rem;">At the top of the analytics page, you'll see four cards that give you a quick "heartbeat" of the company. These change in real-time as you filter by date.</p>
+    
+    <div class="grid-layout" style="grid-template-columns: repeat(4, 1fr); gap: 1rem;">
+        <div class="stat-card">
+            <h4>15+</h4>
+            <p>Total Employees</p>
+        </div>
+        <div class="stat-card" style="border-color: hsl(var(--secondary));">
+            <h4>$745K</h4>
+            <p>Total Payroll</p>
+        </div>
+        <div class="stat-card" style="border-color: hsl(var(--accent));">
+            <h4>87.5%</h4>
+            <p>Attendance Rate</p>
+        </div>
+        <div class="stat-card" style="border-color: hsl(var(--primary));">
+            <h4>3</h4>
+            <p>Pending Leaves</p>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 02: WORKFORCE INSIGHTS -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">02. Workforce Insights</span>
+    <div class="grid-layout" style="margin-top: 2rem;">
+        <div class="neo-card spotlight">
+            <h3><i data-lucide="bar-chart-3"></i> Headcount by Department</h3>
+            <p>This bar chart shows how many employees are in each department (like Engineering, HR, or Sales). It’s perfect for seeing which teams are growing the fastest.</p>
+            <ul class="feat-list" style="margin-top: 2rem;">
+                <li><span class="feat-tag">Bar Chart</span> Uses <code>BarChart</code> from Recharts.</li>
+                <li><span class="feat-tag">Layout</span> Horizontal "Vertical" layout for easy reading.</li>
+            </ul>
+        </div>
+
+        <div class="neo-card spotlight">
+            <h3><i data-lucide="pie-chart"></i> Official Employee Status</h3>
+            <p>A pie chart that breaks down who is <strong>Active</strong>, <strong>On Leave</strong>, or <strong>Inactive</strong>. This helps HR understand current workforce availability at a glance.</p>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 03: FINANCIAL ENGINE -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">03. The Financial Engine</span>
+    <div class="neo-card technical" style="margin-top: 2rem; background: hsl(var(--card)); color: hsl(var(--foreground));">
+        <h3><i data-lucide="line-chart"></i> Monthly Payroll Trends</h3>
+        <p>A multi-layered <strong>Area Chart</strong> that tracks two things over 6 months:</p>
+        <ul class="feat-list">
+            <li><span class="feat-tag">Total Spend</span> The primary base salary for all employees.</li>
+            <li><span class="feat-tag">Bonuses</span> Extra payments like performance rewards or incentives.</li>
+        </ul>
+        <div class="neo-card" style="margin-top: 2rem; background: hsl(var(--card)); border: 2px dashed hsl(var(--border)); font-family: var(--font-mono); font-size: 0.8rem;">
+            // Data logic for trend calculation<br>
+            const monthlyPayroll = [ { month: "Jan", total: 735000, bonus: 36000 }, ... ];
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 04: ATTENDANCE PULSE -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">04. Attendance & Leave Pulse</span>
+    <div class="grid-layout" style="margin-top: 2rem;">
+        <div class="neo-card spotlight">
+            <h3><i data-lucide="calendar-days"></i> Today's Attendance</h3>
+            <p>A real-time donut chart showing who is <strong>Present</strong>, <strong>Late</strong>, <strong>Absent</strong>, or <strong>On Leave</strong> today.</p>
+        </div>
+        <div class="neo-card spotlight">
+            <h3><i data-lucide="message-square"></i> Leave Request Status</h3>
+            <p>A bar chart tracking pending vs approved vs rejected leave requests. This helps the HR team stay on top of their to-do list.</p>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 05: INTERACTIVE TOOLS -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">05. Interactive Tools</span>
+    <div class="grid-layout" style="margin-top: 2rem;">
+        <div class="neo-card spotlight">
+            <h3><i data-lucide="sliders"></i> Period Selection</h3>
+            <p>Users can change the entire dashboard's context using the <strong>Period Selector</strong>. You can view data for 1 month, 3 months, 6 months, or 1 year. The graphs update automatically!</p>
+        </div>
+        <div class="neo-card spotlight">
+            <h3><i data-lucide="download"></i> Reports Export</h3>
+            <p>Each section has a <strong>Download</strong> button. While currently in demo mode (showing a toast notification), this is designed to generate CSV or PDF files of the specific data you're looking at.</p>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 06: ENGINEERING BLUEPRINT -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">06. Engineering Blueprint</span>
+    <div class="neo-card technical">
+        <h3><i data-lucide="terminal"></i> Behind the Scenes (Code)</h3>
+        <p style="color: hsl(var(--secondary)); font-weight: 700;">Engineers and developers, here is the technical "recipe" for this page:</p>
+        <div class="tech-grid" style="margin-top: 2rem;">
+            <div class="tech-item">
+                <strong>Components</strong>
+                <p>Tabs, Card, Select, Button, Toast.</p>
+            </div>
+            <div class="tech-item">
+                <strong>Chart Engine</strong>
+                <p>Recharts (Bar, Pie, Area, Legend).</p>
+            </div>
+            <div class="tech-item">
+                <strong>Iconography</strong>
+                <p>Lucide-React (TrendingUp, Users, DollarSign).</p>
+            </div>
+            <div class="tech-item">
+                <strong>State</strong>
+                <p><code>period</code> (string: 1m, 3m, 6m, 1y).</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 07: ACCESS & PERMISSIONS -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">07. Who can see this? (RBAC)</span>
+    <table class="neo-table" style="margin-top: 2rem;">
+        <thead>
+            <tr>
+                <th>Role</th>
+                <th>Access Level</th>
+                <th>Key Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Admin</td><td>Full Access</td><td>View All, Filter All, Export All</td></tr>
+            <tr><td>HR</td><td>Full Access</td><td>View All, Filter All, Export All</td></tr>
+            <tr><td>Manager</td><td>Filtered Access</td><td>View Department stats, Export team report</td></tr>
+            <tr><td>Employee</td><td>No Access</td><td>N/A (Redirect to Dashboard)</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="doc-section" style="margin-top: 5rem; border-top: 4px solid hsl(var(--border)); padding-top: 4rem;">
+    <span class="neo-section-title">08. How to use this page</span>
+    <p style="margin-bottom: 2rem;">Ready to pull some reports? Here is the best way to use the Analytics dashboard:</p>
+    
+    <div class="grid-layout" style="grid-template-columns: repeat(3, 1fr);">
+        <div class="neo-card spotlight" style="padding: 1.5rem; text-align: left;">
+            <div style="font-weight: 800; font-size: 0.8rem; margin-bottom: 0.5rem;">STEP 1: SET THE DATE</div>
+            <p style="font-size: 0.75rem;">Use the dropdown at the top right to choose a time period (like "Last 6 Months"). This scales all charts instantly.</p>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem; text-align: left;">
+            <div style="font-weight: 800; font-size: 0.8rem; margin-bottom: 0.5rem;">STEP 2: SWITCH TABS</div>
+            <p style="font-size: 0.75rem;">Click between <strong>Workforce</strong>, <strong>Payroll</strong>, or <strong>Attendance</strong> to see different types of charts and data lists.</p>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem; text-align: left;">
+            <div style="font-weight: 800; font-size: 0.8rem; margin-bottom: 0.5rem;">STEP 3: EXPORT DATA</div>
+            <p style="font-size: 0.75rem;">Found a chart you like? Click the <strong>Download</strong> button to save the data to your computer for an spreadsheet or meeting.</p>
+        </div>
+    </div>
+</div>
+
+<div class="neo-card spotlight" style="margin-top: 5rem; background: hsl(var(--primary) / 0.1); border-style: dashed;">
+    <h3><i data-lucide="lightbulb"></i> Fun Fact</h3>
+    <p>Did you know? All the charts on this page use the same <strong>HSL color system</strong> as the rest of the app. This ensures that a "Sales" bar here looks exactly like a "Sales" badge on the employee list!</p>
+</div>

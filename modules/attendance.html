@@ -1,0 +1,137 @@
+<div class="module-hero">
+    <span class="neo-badge accent">Module 06: The Timecard</span>
+    <h2 class="gradient-text" style="font-size: 3.5rem;">Attendance</h2>
+    <p class="module-summary" style="max-width: 800px;">The Attendance module is the company’s digital timecard. It’s where employees check in when they start work and check out when they finish. It helps everyone stay on schedule and makes sure that work hours are tracked accurately.</p>
+</div>
+
+<!-- SECTION 01: THE CLOCK-IN STATION -->
+<div class="doc-section">
+    <span class="neo-section-title">01. The Clock-In Station</span>
+    <p style="margin-bottom: 2rem;">When you open the Attendance page, the first thing you see is a big, real-time clock. It tells you exactly what time it is, down to the second!</p>
+    
+    <div class="neo-card spotlight" style="padding: 2.5rem; text-align: center;">
+        <div style="font-size: 0.85rem; color: hsl(var(--muted-foreground)); margin-bottom: 0.5rem;">Current Time</div>
+        <div style="font-size: 3.5rem; font-weight: 900; font-family: var(--font-mono); line-height: 1;">12:45:08 PM</div>
+        <div style="margin-top: 1.5rem; display: flex; gap: 1rem; justify-content: center;">
+            <div class="neo-badge" style="background: hsl(var(--primary) / 0.1); color: hsl(var(--primary)); padding: 1rem 2rem;">Check In</div>
+            <div class="neo-badge" style="background: hsl(var(--destructive) / 0.1); color: hsl(var(--destructive)); padding: 1rem 2rem; opacity: 0.5;">Check Out</div>
+        </div>
+        <p style="margin-top: 1.5rem; font-size: 0.85rem; opacity: 0.8;">The buttons change color and "Lock" themselves once you click them to prevent mistakes.</p>
+    </div>
+</div>
+
+<!-- SECTION 02: THE SCOREBOARD -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">02. The Daily Scoreboard</span>
+    <p style="margin-bottom: 2rem;">Managers can see a quick summary of who is working today. These numbers update as people check in or out.</p>
+         <div class="grid-layout" style="grid-template-columns: repeat(4, 1fr); gap: 1rem;">
+        <div class="stat-card" style="border-color: hsl(142 72% 40%);">
+            <h4 style="color: hsl(142 72% 40%);">12</h4>
+            <p>Present</p>
+        </div>
+        <div class="stat-card" style="border-color: hsl(38 92% 50%);">
+            <h4 style="color: hsl(38 92% 50%);">2</h4>
+            <p>Late</p>
+        </div>
+        <div class="stat-card" style="border-color: hsl(var(--destructive));">
+            <h4 style="color: hsl(var(--destructive));">1</h4>
+            <p>Absent</p>
+        </div>
+        <div class="stat-card" style="border-color: hsl(var(--primary));">
+            <h4 style="color: hsl(var(--primary));">3</h4>
+            <p>On Leave</p>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 03: DAILY LOG & CALENDAR -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">03. History & Daily Logs</span>
+    <div class="grid-layout" style="grid-template-columns: 1fr 2fr; margin-top: 2rem;">
+        <div class="neo-card spotlight">
+            <h3><i data-lucide="calendar"></i> The Calendar</h3>
+            <p>You can click any day on the calendar to see who worked on that specific date. It’s a fast way to check attendance for last Tuesday or any other day in the past.</p>
+        </div>
+        <div class="neo-card spotlight">
+            <h3><i data-lucide="list"></i> Daily Log Table</h3>
+            <p>A simple table that lists every employee's name, their check-in time, their check-out time, and their final status (like "Present" or "Late").</p>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 04: ENGINEERING BLUEPRINT -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">04. Engineering Blueprint</span>
+    <div class="neo-card technical">
+        <h3><i data-lucide="terminal"></i> Behind the Scenes (Code)</h3>
+        <p style="color: hsl(var(--secondary)); font-weight: 700;">Here is how we keep the time and logs updated:</p>
+        <div class="tech-grid" style="margin-top: 2rem;">
+            <div class="tech-item">
+                <strong>Real-Time Timer</strong>
+                <p>We use <code>setInterval</code> in a React <code>useEffect</code> hook to update the clock every second.</p>
+            </div>
+            <div class="tech-item">
+                <strong>Memory Search</strong>
+                <p>The <code>visibleRecords</code> state filters data so you only see what you are allowed to see.</p>
+            </div>
+            <div class="tech-item">
+                <strong>UI Library</strong>
+                <p>We use the <strong>Calendar</strong> and <strong>Table</strong> components from the main UI kit.</p>
+            </div>
+            <div class="tech-item">
+                <strong>Stagger Effect</strong>
+                <p>The stat cards use <code>StaggerItem</code> to slide into view with a smooth animation.</p>
+            </div>
+        </div>
+        <pre class="code-block" style="margin-top: 2rem;"><code>// Keeping the clock ticking
+useEffect(() => {
+  const timer = setInterval(() => setNow(new Date()), 1000);
+  return () => clearInterval(timer); // Crucial! Prevents memory leaks
+}, []);</code></pre>
+    </div>
+</div>
+
+<!-- SECTION 05: ACCESS & PERMISSIONS -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">05. Who can see what? (RBAC)</span>
+    <table class="neo-table" style="margin-top: 2rem;">
+        <thead>
+            <tr>
+                <th>Role</th>
+                <th>Can Check In?</th>
+                <th>Can View All Logs?</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Admin</td><td>✅ Yes</td><td>✅ Yes</td></tr>
+            <tr><td>HR</td><td>✅ Yes</td><td>✅ Yes</td></tr>
+            <tr><td>Manager</td><td>✅ Yes</td><td>✅ Yes</td></tr>
+            <tr><td>Employee</td><td>✅ Yes</td><td>❌ Only Own</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="doc-section" style="margin-top: 5rem; border-top: 4px solid hsl(var(--border)); padding-top: 4rem;">
+    <span class="neo-section-title">06. How to use this page</span>
+    <p style="margin-bottom: 2rem;">Starting or ending your day? Here’s how to use the Attendance tracker:</p>
+    
+    <div class="grid-layout" style="grid-template-columns: repeat(3, 1fr);">
+        <div class="neo-card spotlight" style="padding: 1.5rem; text-align: left;">
+            <div style="font-weight: 800; font-size: 0.8rem; margin-bottom: 0.5rem;">STEP 1: CHECK IN</div>
+            <p style="font-size: 0.75rem;">When you arrive, click the <strong>Check In</strong> button. The clock will record your exact start time in green.</p>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem; text-align: left;">
+            <div style="font-weight: 800; font-size: 0.8rem; margin-bottom: 0.5rem;">STEP 2: SCAN THE LOG</div>
+            <p style="font-size: 0.75rem;">If you are a manager, check the scoreboard to see who has arrived and who might be running late.</p>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem; text-align: left;">
+            <div style="font-weight: 800; font-size: 0.8rem; margin-bottom: 0.5rem;">STEP 3: CHECK OUT</div>
+            <p style="font-size: 0.75rem;">Before you leave, don't forget to click <strong>Check Out</strong>. This finishes your daily log for the system.</p>
+        </div>
+    </div>
+</div>
+
+<div class="neo-card spotlight" style="margin-top: 5rem; background: hsl(var(--accent) / 0.1); border-style: dashed;">
+    <h3><i data-lucide="shield"></i> Privacy Note</h3>
+    <p>Safety first! Regular employees can only see their own attendance logs. Managers can see the daily logs for their entire team to help with payroll and scheduling.</p>
+</div>

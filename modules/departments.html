@@ -1,0 +1,128 @@
+<div class="module-hero">
+    <span class="neo-badge accent">Module 11: The Team Map</span>
+    <h2 class="gradient-text" style="font-size: 3.5rem;">Departments</h2>
+    <p class="module-summary" style="max-width: 800px;">The Departments module provides a high-level view of how the company is organized. It’s a clean grid that lists every team, who leads them, and how many people work there. It’s perfect for understanding the structure of the business at a single glance.</p>
+</div>
+
+<!-- SECTION 01: DEPARTMENT ANATOMY -->
+<div class="doc-section">
+    <span class="neo-section-title">01. Anatomy of a Team Card</span>
+    <p style="margin-bottom: 2rem;">Every team has its own "Card." We designed these cards to be simple so you can find the most important information—like the manager or the headcount—in less than a second.</p>
+    
+    <div class="grid-layout" style="grid-template-columns: repeat(3, 1fr); gap: 1rem;">
+        <div class="neo-card spotlight" style="padding: 1.5rem; text-align: left;">
+            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
+                <div style="width: 40px; height: 40px; background: hsl(var(--primary) / 0.1); color: hsl(var(--primary)); display: flex; align-items: center; justify-content: center; border-radius: 8px;">
+                    <i data-lucide="users" style="width: 20px;"></i>
+                </div>
+                <div style="font-size: 0.7rem; font-weight: 800; color: hsl(var(--muted-foreground));">$250,000</div>
+            </div>
+            <h4 style="font-size: 1.25rem; font-weight: 900; margin-bottom: 0.25rem;">Engineering</h4>
+            <p style="font-size: 0.8rem; margin-bottom: 1.5rem;">24 employees</p>
+            <div style="display: flex; align-items: center; gap: 0.5rem;">
+                <div style="width: 24px; height: 24px; background: hsl(var(--primary) / 0.1); color: hsl(var(--primary)); border-radius: 50%; font-size: 8px; display: flex; align-items: center; justify-content: center; font-weight: 900;">JD</div>
+                <span style="font-size: 0.8rem; font-weight: 700;">John Doe</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 02: RESTRICTED ACCESS -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">02. Restricted Access View</span>
+    <div class="neo-card spotlight" style="margin-top: 2rem; border-color: hsl(var(--destructive));">
+        <h3><i data-lucide="shield-alert"></i> Access Denied for Regular Employees</h3>
+        <p>Because this page contains sensitive organizational and budget data, regular **Employees** are not allowed to enter. If they try, the system shows an "Access Restricted" message and helps them go back to the Dashboard.</p>
+        <div style="margin-top: 1.5rem;">
+            <div class="neo-badge" style="background: hsl(var(--destructive) / 0.1); color: hsl(var(--destructive));">Redirect Active</div>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 03: BUDGET VISIBILITY -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">03. Budget Transparency</span>
+    <p style="margin-bottom: 2rem;">Visibility is key for leaders. If you are an **Admin** or **HR**, you will see the annual budget for each department in the top right corner of the card. Managers can see the cards but they cannot see the budget numbers.</p>
+    
+    <div class="neo-card spotlight" style="background: hsl(var(--card)); border-style: dashed; padding: 2rem; text-align: center;">
+        <div style="font-size: 1.5rem; font-weight: 900; color: hsl(var(--secondary));">$1,200,500.00</div>
+        <p style="font-size: 0.8rem; font-style: italic; margin-top: 0.5rem;">"Budget data is dynamically hidden based on your role."</p>
+    </div>
+</div>
+
+<!-- SECTION 04: ENGINEERING BLUEPRINT -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">04. Engineering Blueprint</span>
+    <div class="neo-card technical">
+        <h3><i data-lucide="terminal"></i> Behind the Scenes (Code)</h3>
+        <p style="color: hsl(var(--secondary)); font-weight: 700;">Here’s the developer’s "recipe" for the organizational grid:</p>
+        <div class="tech-grid" style="margin-top: 2rem;">
+            <div class="tech-item">
+                <strong>Color Trick</strong>
+                <p>We use <code>dept.color + "1a"</code> to create a 10% transparent background of the department's main color for a soft "Glow" look.</p>
+            </div>
+            <div class="tech-item">
+                <strong>Initial Generator</strong>
+                <p>We use <code>split(" ")</code> and <code>map(n[0])</code> to turn a manager's full name (like "John Doe") into initials ("JD") for the avatar.</p>
+            </div>
+            <div class="tech-item">
+                <strong>Safety Lock</strong>
+                <p>Before any code runs, a top-level <code>if (!hasAccess)</code> check verifies the role. If it fails, the rest of the page is never even loaded.</p>
+            </div>
+            <div class="tech-item">
+                <strong>Staggered Load</strong>
+                <p>We wrap our grid in <code>StaggerContainer</code> so the departments slide into view one-by-one with a smooth animation.</p>
+            </div>
+        </div>
+        <pre class="code-block" style="margin-top: 2rem;"><code>// Initial-based avatar generation
+{dept.manager.split(" ").map((n) => n[0]).join("")}</code></pre>
+    </div>
+</div>
+
+<!-- SECTION 05: HOW TO USE IT -->
+<div class="doc-section" style="margin-top: 5rem; border-top: 4px solid hsl(var(--border)); padding-top: 4rem;">
+    <span class="neo-section-title">05. How to use this page</span>
+    <p style="margin-bottom: 2rem;">Need to understand our team structure? Here’s the best way to use the Departments view:</p>
+    
+    <div class="grid-layout" style="grid-template-columns: repeat(3, 1fr);">
+        <div class="neo-card spotlight" style="padding: 1.5rem; text-align: left;">
+            <div style="font-weight: 800; font-size: 0.8rem; margin-bottom: 0.5rem;">STEP 1: CHECK HEADCOUNT</div>
+            <p style="font-size: 0.75rem;">Scan the cards to see which teams are the largest and which are the smallest. This helps with resource planning.</p>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem; text-align: left;">
+            <div style="font-weight: 800; font-size: 0.8rem; margin-bottom: 0.5rem;">STEP 2: FIND A MANAGER</div>
+            <p style="font-size: 0.75rem;">If you need to reach out to a team lead, use the avatar section at the bottom of the card to find out who is in charge.</p>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem; text-align: left;">
+            <div style="font-weight: 800; font-size: 0.8rem; margin-bottom: 0.5rem;">STEP 3: VIEW BUDGETS</div>
+            <p style="font-size: 0.75rem;">(Admins only) Use the top right numbers to ensure your department spending is aligned with the annual plan.</p>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 06: ACCESS & PERMISSIONS -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">06. Who can do what? (RBAC)</span>
+    <table class="neo-table" style="margin-top: 2rem;">
+        <thead>
+            <tr>
+                <th>Action</th>
+                <th>Admin</th>
+                <th>HR</th>
+                <th>Manager</th>
+                <th>Employee</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Enter Module</td><td>✅ Yes</td><td>✅ Yes</td><td>✅ Yes</td><td>❌ No</td></tr>
+            <tr><td>View All Teams</td><td>✅ Yes</td><td>✅ Yes</td><td>✅ Yes</td><td>❌ No</td></tr>
+            <tr><td>View Budgets</td><td>✅ Yes</td><td>✅ Yes</td><td>❌ No</td><td>❌ No</td></tr>
+            <tr><td>View Managers</td><td>✅ Yes</td><td>✅ Yes</td><td>✅ Yes</td><td>❌ No</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="neo-card spotlight" style="margin-top: 5rem; background: hsl(var(--primary) / 0.1); border-style: dashed;">
+    <h3><i data-lucide="info"></i> Quick Tip</h3>
+    <p>Departments use the **HoverCard** effect. When you mouse over a department, the card lifts up slightly to let you know it's selected!</p>
+</div>

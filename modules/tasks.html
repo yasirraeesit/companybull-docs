@@ -1,0 +1,162 @@
+<div class="module-hero">
+    <span class="neo-badge accent">Module 29: The Mission Control</span>
+    <h2 class="gradient-text" style="font-size: 3.5rem;">Tasks & Projects</h2>
+    <p class="module-summary" style="max-width: 800px;">Tasks & Projects is the company's "Kanban Board." It’s where departments organize their work, drag tasks across columns, and see exactly what needs to be done. It’s designed to make project management feel natural, satisfying, and easy for everyone to use.</p>
+</div>
+
+<!-- SECTION 01: TASK SCOREBOARD -->
+<div class="doc-section">
+    <span class="neo-section-title">01. The Mission Dashboard</span>
+    <p style="margin-bottom: 2rem;">At the top of the mission board, we show four "Live Stats." These cards count your tasks in real-time. Whether you’re looking at your own to-do list or the whole company’s projects, these numbers keep you focused on the goal.</p>
+    
+    <div class="grid-layout" style="grid-template-columns: repeat(4, 1fr); gap: 1rem; text-align: center;">
+        <div class="neo-card spotlight" style="padding: 1.5rem;">
+            <p style="font-size: 1.5rem; font-weight: 900;">12</p>
+            <p style="font-size: 0.6rem; opacity: 0.5;">TOTAL TASKS</p>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem;">
+            <p style="font-size: 1.5rem; font-weight: 900; opacity: 0.5;">4</p>
+            <p style="font-size: 0.6rem; opacity: 0.5;">TO DO</p>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem;">
+            <p style="font-size: 1.5rem; font-weight: 900; color: hsl(var(--primary));">5</p>
+            <p style="font-size: 0.6rem; opacity: 0.5;">IN PROGRESS</p>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem; border-color: hsl(142, 72%, 40%);">
+            <p style="font-size: 1.5rem; font-weight: 900; color: hsl(142, 72%, 40%);">3</p>
+            <p style="font-size: 0.6rem; opacity: 0.5;">FINISHED</p>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 02: KANBAN BOARD -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">02. Drag & Drop Columns</span>
+    <p style="margin-bottom: 2rem;">We use a "Three-Column" layout: **Todo**, **In Progress**, and **Done**. Every column has a dashed border at the bottom—this is your "Drop Zone." Just grab a task with your mouse and drop it in the next column to update the whole team!</p>
+    
+    <div class="grid-layout" style="grid-template-columns: repeat(3, 1fr); gap: 1.5rem;">
+        <!-- COLUMN 1 -->
+        <div style="background: rgba(0,0,0,0.02); border: 2px dashed #ddd; border-radius: 12px; padding: 1rem; min-height: 200px;">
+           <div style="display: flex; justify-content: space-between; margin-bottom: 1rem; font-weight: 800; font-size: 0.75rem;">TO DO <div class="neo-badge">2</div></div>
+           <div class="neo-card spotlight" style="padding: 1rem; background: hsl(var(--card)); margin-bottom: 0.5rem; border-style: solid;">
+              <h4 style="font-size: 0.75rem; font-weight: 800;">Fix Login Bug</h4>
+              <p style="font-size: 0.65rem; opacity: 0.5;">Mobile users can't login.</p>
+              <div class="neo-badge" style="background: rgba(239, 68, 68, 0.1); color: #ef4444; font-size: 0.5rem; margin-top: 10px;">HIGH PRIORITY</div>
+           </div>
+        </div>
+        <!-- COLUMN 2 -->
+        <div style="background: rgba(0,0,0,0.02); border: 2px dashed #ddd; border-radius: 12px; padding: 1rem; min-height: 200px;">
+           <div style="display: flex; justify-content: space-between; margin-bottom: 1rem; font-weight: 800; font-size: 0.75rem;">IN PROGRESS <div class="neo-badge">1</div></div>
+           <div class="neo-card spotlight" style="padding: 1rem; background: hsl(var(--card)); border-style: solid;">
+              <h4 style="font-size: 0.75rem; font-weight: 800;">Draft docs</h4>
+              <p style="font-size: 0.65rem; opacity: 0.5;">Writing module help.</p>
+           </div>
+        </div>
+        <!-- COLUMN 3 -->
+        <div style="background: rgba(0,0,0,0.02); border: 2px dashed #ddd; border-radius: 12px; padding: 1rem; min-height: 200px;">
+           <div style="display: flex; justify-content: space-between; margin-bottom: 1rem; font-weight: 800; font-size: 0.75rem;">DONE <div class="neo-badge">12</div></div>
+           <div style="text-align: center; margin-top: 40px; opacity: 0.2;"><i data-lucide="check-circle" style="width: 40px;"></i></div>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 03: THE INTERACTIVE TASK CARD -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">03. Inside the Task Card</span>
+    <div class="neo-card spotlight" style="margin-top: 2rem; background: hsl(var(--card)); border-style: dashed; padding: 2.5rem; text-align: center;">
+        <h3><i data-lucide="layout"></i> Card Anatomy</h3>
+        <p>A task card is packed with information but small enough to fit on the board. You can see the **Assignee** (the person doing the work), the **Due Date** (the deadline), and even which **Project** the task belongs to.</p>
+        <div class="grid-layout" style="grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-top: 1.5rem; text-align: left;">
+            <div class="neo-card spotlight" style="padding: 1rem;">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                    <div style="width: 20px; height: 20px; background: hsl(var(--primary)); border-radius: 50%;"></div>
+                    <span style="font-size: 0.7rem; font-weight: 800;">Sarah Johnson</span>
+                </div>
+                <p style="font-size: 0.6rem; opacity: 0.5; margin-top: 5px;">Due: April 15, 2026</p>
+            </div>
+            <div class="neo-card spotlight" style="padding: 1rem;">
+                <div class="neo-badge" style="background: hsl(var(--primary) / 0.1); color: hsl(var(--primary)); font-size: 0.5rem;">PROJECT: BULL-V2</div>
+                <p style="font-size: 0.65rem; margin-top: 5px; font-weight: 800;">Sprint 12 Cleanup</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 04: ENGINEERING BLUEPRINT -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">04. Engineering Blueprint</span>
+    <div class="neo-card technical">
+        <h3><i data-lucide="terminal"></i> Behind the Scenes (Code)</h3>
+        <p style="color: hsl(var(--secondary)); font-weight: 700;">Logic for the mission control board:</p>
+        <div class="tech-grid" style="margin-top: 2rem;">
+            <div class="tech-item">
+                <strong>Drag-and-Drop</strong>
+                <p>We use <code>onDragStart</code> to "remember" which task is being moved, and <code>onDrop</code> to update its status in the database instantly.</p>
+            </div>
+            <div class="tech-item">
+                <strong>Kanban Map</strong>
+                <p>The board is generated from a <code>statusColumns</code> array. This makes it easy to add new columns (like "Testing") in just one line of code.</p>
+            </div>
+            <div class="tech-item">
+                <strong>Task Filtering</strong>
+                <p>We use <code>items.filter()</code> to check your ID. If you aren't an Admin, the system only shows you tasks where YOUR name is on the card.</p>
+            </div>
+            <div class="tech-item">
+                <strong>Priority Colors</strong>
+                <p>A <code>priorityStyle</code> object maps "High" to red and "Low" to green, so you can tell at a glance which tasks are most urgent.</p>
+            </div>
+        </div>
+        <pre class="code-block" style="margin-top: 2rem;"><code>// Status update logic
+const handleDrop = (status) => {
+  setItems(prev => prev.map(t => t.id === dragId ? { ...t, status } : t));
+  toast({ title: "Task moved", description: "Updated!" });
+};</code></pre>
+    </div>
+</div>
+
+<!-- SECTION 05: HOW TO USE IT -->
+<div class="doc-section" style="margin-top: 5rem; border-top: 4px solid hsl(var(--border)); padding-top: 4rem;">
+    <span class="neo-section-title">05. How to use this page</span>
+    <p style="margin-bottom: 2rem;">Starting your day? Here’s the best way to leverage Tasks & Projects:</p>
+    
+    <div class="grid-layout" style="grid-template-columns: repeat(3, 1fr);">
+        <div class="neo-card spotlight" style="padding: 1.5rem; text-align: left;">
+            <div style="font-weight: 800; font-size: 0.8rem; margin-bottom: 0.5rem;">STEP 1: FIND YOUR TASKS</div>
+            <p style="font-size: 0.75rem;">Check the **To Do** column. Look for your name on the cards to see what projects you're assigned to today.</p>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem; text-align: left;">
+            <div style="font-weight: 800; font-size: 0.8rem; margin-bottom: 0.5rem;">STEP 2: DRAG TO START</div>
+            <p style="font-size: 0.75rem;">As soon as you open a file to start working, grab the card and drag it into the **In Progress** column. This lets the team know you're on it!</p>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem; text-align: left;">
+            <div style="font-weight: 800; font-size: 0.8rem; margin-bottom: 0.5rem;">STEP 3: FINISH & CELEBRATE</div>
+            <p style="font-size: 0.75rem;">Once the job is done, drop it in the **Done** column. The card will turn green and be added to the company's finished missions list.</p>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 06: ACCESS & PERMISSIONS -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">06. Who can do what? (RBAC)</span>
+    <table class="neo-table" style="margin-top: 2rem;">
+        <thead>
+            <tr>
+                <th>Action</th>
+                <th>Admin</th>
+                <th>Manager</th>
+                <th>Employee</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Enter Tasks Module</td><td>✅ Yes</td><td>✅ Yes</td><td>✅ Yes</td></tr>
+            <tr><td>See ALL Company Tasks</td><td>✅ Yes</td><td>✅ Yes</td><td>❌ No</td></tr>
+            <tr><td>Move Own Tasks</td><td>✅ Yes</td><td>✅ Yes</td><td>✅ Yes</td></tr>
+            <tr><td>Assign task to others</td><td>✅ Yes</td><td>✅ Yes</td><td>❌ No</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="neo-card spotlight" style="margin-top: 5rem; background: hsl(var(--primary) / 0.1); border-style: dashed;">
+    <h3><i data-lucide="info"></i> Quick Tip</h3>
+    <p>The Kanban board uses **Auto-Saving**. Every time you drop a card into a new column, the system saves the change instantly—no "Save" button required!</p>
+</div>

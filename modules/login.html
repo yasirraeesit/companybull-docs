@@ -1,0 +1,134 @@
+<div class="module-hero">
+    <span class="neo-badge accent">Module 22: The Front Door</span>
+    <h2 class="gradient-text" style="font-size: 3.5rem;">Welcome & Login</h2>
+    <p class="module-summary" style="max-width: 800px;">The Login module is the company's "First Impression." Instead of a boring password form, we’ve built a high-energy "Role Picker" for our demo. This lets you jump straight into the action by picking the type of user you want to be—whether it’s a powerful Admin or a busy Employee.</p>
+</div>
+
+<!-- SECTION 01: THE ROLE PICKER -->
+<div class="doc-section">
+    <span class="neo-section-title">01. Choose Your Persona</span>
+    <p style="margin-bottom: 2rem;">When you first arrive, you’ll see four colorful role buttons. Each one is a "Key" to a different part of the app. Every card has a short description saying exactly what that person can do, making it easy to decide who you want to be today.</p>
+    
+    <div class="grid-layout" style="grid-template-columns: repeat(2, 1fr); gap: 1.5rem;">
+        <div class="neo-card spotlight" style="padding: 1.5rem; background: hsl(var(--card)); border-style: solid; display: flex; align-items: center; gap: 1rem;">
+            <div style="width: 40px; height: 40px; background: hsl(var(--primary)); color: white; border-radius: 10px; display: flex; align-items: center; justify-content: center;"><i data-lucide="shield"></i></div>
+            <div style="text-align: left;">
+                <h4 style="font-weight: 900; font-size: 0.8rem;">ADMIN</h4>
+                <p style="font-size: 0.7rem; opacity: 0.6;">Total access to all modules</p>
+            </div>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem; background: hsl(var(--card)); border-style: solid; display: flex; align-items: center; gap: 1rem;">
+            <div style="width: 40px; height: 40px; background: hsl(var(--secondary)); color: white; border-radius: 10px; display: flex; align-items: center; justify-content: center;"><i data-lucide="user-cog"></i></div>
+            <div style="text-align: left;">
+                <h4 style="font-weight: 900; font-size: 0.8rem;">HR</h4>
+                <p style="font-size: 0.7rem; opacity: 0.6;">Manage employees & payroll</p>
+            </div>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem; background: hsl(var(--card)); border-style: solid; display: flex; align-items: center; gap: 1rem;">
+            <div style="width: 40px; height: 40px; background: hsl(var(--accent)); color: white; border-radius: 10px; display: flex; align-items: center; justify-content: center;"><i data-lucide="users"></i></div>
+            <div style="text-align: left;">
+                <h4 style="font-weight: 900; font-size: 0.8rem;">MANAGER</h4>
+                <p style="font-size: 0.7rem; opacity: 0.6;">View team & approve leave</p>
+            </div>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem; background: hsl(var(--card)); border-style: solid; display: flex; align-items: center; gap: 1rem;">
+            <div style="width: 40px; height: 40px; background: hsl(142, 72%, 40%); color: white; border-radius: 10px; display: flex; align-items: center; justify-content: center;"><i data-lucide="user-check"></i></div>
+            <div style="text-align: left;">
+                <h4 style="font-weight: 900; font-size: 0.8rem;">EMPLOYEE</h4>
+                <p style="font-size: 0.7rem; opacity: 0.6;">View own data & requests</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 02: BRANDING & VISUALS -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">02. Neon Lines & Bold Shadows</span>
+    <p style="margin-bottom: 2rem;">The Login page uses our signature **Neo-Brutalist** style. Thick black borders, vibrant colors, and deep shadows make the interface feel alive. We even added "Floating Shapes" that spin and bounce to keep you engaged while you decide who to be.</p>
+    
+    <div class="neo-card spotlight" style="padding: 2.5rem; background: hsl(var(--primary)); color: white; border-style: solid; text-align: center; position: relative; overflow: hidden;">
+        <div style="position: absolute; right: -20px; top: -20px; width: 60px; height: 60px; border: 4px solid rgba(255,255,255,0.2); border-radius: 50%;"></div>
+        <div style="position: absolute; left: 20px; bottom: -10px; width: 40px; height: 40px; background: rgba(255,255,255,0.15); border-radius: 10px; transform: rotate(15deg);"></div>
+        
+        <h3 style="font-size: 2.5rem; font-weight: 900; line-height: 1.1; margin-bottom: 1rem;">Empower Your <br><span style="background: hsl(var(--card)); color: hsl(var(--primary)); padding: 0 1rem;">Workforce</span></h3>
+        <p style="font-size: 0.85rem; font-weight: 800; opacity: 0.9;">Unified, efficient, and built for growth.</p>
+    </div>
+</div>
+
+<!-- SECTION 03: ENGINEERING BLUEPRINT -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">03. Engineering Blueprint</span>
+    <div class="neo-card technical">
+        <h3><i data-lucide="terminal"></i> Behind the Scenes (Code)</h3>
+        <p style="color: hsl(var(--secondary)); font-weight: 700;">Logic for the entry system:</p>
+        <div class="tech-grid" style="margin-top: 2rem;">
+            <div class="tech-item">
+                <strong>Demo Auto-Login</strong>
+                <p>We use a custom <code>loginAs(role)</code> function. When you click a button, it immediately sets your permissions and redirects you to the home page.</p>
+            </div>
+            <div class="tech-item">
+                <strong>Motion Elements</strong>
+                <p>The role buttons use <code>framer-motion</code> with a staggered delay (<code>i * 0.1</code>), so they pop into view one-by-one when the page loads.</p>
+            </div>
+            <div class="tech-item">
+                <strong>Interactive Depth</strong>
+                <p>The buttons use a <code>translate</code> effect. When you hover, the card "sinks" into its shadow, creating a satisfying 3D "Click" feeling.</p>
+            </div>
+            <div class="tech-item">
+                <strong>Logo Inversion</strong>
+                <p>We use <code>filter: invert()</code> on the bull logo to make sure it looks great against both light and dark backgrounds without needing two files.</p>
+            </div>
+        </div>
+        <pre class="code-block" style="margin-top: 2rem;"><code>// Quick Redirect Logic
+const handleDemo = (role) => {
+  loginAs(role);
+  navigate("/");
+};</code></pre>
+    </div>
+</div>
+
+<!-- SECTION 04: HOW TO USE IT -->
+<div class="doc-section" style="margin-top: 5rem; border-top: 4px solid hsl(var(--border)); padding-top: 4rem;">
+    <span class="neo-section-title">04. How to use this page</span>
+    <p style="margin-bottom: 2rem;">Ready to explore the app? Here’s the best way to get started:</p>
+    
+    <div class="grid-layout" style="grid-template-columns: repeat(3, 1fr);">
+        <div class="neo-card spotlight" style="padding: 1.5rem; text-align: left;">
+            <div style="font-weight: 800; font-size: 0.8rem; margin-bottom: 0.5rem;">STEP 1: BROWSE THE ROLES</div>
+            <p style="font-size: 0.75rem;">Take a second to read the descriptions. If you want to see everything, pick **Admin**. If you want a simpler view, pick **Employee**.</p>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem; text-align: left;">
+            <div style="font-weight: 800; font-size: 0.8rem; margin-bottom: 0.5rem;">STEP 2: CLICK TO ENTER</div>
+            <p style="font-size: 0.75rem;">Click the card that matches your needs. The "ArrowRight" icon will glow, and you’ll be teleported straight to the Dashboard.</p>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem; text-align: left;">
+            <div style="font-weight: 800; font-size: 0.8rem; margin-bottom: 0.5rem;">STEP 3: EXPLORE THE VIEW</div>
+            <p style="font-size: 0.75rem;">Once inside, look around! Most pages will show or hide buttons based on the role you picked at the login screen.</p>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 05: ACCESS & PERMISSIONS -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">05. The Gate System (Logic)</span>
+    <table class="neo-table" style="margin-top: 2rem;">
+        <thead>
+            <tr>
+                <th>Gate Action</th>
+                <th>Public</th>
+                <th>Authenticated</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Enter Login Module</td><td>✅ Yes</td><td>✅ Yes</td></tr>
+            <tr><td>Select Role</td><td>✅ Yes</td><td>✅ Yes</td></tr>
+            <tr><td>Enter Dashboard</td><td>❌ No</td><td>✅ Yes</td></tr>
+            <tr><td>View Admin Tools</td><td>❌ No</td><td>✅ Yes (Admin/HR)</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="neo-card spotlight" style="margin-top: 5rem; background: hsl(var(--primary) / 0.1); border-style: dashed;">
+    <h3><i data-lucide="zap"></i> Quick Tip</h3>
+    <p>This is a **Demo Login**. If this were a real app, you would see common "Forgotten Password" links and "Remember Me" checkboxes next to the role cards!</p>
+</div>

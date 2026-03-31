@@ -1,0 +1,140 @@
+<div class="module-hero">
+    <span class="neo-badge accent">Module 30: The Digital Timesheet</span>
+    <h2 class="gradient-text" style="font-size: 3.5rem;">Time Tracking</h2>
+    <p class="module-summary" style="max-width: 800px;">Time Tracking is the company's "Attendance Engine." It’s an interactive tool where employees log their daily work, and managers track productivity and overtime. It ensures that everyone is paid fairly for every minute they spend contributing to the mission.</p>
+</div>
+
+<!-- SECTION 01: THE INTERACTIVE CLOCK -->
+<div class="doc-section">
+    <span class="neo-section-title">01. The Clock-In System</span>
+    <p style="margin-bottom: 2rem;">Every day starts here. The **Clock-In Card** is your primary dashboard for attendance. It features a real-time timer that shows exactly how many hours and minutes you've worked so far today, allowing you to focus on your tasks without checking the wall clock.</p>
+    
+    <div class="neo-card spotlight" style="padding: 2.5rem; background: hsl(var(--card)); border-style: solid; max-width: 500px; margin: 0 auto; display: flex; align-items: center; gap: 2rem;">
+        <div style="width: 70px; height: 70px; background: hsl(var(--primary) / 0.1); color: hsl(var(--primary)); border-radius: 50%; display: flex; align-items: center; justify-content: center;"><i data-lucide="clock" style="width: 32px;"></i></div>
+        <div style="text-align: left; flex: 1;">
+            <p style="font-size: 0.75rem; opacity: 0.5;">Working since 09:00 AM</p>
+            <h4 style="font-size: 2.5rem; font-weight: 900; font-family: monospace; color: hsl(var(--primary));">06:45</h4>
+            <div style="display: flex; gap: 10px; margin-top: 1rem;">
+               <div class="neo-badge" style="background: hsl(var(--primary)); color: white;">⏹️ CLOCK OUT</div>
+               <div class="neo-badge" style="background: hsl(var(--card));"><i data-lucide="coffee"></i> BREAK</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 02: THE PERFORMANCE SCOREBOARD -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">02. Accuracy & Overtime Stats</span>
+    <p style="margin-bottom: 2rem;">As you log your time, the app builds a **Performance Scoreboard**. This shows your total hours for the week, your average daily work time, and most importantly, any **Overtime** you've earned by staying late to finish a project.</p>
+    
+    <div class="grid-layout" style="grid-template-columns: repeat(4, 1fr); gap: 1rem; text-align: center;">
+        <div class="neo-card spotlight" style="padding: 1.5rem;">
+            <p style="font-size: 1.5rem; font-weight: 900; color: hsl(var(--primary));">38.5h</p>
+            <p style="font-size: 0.6rem; opacity: 0.5;">WEEKY TOTAL</p>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem;">
+            <p style="font-size: 1.5rem; font-weight: 900;">7.7h</p>
+            <p style="font-size: 0.6rem; opacity: 0.5;">DAILY AVG</p>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem; border-color: hsl(0, 84%, 60%);">
+            <p style="font-size: 1.5rem; font-weight: 900; color: hsl(0, 84%, 60%);">+2.5h</p>
+            <p style="font-size: 0.6rem; opacity: 0.5;">TOTAL OVERTIME</p>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem;">
+            <p style="font-size: 1.5rem; font-weight: 900;">3</p>
+            <p style="font-size: 0.6rem; opacity: 0.5;">OT SESSIONS</p>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 03: DETAILED LOGS -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">03. The History Vault</span>
+    <div class="neo-card spotlight" style="margin-top: 2rem; background: hsl(var(--card)); border-style: dashed; padding: 2.5rem; text-align: center;">
+        <h3><i data-lucide="tabs"></i> Daily Log vs. Weekly Summary</h3>
+        <p>Transparency is key! You can switch between two views. The **Daily Log** shows every specific clock-in and break you took, while the **Weekly Summary** aggregates this data to show if you are "On Track" or "Under Hours" for the 40-hour company standard.</p>
+        <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 1.5rem;">
+           <span class="neo-badge" style="background: hsl(var(--primary)); color: white;">DAILY VIEW</span>
+           <span class="neo-badge" style="background: hsl(var(--card));">WEEKLY TOTALS</span>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 04: ENGINEERING BLUEPRINT -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">04. Engineering Blueprint</span>
+    <div class="neo-card technical">
+        <h3><i data-lucide="terminal"></i> Behind the Scenes (Code)</h3>
+        <p style="color: hsl(var(--secondary)); font-weight: 700;">Logic for the attendance engine:</p>
+        <div class="tech-grid" style="margin-top: 2rem;">
+            <div class="tech-item">
+                <strong>Time Converter</strong>
+                <p>We use a <code>calcHours()</code> function that takes strings like "09:00" and "17:30", subtracts any break minutes, and converts the final result into decimal hours (like 8.25).</p>
+            </div>
+            <div class="tech-item">
+                <strong>Overtime Engine</strong>
+                <p>The system is programmed with a <code>STANDARD_HOURS</code> of 8. Any minute worked beyond this threshold is automatically flagged as "Overtime" and added to your weekly bonus pool.</p>
+            </div>
+            <div class="tech-item">
+                <strong>Real-Time Timers</strong>
+                <p>We use a <code>Date.now()</code> calculation to show the live timer. It subtracts the <code>totalBreakMins</code> in real-time, so you always see your "Effective Work Time" correctly.</p>
+            </div>
+            <div class="tech-item">
+                <strong>Memoized Stats</strong>
+                <p>We use <code>useMemo</code> for the summary tables. This ensures that even with 300 employees and months of history, the data updates instantly without slowing down the app.</p>
+            </div>
+        </div>
+        <pre class="code-block" style="margin-top: 2rem;"><code>// Converting strings to decimal hours
+const [inH, inM] = clockIn.split(":").map(Number);
+const totalMins = (outH * 60 + outM) - (inH * 60 + inM) - breakMins;
+return +(totalMins / 60).toFixed(2);</code></pre>
+    </div>
+</div>
+
+<!-- SECTION 05: HOW TO USE IT -->
+<div class="doc-section" style="margin-top: 5rem; border-top: 4px solid hsl(var(--border)); padding-top: 4rem;">
+    <span class="neo-section-title">05. How to use this page</span>
+    <p style="margin-bottom: 2rem;">Starting your work day? Here’s the best way to leverage Time Tracking:</p>
+    
+    <div class="grid-layout" style="grid-template-columns: repeat(3, 1fr);">
+        <div class="neo-card spotlight" style="padding: 1.5rem; text-align: left;">
+            <div style="font-weight: 800; font-size: 0.8rem; margin-bottom: 0.5rem;">STEP 1: CLOCK IN EARLY</div>
+            <p style="font-size: 0.75rem;">Click the **Clock In** button as soon as you start your work. This ensures every minute of your contribution is recorded accurately for payroll.</p>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem; text-align: left;">
+            <div style="font-weight: 800; font-size: 0.8rem; margin-bottom: 0.5rem;">STEP 2: LOG YOUR BREAKS</div>
+            <p style="font-size: 0.75rem;">Heading for lunch? Take the coffee icon for a spin! Toggling the **Break** button pauses the timer so your totals only reflect "Deep Work."</p>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem; text-align: left;">
+            <div style="font-weight: 800; font-size: 0.8rem; margin-bottom: 0.5rem;">STEP 3: REVIEW THE WEEK</div>
+            <p style="font-size: 0.75rem;">On Friday afternoon, check the **Weekly Summary**. If you worked late on Tuesday, make sure the red **OT Badge** is visible on the daily log!</p>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 06: ACCESS & PERMISSIONS -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">06. Who can do what? (RBAC)</span>
+    <table class="neo-table" style="margin-top: 2rem;">
+        <thead>
+            <tr>
+                <th>Action</th>
+                <th>Admin</th>
+                <th>HR</th>
+                <th>Manager</th>
+                <th>Employee</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Enter Time Module</td><td>✅ Yes</td><td>✅ Yes</td><td>✅ Yes</td><td>✅ Yes</td></tr>
+            <tr><td>Clock In / Out</td><td>✅ Yes</td><td>✅ Yes</td><td>✅ Yes</td><td>✅ Yes</td></tr>
+            <tr><td>See ALL Company Time</td><td>✅ Yes</td><td>✅ Yes</td><td>✅ Yes</td><td>❌ No</td></tr>
+            <tr><td>Approve Overtime</td><td>✅ Yes</td><td>✅ Yes</td><td>✅ Yes</td><td>❌ No</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="neo-card spotlight" style="margin-top: 5rem; background: hsl(var(--primary) / 0.1); border-style: dashed;">
+    <h3><i data-lucide="info"></i> Quick Tip</h3>
+    <p>Everything in Time Tracking is **Privacy Protected**. Regular employees can only see their own timesheets, while managers can search for anyone on their team to approve their hours!</p>
+</div>

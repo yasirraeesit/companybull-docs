@@ -1,0 +1,132 @@
+<div class="module-hero">
+    <span class="neo-badge accent">Module 24: The Company Tree</span>
+    <h2 class="gradient-text" style="font-size: 3.5rem;">Organization Chart</h2>
+    <p class="module-summary" style="max-width: 800px;">The Org Chart is the company's "Family Tree." It’s an interactive map that shows how everyone in the company is connected. It helps you see who reports to whom and understand the bigger picture of our organization from the CEO all the way down to every team member.</p>
+</div>
+
+<!-- SECTION 01: THE INTERACTIVE NODE -->
+<div class="doc-section">
+    <span class="neo-section-title">01. The Team Member Card</span>
+    <p style="margin-bottom: 2rem;">Every person in the company is represented by a "Node." These cards show a small **Avatar** (for their face), their **Name**, their **Job Title**, and a **Department Badge**. We’ve kept the design clean so you can see many people at once without clutter.</p>
+    
+    <div class="neo-card spotlight" style="padding: 2rem; background: hsl(var(--card)); border-style: solid; text-align: center; max-width: 200px; margin: 0 auto;">
+        <div style="width: 40px; height: 40px; background: hsl(var(--primary)); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px; font-weight: 800; font-size: 0.75rem;">JD</div>
+        <h4 style="font-weight: 900; font-size: 0.8rem; margin-bottom: 2px;">John Doe</h4>
+        <p style="font-size: 0.6rem; opacity: 0.5; margin-bottom: 10px;">Engineering Director</p>
+        <div class="neo-badge" style="font-size: 0.5rem; text-transform: uppercase;">Engineering</div>
+        <div style="margin-top: 10px; color: #ccc;"><i data-lucide="chevron-down" style="width: 14px;"></i></div>
+    </div>
+</div>
+
+<!-- SECTION 02: EXPANDING THE BRANCH -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">02. Unlocking the Tiers</span>
+    <p style="margin-bottom: 2rem;">The chart is **Expandable**. If a manager has a team, you’ll see a small chevron icon (down or right). Click on their card, and the next level of the tree will "Slide Out." This allows the chart to stay organized while still holding hundreds of people.</p>
+    
+    <div class="grid-layout" style="grid-template-columns: repeat(2, 1fr); gap: 1rem; text-align: center;">
+        <div class="neo-card spotlight" style="padding: 1.5rem;">
+            <div class="neo-badge" style="background: hsl(var(--primary) / 0.1); color: hsl(var(--primary)); width: 100%;"><i data-lucide="chevron-right" style="width: 14px; vertical-align: middle;"></i> Closed</div>
+            <p style="font-size: 0.7rem; margin-top: 0.5rem;">Team is hidden</p>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem;">
+            <div class="neo-badge" style="background: hsl(142 72% 40% / 0.1); color: hsl(142 72% 40%); width: 100%;"><i data-lucide="chevron-down" style="width: 14px; vertical-align: middle;"></i> Expanded</div>
+            <p style="font-size: 0.7rem; margin-top: 0.5rem;">Team is visible</p>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 03: THE VISUAL WEB -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">03. The Visual Web (Connectors)</span>
+    <div class="neo-card spotlight" style="margin-top: 2rem; background: hsl(var(--card)); border-style: dashed; padding: 2.5rem; text-align: center;">
+        <h3><i data-lucide="git-branch"></i> Drawing the Connections</h3>
+        <p>We use 1px vertical and horizontal lines to draw the "Reporting Paths." Even as the team grows wider, these lines automatically stretch and center themselves, ensuring that the hierarchy is always crystal clear.</p>
+        <div style="margin-top: 20px; display: flex; flex-direction: column; align-items: center;">
+            <div style="width: 1px; height: 30px; background: #ddd;"></div>
+            <div style="width: 100px; height: 1px; background: #ddd;"></div>
+            <div style="display: flex; gap: 98px;">
+                <div style="width: 1px; height: 20px; background: #ddd;"></div>
+                <div style="width: 1px; height: 20px; background: #ddd;"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 04: ENGINEERING BLUEPRINT -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">04. Engineering Blueprint</span>
+    <div class="neo-card technical">
+        <h3><i data-lucide="terminal"></i> Behind the Scenes (Code)</h3>
+        <p style="color: hsl(var(--secondary)); font-weight: 700;">How we built the recursive tree:</p>
+        <div class="tech-grid" style="margin-top: 2rem;">
+            <div class="tech-item">
+                <strong>Recursive Node</strong>
+                <p>We built one component (<code>OrgNode</code>) that calls itself if it finds a "Children" array. This allows the tree to grow infinitely without writing new code for each level.</p>
+            </div>
+            <div class="tech-item">
+                <strong>Default Expand</strong>
+                <p>To make the chart useful immediately, we automatically expand levels 0 and 1, so you see the leadership team as soon as you open the page.</p>
+            </div>
+            <div class="tech-item">
+                <strong>Line Math (Calc)</strong>
+                <p>We use <code>calc()</code> logic in CSS to find the exact center of child nodes, ensuring the connecting lines are perfectly pixel-aligned.</p>
+            </div>
+            <div class="tech-item">
+                <strong>Avatar Fallback</strong>
+                <p>If a user doesn't have a photo, we use a simple **AvatarFallback** that generates a colorful circle with their initials inside.</p>
+            </div>
+        </div>
+        <pre class="code-block" style="margin-top: 2rem;"><code>// Recursive logic in the component
+{expanded && hasChildren && node.children.map(child => (
+  <OrgNode node={child} level={level + 1} />
+))}</code></pre>
+    </div>
+</div>
+
+<!-- SECTION 05: HOW TO USE IT -->
+<div class="doc-section" style="margin-top: 5rem; border-top: 4px solid hsl(var(--border)); padding-top: 4rem;">
+    <span class="neo-section-title">05. How to use this page</span>
+    <p style="margin-bottom: 2rem;">New to the team? Here’s the best way to explore the Org Chart:</p>
+    
+    <div class="grid-layout" style="grid-template-columns: repeat(3, 1fr);">
+        <div class="neo-card spotlight" style="padding: 1.5rem; text-align: left;">
+            <div style="font-weight: 800; font-size: 0.8rem; margin-bottom: 0.5rem;">STEP 1: START AT THE TOP</div>
+            <p style="font-size: 0.75rem;">Begin at the root (the CEO) and follow the lines down to understand the different departments and leadership tiers.</p>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem; text-align: left;">
+            <div style="font-weight: 800; font-size: 0.8rem; margin-bottom: 0.5rem;">STEP 2: CLICK TO DRILL DOWN</div>
+            <p style="font-size: 0.75rem;">If you want to see who reports to a specific Director, just click their card. The branch will expand to show their team.</p>
+        </div>
+        <div class="neo-card spotlight" style="padding: 1.5rem; text-align: left;">
+            <div style="font-weight: 800; font-size: 0.8rem; margin-bottom: 0.5rem;">STEP 3: SCROLL SIDEWAYS</div>
+            <p style="font-size: 0.75rem;">Big teams (like Engineering) can be very wide! Use your mouse or trackpad to scroll left and right to see everyone on that tier.</p>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION 06: ACCESS & PERMISSIONS -->
+<div class="doc-section" style="margin-top: 4rem;">
+    <span class="neo-section-title">06. Who can do what? (RBAC)</span>
+    <table class="neo-table" style="margin-top: 2rem;">
+        <thead>
+            <tr>
+                <th>Action</th>
+                <th>Admin</th>
+                <th>HR</th>
+                <th>Manager</th>
+                <th>Employee</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Enter Chart Module</td><td>✅ Yes</td><td>✅ Yes</td><td>✅ Yes</td><td>✅ Yes</td></tr>
+            <tr><td>Expand/Collapse Branches</td><td>✅ Yes</td><td>✅ Yes</td><td>✅ Yes</td><td>✅ Yes</td></tr>
+            <tr><td>Change reporting lines</td><td>✅ Yes</td><td>✅ Yes</td><td>❌ No</td><td>❌ No</td></tr>
+            <tr><td>See salary info in chart</td><td>❌ No</td><td>❌ No</td><td>❌ No</td><td>❌ No</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="neo-card spotlight" style="margin-top: 5rem; background: hsl(var(--primary) / 0.1); border-style: dashed;">
+    <h3><i data-lucide="info"></i> Quick Tip</h3>
+    <p>The Org Chart is **Linked to Profiles**. If an employee moves to a new department, the chart updates its lines automatically—no manual drawing needed!</p>
+</div>
